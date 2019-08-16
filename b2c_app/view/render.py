@@ -18,7 +18,7 @@ app.secret_key = "partner data session secret key"
 
 
 @app.route('/', methods=['GET'])
-def hotel():
+def hotel_home():
     return render_template('hotel/b2c_hotels/hotel.html')
 
 @app.route('/hotel', methods=['GET'])
