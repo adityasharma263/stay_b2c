@@ -3,9 +3,9 @@
 __author__ = 'aditya'
 from flask_script import Manager, Server
 from flask_migrate import Migrate, MigrateCommand
-from b2c_app import db, app
+from b2c_app import app
 
-migrate = Migrate(app, db)
+migrate = Migrate(app)
 
 manager = Manager(app)
 manager.add_command("runserver", Server(use_debugger=app.config['SERVER_DEBUG'],

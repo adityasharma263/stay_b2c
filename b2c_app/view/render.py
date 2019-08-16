@@ -2,7 +2,7 @@
 __author__ = 'aditya'
 
 
-from stay_app import app
+from b2c_app import app
 from flask import render_template, request, make_response, jsonify, abort, redirect, session, Response
 import requests
 from Crypto.Cipher import AES
@@ -29,7 +29,8 @@ def hotel_list():
 
 @app.route('/hotel/<hotel_id>', methods=['GET'])
 def hotel_detail(hotel_id):
-    hotel_api_url = str(app.config["API_URL"]) + "api/v1/hotel"
+    print(hotel_id, "vgddf")
+    hotel_api_url = str(app.config["API_URL"]) + "/api/v1/hotel"
     hotel_data = requests.get(url=hotel_api_url, params={"id": hotel_id}).json()
     if len(hotel_data["result"]["hotel"]) > 0:
         hotel_data = hotel_data["result"]["hotel"][0]
