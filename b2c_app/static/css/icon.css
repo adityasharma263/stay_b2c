@@ -1,0 +1,18 @@
+/*! CSS Used from: http://localhost:5000/css/bootstrap.min.css */
+
+   [class^="fa"].circle{border:1px solid;width:1.8em;height:1.8em;line-height:1.7333em;-webkit-border-radius:50% 50% 50% 50%;-moz-border-radius:50% 50% 50% 50%;-ms-border-radius:50% 50% 50% 50%;border-radius:50% 50% 50% 50%;display:inline-block;text-align:center;}
+    .listing-style3.car .amenities ul li [class^="fa"]{display:block;font-size:16px;color:#d9d9d9;overflow:hidden;}
+    .listing-style3.car .amenities ul li:hover [class^="fa"]{color:#01b7f2;}
+    .listing-style3.car .amenities ul li:hover [class^="fa"]:before{-webkit-animation:toTopFromBottom 0.35s forwards;-moz-animation:toTopFromBottom 0.35s forwards;animation:toTopFromBottom 0.35s forwards;}
+    .listing-style3 [class^="fa"].circle{color:#d9d9d9;cursor:default;font-size:16px;overflow:hidden;}
+    .listing-style3 [class^="fa"].circle:hover{color:#01b7f2;}
+    .listing-style3 [class^="fa"].circle:hover:before{-webkit-animation:toTopFromBottom 0.35s forwards;-moz-animation:toTopFromBottom 0.35s forwards;animation:toTopFromBottom 0.35s forwards;}
+    /*! CSS Used from: http://localhost:5000/css/style.css */
+   
+    /*! CSS Used from: http://localhost:5000/css/bootstrap.min.css */
+
+    .listing-style1.car .amenities ul li [class^="fa"]{display:block;font-size:16px;color:#d9d9d9;overflow:hidden;}
+    .listing-style1.car .amenities ul li:hover [class^="fa"]{color:#01b7f2;}
+    .listing-style1.car .amenities ul li:hover [class^="fa"]:before{-webkit-animation:toTopFromBottom 0.35s forwards;-moz-animation:toTopFromBottom 0.35s forwards;animation:toTopFromBottom 0.35s forwards;}
+    /*! CSS Used keyframes */
+   

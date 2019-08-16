@@ -1,0 +1,367 @@
+{% extends '/hotel/components/header.html' %} {% block controller%}stayController{% endblock %} {% block
+    content%}
+            <div class="search-box-wrapper">
+               
+
+
+        <section id="content" class="tour">
+            <div id="slideshow" class="slideshow-bg" style="height: 541px;">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;">
+                            <div class="slidebg" style="background-image: url(images/hotel_home/Campsite-Daytime-Travel-Beans-Unique-Places-To-Stay.jpg);"></div>
+                        </li>
+                        <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;">
+                            <div class="slidebg" style="background-image: url(images/hotel_home/Travel-Beans-Hotels-Collections-Boutique-Hotels.jpg);"></div>
+                        </li>
+						<li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;">
+                            <div class="slidebg" style="background-image: url(images/hotel_home/cabins-travel-beans-book-now.jpg);"></div>
+                        </li>
+                        <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;">
+                            <div class="slidebg" style="background-image: url(images/hotel_home/Travel-Beans-Hotel-And-Accomodations.jpg);"></div>
+                        </li>
+                        <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;">
+                            <div class="slidebg" style="background-image: url(images/hotel_home/Travel-Beans-Hotel-Collection-Capmsite.jpg);"></div>
+                        </li>
+                        <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;">
+                            <div class="slidebg" style="background-image: url(images/hotel_home/Hotels-In-India-Travel-Beans.jpg);"></div>
+                        </li>
+                    </ul>
+                </div>
+				
+				
+                <div class="container">
+                    <div class="table-wrapper full-width">
+                        <div class="table-cell">
+                            <div class="heading box">
+                                <h1 class="title">#TB Hotels</h1>
+                                <h3 class="sub-title"><font color="white">We Have More Than Just Hotels Explore More Unique Places !</font></h3>
+                            </div>
+                            <div class="search-box" style="margin-bottom:0px;">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-8 form-group" onmouseover="myFunction(event)" onmouseout="clearCoor()">
+                                            
+                                            <input type="text" class="input-text full-width" ng-keyup="[search() , show()]" ng-model="hotel.search" placeholder="Where Do You Wanna Visit ? .... ">
+                                        
+                                        </div>
+                                        
+                                            
+                                            <div class="col-sm-4 form-group">
+                                                <button type="submit" class="button btn-medium full-width uppercase sky-blue1 animated" data-animation-type="tada" ng-click="getHotel()">Search Now</button>
+                                            </div>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row col-md-8" id="demo" style="margin-left:10px; top:-19px; z-index:999"  onmouseover="myFunction(event)" onmouseout="clearCoor()">
+                                <div class="col-sm-12" style="position: relative; z-index: 99;"> 
+                                    <div style="max-height:100px; text-align: left;
+                                    margin: 0;
+                                    box-sizing: border-box;
+                                    z-index: 99;
+                                    width: 96%;
+                                    padding: 0;
+                                    position: absolute;">
+                                <table class="table table-hover " style="background-color:white">
+
+                                        <tbody>
+                                          <tr ng-repeat="city in cities | limitTo:3">
+                                            <td ng-click="result([[city]],'city')">[[city]]</td>
+
+                                          </tr>
+                                          <tr ng-repeat="name in names | limitTo:3">
+                                            <td ng-click="result([[name]],'name')">[[name]]</td>
+
+                                          </tr>
+                                          <tr ng-if="resp">
+                                              <td>No result found</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    </div>
+                                </div>
+                            <div class="text-center" style="margin-top:40px;">
+                                <a href="#collections" class="button btn-medium yellow uppercase animated" data-animation-type="bounceInDown">View All Collections</a>
+                                &nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+			</div>
+			
+            
+        </section>
+
+
+        <section>
+            <div class="section" style="background-color:#f5f5f5">
+                <div class="container">
+
+                        <h2>Travelers Choice of Hotels</h2>
+                        <div class="image-carousel style2 flexslider" data-animation="slide" data-item-width="270" data-item-margin="30">
+                            
+                        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                            <ul class="slides image-box hotel listing-style1" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-300px, 0px, 0px);">
+                                <li ng-repeat="hotel in hotels" style="width: 270px; float: left; display: block;">
+                                    <article class="box" style="min-height: 220px;">
+                                        <figure>
+                                            <a href="#" ng-click="showDetail(hotel.id)" class=""><img style="height:150px"  alt="" src="http://[[hotel.images[0].image_url]]"></a>
+                                        </figure>
+                                        <div class="details">
+                                            <!-- <span class="price">
+                                                <small>avg/night</small>
+                                                ₹[[hotel.deals[0].price]]
+                                            </span> -->
+                                            <a ng-click="showDetail(hotel.id)"><h4 class="box-title">[[hotel.name]]<small>[[hotel.city]]</small></h4></a>
+                                            <!-- <div class="feedback">
+                                                <div data-placement="bottom" data-toggle="tooltip" class="five-stars-container" title="" data-original-title="4 stars"><span style="width: 80%;" class="five-stars"></span></div>
+                                                <span class="review">270 reviews</span>
+                                            </div> -->
+                                            
+                                            <!-- <div class="action">
+                                                <a class="button btn-small" href="[[hotel.deals[0].hotel_url]]">SELECT</a>
+                                                <a class="button btn-small yellow popup-map" href="http://www.soaptheme.net/html/travelo/hotel-index.html#" data-box="48.856614, 2.352222">VIEW ON MAP</a>
+                                            </div> -->
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                                
+                                    <ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li>
+                                        <li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav">
+                                            <li><a class="flex-prev" href="#">Previous</a></li>
+                                            <li><a class="flex-next" href="#">Next</a></li></ul>
+                        </div>
+
+
+                    
+	
+	
+	
+                  
+                      
+                    
+                    <!-- <h2>Travelling Products</h2>
+                    <div class="block image-carousel style2 flexslider" data-animation="slide" data-item-width="270" data-item-margin="30">
+                        
+                    <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides image-box listing-style2" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-300px, 0px, 0px);">
+                        <li style="width: 270px; float: left; display: block;">
+                            <article class="box">
+                                <figure>
+                                    <a href="" class="hover-effect popup-gallery"><img src="/images/Products/Buy-Travel-Luggage-Travel-Beans-Hotel-Home.png" alt="" width="270" height="160" draggable="false"></a>
+                                </figure>
+                                <div class="details">
+                                    <h4 class="box-title">Travel Luggage</h4>
+                                    <label class="price-wrapper">
+                                       Starting @ <span class="price-per-unit">₹3999<span>
+                                    </label>
+                                </div>
+                            </article>
+                        </li>
+                        
+                        </ul></div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="http://www.soaptheme.net/html/travelo/hotel-index.html#">Previous</a></li><li><a class="flex-next" href="http://www.soaptheme.net/html/travelo/hotel-index.html#">Next</a></li></ul>
+                    </div> -->
+
+
+                    <div id="collections" class="block">
+                        <h1>Not Just Hotels , Travel Square is About More ! <a href="#collections" class="active">#Collections</a></h1>
+                        <p>To Make Your Vacations Best , We Have a Collection of The Most Awesome and Unique Places to Experience .</p>
+                        <div class="row image-box style4">
+                            <div class="col-sm-4" ng-repeat="collection in collections">
+                                <article class="box">
+                                    <figure>
+                                        <a class="hover-effect" href="#" title="">
+                                        <img src="/[[collection.image]]" alt="" width="370" height="172"></a>
+                                    </figure>
+                                    <div class="details">
+                                        <h4 class="box-title">[[collection.collection_name]]</h4>
+                                        <a href="#" class="goto-detail"></a>
+                                    </div>
+                                </article>
+                            </div>
+                          
+                        </div>
+                    </div>
+                        
+                        </div>
+                        
+                </div>
+                {% include '/hotel/components/footer.html' %}
+            
+            </section>
+	</div>
+	
+        
+        </section>  
+
+        
+    </div>
+    
+    <!-- <script>
+     document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+      });
+    </script> -->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="/js/modernizr.2.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.1.10.4.min.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js.download"></script>
+    <script type="text/javascript" src="/js/jquery.noconflict.js.download"></script>
+    <script type="text/javascript" src="/js/modernizr.2.7.1.min.js.download"></script>
+    <script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js.download"></script>
+    <script type="text/javascript" src="/js/jquery.placeholder.js.download"></script>
+    <script type="text/javascript" src="/js/jquery-ui.1.10.4.min.js.download"></script>
+
+
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="/js/bootstrap.js.download"></script>
+
+    <!-- Flex Slider -->
+    <script type="text/javascript" src="/js/jquery.flexslider-min.js.download"></script>
+    
+    <!-- parallax -->
+    <script type="text/javascript" src="/js/jquery.stellar.min.js.download"></script>
+    
+    <!-- waypoint -->
+    <script type="text/javascript" src="/js/waypoints.min.js.download"></script>
+
+    <!-- load page Javascript -->
+    <script type="text/javascript" src="/js/theme-scripts.js.download"></script>
+    <script type="text/javascript" src="/js/scripts.js.download"></script>
+    
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    
+    <!-- load revolution slider scripts -->
+    <script type="text/javascript" src="/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.themepunch.revolution.min.js"></script>
+    
+    <!-- load BXSlider scripts -->
+    <script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+    
+    <!-- load FlexSlider scripts -->
+    <script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
+    
+    <!-- Google Map Api -->
+    <script type="text/javascript" src="/js/js"></script>
+    <script type="text/javascript" src="/js/gmap3.min.js"></script>
+    
+    <!-- parallax -->
+    <script type="text/javascript" src="/js/jquery.stellar.min.js"></script>
+    
+    <!-- waypoint -->
+    <script type="text/javascript" src="/js/waypoints.min.js"></script>
+
+    <!-- load page Javascript -->
+    <script type="text/javascript" src="/js/theme-scripts.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+    <!-- for bottom to top scroller -->
+    <script type="text/javascript" src="/js/top-scroller.js"></script>
+
+    
+    <script type="text/javascript">
+        tjq("#slideshow .flexslider").flexslider({
+            animation: "fade",
+            controlNav: false,
+            animationLoop: true,
+            directionNav: false,
+            slideshow: true,
+            slideshowSpeed: 5000
+        });
+    </script>
+    <script type="text/javascript">
+        tjq(document).ready(function() {
+            tjq('.revolution-slider').revolution(
+            {
+                sliderType:"standard",
+	sliderLayout:"auto",
+	dottedOverlay:"none",
+	delay:9000,
+	navigation: {
+	keyboardNavigation:"off",
+	keyboard_direction: "horizontal",
+	mouseScrollNavigation:"off",
+	mouseScrollReverse:"default",
+	onHoverStop:"on",
+	touch:{
+	touchenabled:"on",
+	swipe_threshold: 75,
+	swipe_min_touches: 1,
+	swipe_direction: "horizontal",
+	drag_block_vertical: false
+	}
+	,
+	arrows: {
+	style:"default",
+	enable:true,
+	hide_onmobile:false,
+	hide_onleave:false,
+	tmp:'',
+	left: {
+	h_align:"left",
+	v_align:"center",
+	h_offset:20,
+	v_offset:0
+	},
+	right: {
+	h_align:"right",
+	v_align:"center",
+	h_offset:20,
+	v_offset:0
+	}
+	}
+	},
+	visibilityLevels:[1240,1024,778,480],
+	gridwidth:1200,
+	gridheight:646,
+	lazyType:"none",
+	shadow:0,
+	spinner:"spinner4",
+	stopLoop:"off",
+	stopAfterLoops:-1,
+	stopAtSlide:-1,
+	shuffle:"off",
+	autoHeight:"off",
+	hideThumbsOnMobile:"off",
+	hideSliderAtLimit:0,
+	hideCaptionAtLimit:0,
+	hideAllCaptionAtLilmit:0,
+	debugMode:false,
+	fallbacks: {
+	simplifyAll:"off",
+	nextSlideOnWindowFocus:"off",
+	disableFocusListener:false,
+	}
+            });
+        });
+    </script>
+  <script type="text/javascript">
+    tjq("#slideshow .flexslider").flexslider({
+        animation: "fade",
+        controlNav: false,
+        animationLoop: true,
+        directionNav: false,
+        slideshow: true,
+        slideshowSpeed: 5000
+    });
+</script>
+
+<button onclick="topFunction()" id="upBtn" title="Go to top">
+    <i class="fa fa-chevron-up"></i>
+</button>
+
+</div>
+</body>
+</html>
+{% endblock%}

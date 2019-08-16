@@ -1,0 +1,1 @@
+import b2c_app.view.render

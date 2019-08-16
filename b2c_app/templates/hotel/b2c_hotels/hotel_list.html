@@ -1,0 +1,411 @@
+{% extends '/hotel/components/header.html' %} {% block controller%}staylistController{% endblock %} {% block
+    content%}
+        <div class="page-title-container">
+            <div class="container">
+                <div class="page-title pull-left">
+                    <h2 class="entry-title">Hotel Search Results</h2>
+                </div>
+                <ul class="breadcrumbs pull-right">
+                    <li><a href="#">HOME</a></li>
+                    <li class="active">Hotel Search Results</li>
+                </ul>
+            </div>
+        </div>
+        <section id="content">
+            <div class="container">
+                <div id="main">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-3">
+                            <div class="toggle-container filters-container">
+                                <div class="panel style1 arrow-right">
+                                        <button class="btn-medium icon-check uppercase full-width" ng-click="hotel = {  rating : null ,
+                                            star :  null,
+                                            price_start : null,
+                                            price_end : null,
+                                            page: 1}">Clear filter</button> 
+                                </div> 
+                                <!-- <div class="panel style1 arrow-right">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#modify-search-panel" class="collapsed" aria-expanded="false">Modify Search</a>
+                                        </h4>
+                                        <div id="modify-search-panel" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-content">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>check in</label>
+                                                            <input type="date" ng-model="hotel.check_in" placeholder="mm/dd/yy">                                                  
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>check out</label>
+                                                            <input type="date" ng-model="hotel.check_out" ng-change="checkErr()" placeholder="mm/dd/yy">
+                                                    </div>
+                                                    <span style="color:red">[[errMessage]]</span>
+                                                    <br>
+                                                    <button class="btn-medium icon-check uppercase full-width" ng-click="getHotelweek()">search again</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                </div> -->
+
+                                <div class="panel style1 arrow-right">
+
+                                        
+
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#price-filter" class="collapsed">Price</a>
+                                    </h4>
+                                    <div id="price-filter" class="panel-collapse collapse">
+                                        <div class="panel-content">
+
+                                            <div class="form-group">
+                                                <div >
+                                                        <label>Max Price:</label>
+                                                        <input type="range" min="[[min]]" max="[[max]]" value="[[max]]" ng-model="hotel.price_end" >
+                                                        <p>Value: <span>[[hotel.price_end]]</span></p>
+                                             
+                                                </div>    
+                                            </div>
+                                            <br>
+                                            <button class="btn-medium icon-check uppercase full-width" ng-click="getHotelsData()">search again</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel style1 arrow-right">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#rating-filter" class="collapsed">User Rating</a>
+                                    </h4>
+                                    <div id="rating-filter" class="panel-collapse collapse filters-container">
+                                        <div class="panel-content">
+                                            <div class="form-group">
+                                                <input id="rating1" type="radio" name="rating" value="9" ng-click="getHotelsData()" ng-model="hotel.rating"/>
+                                                <label class="label success">9+</label>
+                                                <br>
+                                                <input id="rating2" type="radio" name="rating" value="8" ng-click="getHotelsData()" ng-model="hotel.rating"/>
+                                                <label class="label info">8+</label>
+                                                <br>
+                                                <input id="rating3" type="radio" name="rating" value="7" ng-click="getHotelsData()" ng-model="hotel.rating"/>
+                                                <label class="label warning">7+</label>
+                                                <br>
+                                                <input id="rating4" type="radio" name="rating" value="5" ng-click="getHotelsData()" ng-model="hotel.rating"/>
+                                                <label class="label danger">5+</label>
+                                                <br>
+                                                <input id="rating5" type="radio" name="rating" value="0" ng-click="getHotelsData()" ng-model="hotel.rating"/>
+                                                <label class="label other">0+</label>
+                                            </div>
+                                            <br>
+                                            <!-- <button class="btn-medium icon-check uppercase full-width" ng-click="getHotelsData()">search again</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel style1 arrow-right">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#star-filter" class="collapsed">Star</a>
+                                    </h4>
+                                    <div id="star-filter" class="panel-collapse collapse filters-container">
+                                        <div class="panel-content">
+                                            <div class="form-group">
+                                                <label>1<i class="fa fa-star" aria-hidden="true"></i>
+                                                    <input id="star1" type="radio" name="star" value="1" ng-click="getHotelsData()" ng-model="hotel.star"/>
+                                                </label>
+                                                <br>
+                                                <label>3<i class="fa fa-star" aria-hidden="true"></i>
+                                                    <input id="star2" type="radio" name="star" value="3" ng-click="getHotelsData()" ng-model="hotel.star"/>
+                                                </label>
+                                                <br>
+                                                <label>5<i class="fa fa-star" aria-hidden="true"></i>
+                                                    <input id="star3" type="radio" name="star" value="5" ng-click="getHotelsData()" ng-model="hotel.star"/>
+                                                </label>
+                                                <br>
+                                                <label>7<i class="fa fa-star" aria-hidden="true"></i>
+                                                    <input id="star4" type="radio" name="star" value="7" ng-click="getHotelsData()" ng-model="hotel.star"/>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-md-9">     
+                            <div class="sort-by-section clearfix">
+                                <h4 class="sort-by-title block-sm">Search results by:</h4>
+                                <p><input class="input-text full-width" type="text"  placeholder="search by keyword"></p>
+                            </div>
+                            <div class="hotel-list listing-style3 hotel" ng-repeat="hotel in hotelData">
+                                <div ng-repeat="room in hotel.rooms">
+                                    <div>
+                                        <article class="box" ng-if="room.lowest_price_room">
+                                            <figure class="col-sm-5 col-md-4">
+                                                <img  style="height:160px;" src="http://[[hotel.images[0].image_url]]" alt="Travel Square">
+                                                <!-- Modal -->
+                                                <!-- <div class="modal fade" id="[[hotel.id]]" role="dialog">
+                                                    <div class="modal-dialog"> -->
+                                                        <!-- Modal content-->
+                                                        <!-- <div class="modal-content">
+                                                        
+
+                                                            <div id="photos-tab" class="tab-pane fade active in">
+                                                                <div class="photo-gallery style1" data-animation="slide" data-sync="#photos-tab .image-carousel">
+                                                                    
+                                                                <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                                                    <ul class="slides slider" style="width: 4000%; transition-duration: 0.6s;">
+                                                                        <li class="mySlides" ng-repeat="image in hotel.images"  style=" float: left; display: block;" ><img class="img" src="http://[[image.image_url]]" alt="" draggable="false"></li>
+                                                                    </ul>
+                                                                </div> -->
+                                                                    <!-- <ol class="flex-control-nav flex-control-paging">
+                                                                        <li><a class="">1</a></li>
+                                                                        <li><a class="">2</a></li>
+                                                                        <li><a class="flex-active">3</a></li>
+                                                                    </ol><ul class="flex-direction-nav">
+                                                                        <li><a class="flex-prev" href="#">Previous</a></li>
+                                                                        <li><a class="flex-next" href="#">Next</a></li>
+                                                                    </ul> -->
+                                                                <!-- </div>
+                                                                <div class="image-carousel style1" data-animation="slide" data-item-width="70" data-item-margin="10" data-sync="#photos-tab .photo-gallery">
+                                                                    
+                                                                <div  class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides " style="display:block; width: 3000%; ">
+                                                                        <li class="demo w3-opacity w3-hover-opacity-off " ng-click="currentDiv($index+1)"  ng-repeat="image in hotel.images"  style=" transition-duration: 0.6s; width: 70px; float: left; display: block; height: 70px; position: relative;"><img  class="img" src="http://[[image.image_url]]" alt="" draggable="false" style="position: absolute; top: 50%; margin-top: -35px; left: 50%; margin-left: -35px;"></li>
+                                                                    </ul>
+                                                                </div> -->
+                        
+                        
+                                                                
+                        
+                        
+                                                                <!-- <ol class="flex-control-nav flex-control-paging">
+                                                                    <li><a class="flex-active">1</a></li>
+                                                                    <li><a class="">2</a></li>
+                                                                </ol> -->
+                                                                <!-- <ul class="flex-direction-nav">
+                                                                    <li><a class="flex-prev" >Previous</a></li>
+                                                                    <li><a class="flex-next"  >Next</a></li>
+                                                                </ul>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    
+                                                    </div>
+                                                </div> -->
+                                            </figure>
+                                                
+                                            <div class="details col-sm-7 col-md-8">
+                                                <div>
+                                                    <div>
+                                                        <h4 class="box-title">[[hotel.name]]<small>
+                                                            
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i> 
+                                                        <span id="latitude" style="cursor:pointer" ng-click="openMap(hotel)" data-toggle="modal" data-target="#mapModal" data-latitude = "[[hotel.latitude]]"  data-longitude ='[[hotel.longitude]]'>[[hotel.city]]</span></small></h4>
+                                                            
+                                                        <div class="modal fade" id="mapModal" role="dialog">
+                                                            <div class="modal-dialog">
+                                                            
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">                                                          
+                                                                    <div class="modal-body">
+                                                                            <i class="fa fa-map-marker"></i>
+                                                                            <span id="longitude" data-latitude = "[[mapData.latitude]]"  data-longitude ='[[mapData.longitude]]'>[[mapData.city]]</span>
+                                                                            
+                                                                            <div id="map" style="height:354px">
+                                        
+                                                                                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg-3eaCM5LOJXDjY6cMBASoAnREc4-R58&callback=myMap"></script> 
+                                                
+                                                                            </div>
+        
+                                                                        <p>Some text in the modal.</p>
+                                                                    </div>
+                                                            </div>
+                                                            
+                                                            </div>
+                                                        </div>
+                                                            <div class="amenities">
+                                                                <i class="fa fa-wifi" ng-if="hotel.amenities.wifi_in_lobby" aria-hidden="true"></i>
+                                                                <i class="fa fa-car" ng-if="hotel.amenities.parking" aria-hidden="true"></i>
+                                                                <i class="fa fa-heart" ng-if="hotel.amenities.couple_friendly" aria-hidden="true"></i>
+                                                                <i class="fa fa-dumbbell" ng-if="hotel.amenities.gym" aria-hidden="true"></i>
+                                                                <i class="fa fa-swimming-pool" ng-if="hotel.amenities.outdoor_swimming_pool" aria-hidden="true"></i>
+                                                            </div>
+                                                    </div>
+
+                                                        <div>
+                                                            <div ng-if="[[hotel.star]]==1">
+                                                                <span ng-repeat="i in [1]" style="width:10px; height:10px"><img style="width:12px" src="/images/star.png"></span>
+                                                            </div> 
+                                                            <div ng-if="[[hotel.star]]==2">
+                                                                <span ng-repeat="i in [1,2]" style="width:10px; height:10px"><img style="width:12px" src="/images/star.png"></span>
+                                                            </div>
+                                                            <div ng-if="[[hotel.star]]==3">
+                                                                <span ng-repeat="i in [1,2,3]" style="width:10px; height:10px"><img style="width:12px" src="/images/star.png"></span>
+                                                            </div>
+                                                            <div ng-if="[[hotel.star]]==4">
+                                                                <span ng-repeat="i in [1,2,3,4]" style="width:10px; height:10px"><img style="width:12px" src="/images/star.png"></span>
+                                                            </div>
+                                                            <div ng-if="[[hotel.star]]==5">
+                                                                <span ng-repeat="i in [1,2,3,4,5]" style="width:10px; height:10px"><img style="width:12px" src="/images/star.png"></span>
+                                                            </div>
+                                                            <div ng-if="[[hotel.star]]==6">
+                                                                <span ng-repeat="i in [1,2,3,4,5,6]" style="width:10px; height:10px"><img style="width:12px" src="/images/star.png"></span>
+                                                            </div>
+                                                            <div ng-if="[[hotel.star]]==7">
+                                                                <span ng-repeat="i in [1,2,3,4,5,6,7]" style="width:10px; height:10px"><img style="width:12px" src="/images/star.png"></span>
+                                                            </div>
+                                                        </div>
+
+                                                </div>
+                                                
+                                                <div >
+                                                    <div >
+                                                        <span class="price"><a href="[[room.deals[0].hotel_url | orderBy : 'price']]"><small>[[room.deals[0].website.website]]</small>₹[[room.deals[0].price]]</a></span><center>
+                                                        <a class="button btn-small green" ng-click="showDetail(hotel.id)">View Detail</a>
+                                                        <a class="button btn-small yellow" data-toggle="collapse" data-target="#[[hotel.id]]m">More Deals</a>                                            
+                                                    </div>
+                                                    <div class="amenities" ng-repeat="price in room.deals | orderBy : 'price' | unique:'website.website'| limitTo:2 " style="float:left; width:120px">
+                                                            <span class="price" style="text-align: center"><a href="[[price.hotel_url]]"><small>[[price.website.website]]</small>₹[[price.price]]</a></span>
+                                                    </div>    
+                                                </div>
+                                               
+                                            </div>
+
+                                                <div id="[[hotel.id]]m" class="collapse" style="transition: 2s">
+                                                    
+                                                        
+
+                                                    <table class="table table-hover" style="border-top: 0px solid #ddd">
+                                                        
+                                                        <tbody ng-repeat="rm in hotel.rooms">
+                                                        <tr ng-repeat="deal in rm.deals | limitTo:lim ">
+                                                            <td class="col-md-3"><img src="[[deal.website.logo_image]]"></td>
+                                                            <!-- <td ng-if="[[rm.room_type]]==1">Premium</td>
+                                                            <td ng-if="[[rm.room_type]]==2">Executive</td>
+                                                            <td ng-if="[[rm.room_type]]==3">Sweet</td>
+                                                            <td ng-if="[[rm.room_type]]==4">Super_Deluxe</td> -->
+                                                            <td class="col-md-5">[[rm.other_room_type]]</td>
+                                                            <td class="col-md-2"><a class="button btn-mini orange" ng-click="showDetail(deal.room)">View Detail</a></td>
+                                                            <td class="price col-md-2"><a href="[[deal.hotel_url]]">₹[[deal.price]]</a></td>
+                                                        </tr>
+                                                        
+                                                        <!-- <tr>
+                                                            <td><a href="" class="uppercase full-width button btn-large" ng-click='loadmoredeals()'>load more deals</a></td>
+                                                        </tr> -->
+                                                        </tbody>
+                                                    
+                                                    </table>
+
+                                                    
+                                                    
+                                                    </div>
+                                            </article>
+                                    </div>    
+                                </div>
+                                
+                            </div>
+
+
+                          
+
+
+
+                                <div class="hotel-list listing-style3 hotel">
+                                        <article class="box" ng-if="result">
+                                            
+                                            <h3>No Result found</h3>
+                                            
+
+                                            
+
+                                        </article>
+                                    
+                                </div>
+
+                                <a href="" class="uppercase full-width button btn-large" ng-click='loadMoreHotelsData()'>load more listing</a>
+                        
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include '/hotel/components/footer.html' %}
+
+        </section>
+        </div>
+    </div>
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.noconflict.js"></script>
+    <script type="text/javascript" src="/js/modernizr.2.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.1.10.4.min.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+    
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    
+    <!-- load revolution slider scripts -->
+    <script type="text/javascript" src="/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.themepunch.revolution.min.js"></script>
+    
+    <!-- load BXSlider scripts -->
+    <script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+    
+    <!-- load FlexSlider scripts -->
+    <script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
+    
+    <!-- Google Map Api -->
+    <script type="text/javascript" src="/js/js"></script>
+    <script type="text/javascript" src="/js/gmap3.min.js"></script>
+    
+    <!-- parallax -->
+    <script type="text/javascript" src="/js/jquery.stellar.min.js"></script>
+    
+    <!-- waypoint -->
+    <script type="text/javascript" src="/js/waypoints.min.js"></script>
+
+    <!-- load page Javascript -->
+    <script type="text/javascript" src="/js/theme-scripts.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/js/top-scroller.js"></script>
+    <button onclick="topFunction()" id="upBtn" title="Go to top" style="display: block;">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+
+    
+    <script type="text/javascript">
+        // tjq(document).ready(function() {
+        //     tjq("#price-range").slider({
+        //         range: true,
+        //         min: 0,
+        //         max: 1000,
+        //         values: [ 100, 800 ],
+        //         slide: function( event, ui ) {
+        //             tjq(".min-price-label").html( "$" + ui.values[ 0 ]);
+        //             tjq(".max-price-label").html( "$" + ui.values[ 1 ]);
+        //         }
+        //     });
+        //     tjq(".min-price-label").html( "$" + tjq("#price-range").slider( "values", 0 ));
+        //     tjq(".max-price-label").html( "$" + tjq("#price-range").slider( "values", 1 ));
+
+            // tjq("#rating").slider({
+            //     range: "min",
+            //     value: 40,
+            //     min: 0,
+            //     max: 50,
+            //     slide: function( event, ui ) {
+
+            //     }
+            // });
+        // });
+    </script>
+
+</body>
+</html>
+{% endblock %}
