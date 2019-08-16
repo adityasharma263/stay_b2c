@@ -17,6 +17,10 @@ app.secret_key = "partner data session secret key"
 #======================== HOTEL B2C============================
 
 
+@app.route('/', methods=['GET'])
+def hotel():
+    return render_template('hotel/b2c_hotels/hotel.html')
+
 @app.route('/hotel', methods=['GET'])
 def hotel():
     return render_template('hotel/b2c_hotels/hotel.html')
