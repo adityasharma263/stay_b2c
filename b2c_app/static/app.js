@@ -143,7 +143,7 @@ angular.module('comparetravel', ['angular.filter'])
                 $scope.message = 'enter valid location ';
             }
 
-            window.open($scope.location + "/list?" + searchKey + "=" + $scope.hotel.search, '_self');
+            window.open($scope.location + "hotel/list?" + searchKey + "=" + $scope.hotel.search, '_self');
             console.log("$scope.hotel.city", $scope.hotel.city)
         }
 
