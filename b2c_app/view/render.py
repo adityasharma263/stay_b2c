@@ -10,6 +10,8 @@ import base64
 import binascii
 import datetime
 import json
+
+
 app.secret_key = "partner data session secret key"
 
 
@@ -18,8 +20,9 @@ app.secret_key = "partner data session secret key"
 
 
 @app.route('/', methods=['GET'])
-def hotel():
+def home():
     return render_template('hotel/b2c_hotels/hotel.html')
+
 
 @app.route('/hotel', methods=['GET'])
 def hotel():
@@ -31,11 +34,10 @@ def hotel_list():
     return render_template('hotel/b2c_hotels/hotel_list.html')
 
 
-@app.route('/hotel/<hotel_id>', methods=['GET'])
-def hotel_detail(hotel_id):
-    print(hotel_id, "vgddf")
+@app.route('/hotel/<string:slug>', methods=['GET'])
+def hotel_detail(slug):
     hotel_api_url = str(app.config["API_URL"]) + "/api/v1/hotel"
-    hotel_data = requests.get(url=hotel_api_url, params={"id": hotel_id}).json()
+    hotel_data = requests.get(url=hotel_api_url, params={"slug": slug}).json()
     if len(hotel_data["result"]["hotel"]) > 0:
         hotel_data = hotel_data["result"]["hotel"][0]
     else:
@@ -98,101 +100,49 @@ def hotel_detail(hotel_id):
 #         return redirect(str(app.config["PARTNER_DOMAIN_URL"]) + '/login.php', code=302)
 #
 #
-# #================= B2B hotels ==========================
-#
-#
-# @app.route('/', methods=['GET'])
-# def business():
-#     return render_template('hotel/b2b_hotels/index.html')
-#
-#
-# @app.route('/hotel', methods=['GET'])
-# def business_hotel():
-#     if request.cookies.get("hash"):
-#         php_url = str(app.config["PARTNER_API_URL"]) + "/api/v1/partner.php"
-#         AES.key_size = 128
-#         iv = "DEFGHTABCIESPQXO"
-#         key = "pqrstuvwxyz$abcdefghijAB12345678"
-#         crypt_object = AES.new(key=key, mode=AES.MODE_CBC, IV=iv)
-#         decoded = binascii.unhexlify(str(request.cookies["hash"]))  # your ecrypted and encoded text goes here
-#         decrypted = crypt_object.decrypt(decoded)
-#         unpad = lambda s: s[:-ord(s[len(s) - 1:])]
-#         mobile = unpad(decrypted).decode('utf-8')
-#         partner_data = requests.get(url=php_url, params={"mobile": mobile}).json()
-#         if partner_data.get("error"):
-#             return redirect(str(app.config["PARTNER_DOMAIN_URL"]) + '/login.php', code=302)
-#         else:
-#             session["partner_data"] = partner_data
-#         return render_template('hotel/b2b_hotels/hotel.html', name=partner_data["name"])
-#     else:
-#         return redirect(str(app.config["PARTNER_DOMAIN_URL"]) + '/login.php', code=302)
-#
-#
-# @app.route('/hotel/list', methods=['GET'])
-# def business_hotel_list():
-#     if 'partner_data' in session:
-#         partner_data = session["partner_data"]
-#         args = request.args.to_dict()
-#         hotel_api_url = str(app.config["API_URL"]) + "/api/v1/hotel"
-#         hotel_data = requests.get(url=hotel_api_url, params=args).json()
-#         if len(hotel_data["result"]["hotel"]) > 0:
-#             hotel_data = hotel_data["result"]["hotel"]
-#         else:
-#             hotel_data = []
-#         return render_template('hotel/b2b_hotels/hotel_list.html', hotel_data=hotel_data, name=partner_data["name"])
-#     else:
-#         return redirect(str(app.config["PARTNER_DOMAIN_URL"]) + '/login.php', code=302)
-#
-#
-#
-# @app.route('/hotel/<hotel_id>', methods=['GET'])
-# def business_hotel_detail(hotel_id):
-#     if 'partner_data' in session:
-#         partner_data = session["partner_data"]
-#         hotel_api_url = str(app.config["API_URL"]) + "/api/v1/hotel"
-#         hotel_data = requests.get(url=hotel_api_url, params={"id": hotel_id}).json()
-#         if len(hotel_data["result"]["hotel"]) > 0:
-#             hotel_data = hotel_data["result"]["hotel"][0]
-#         else:
-#             hotel_data = {}
-#         return render_template('hotel/b2b_hotels/hotel_detail.html', hotel_data=hotel_data, name=partner_data["name"])
-#     else:
-#         return redirect(str(app.config["PARTNER_DOMAIN_URL"]) + '/login.php', code=302)
-
 
 #================= Destination Pages ==========================
+
 
 @app.route('/destinations/maldives')
 def destinations_maldive():
     return render_template('/hotel/b2b_hotels/destinations/maldives.html')
 
+
 @app.route('/destinations/bali')
 def destinations_bali():
     return render_template('/hotel/b2b_hotels/destinations/bali.html')
+
 
 @app.route('/destinations/bangkok')
 def destinations_bangkok():
     return render_template('/hotel/b2b_hotels/destinations/bangkok.html')
 
+
 @app.route('/destinations/dubai')
 def destinations_dubai():
     return render_template('/hotel/b2b_hotels/destinations/dubai.html')
+
 
 @app.route('/destinations/goa')
 def destinations_goa():
     return render_template('/hotel/b2b_hotels/destinations/goa.html')
 
+
 @app.route('/destinations/krabi')
 def destinations_krabi():
     return render_template('/hotel/b2b_hotels/destinations/krabi.html')
+
 
 @app.route('/destinations/ladakh')
 def destinations_ladakh():
     return render_template('/hotel/b2b_hotels/destinations/ladakh.html')
 
+
 @app.route('/destinations/london')
 def destinations_london():
     return render_template('/hotel/b2b_hotels/destinations/london.html')
+
 
 @app.route('/destinations/newyork')
 def destinations_newyork():
@@ -239,7 +189,6 @@ def business_partner_care():
 @app.route('/press-release', methods=['GET'])
 def business_press_release():
     return render_template('hotel/footer_pages/press-release.html')
-
 
 
 #================= collection hotels ==========================

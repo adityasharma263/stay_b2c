@@ -239,11 +239,6 @@ angular.module('comparetravel', ['angular.filter'])
         $scope.max = 200000;
         var api_url = 'http://139.59.51.174';
 
-
-        $scope.showBusinessDetail = function (hotel_id) {
-            window.open('/business/hotel/' + hotel_id, '_self');
-            console.log(hotel_id);
-
         }
 
         $scope.bookingPage = function (room_id) {
