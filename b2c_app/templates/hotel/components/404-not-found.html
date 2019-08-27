@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Page Title -->
+    <title>404 Page Not Found | The Travel Square</title>
+    
+   
+	
+	
+	<link rel="shortcut icon" href="" type="image/x-icon">
+    
+	<script>
+
+$(document).ready(function() {
+  // Gets the video src from the data-src on each button
+
+  var $videoSrc;
+  $(".video-btn").click(function() {
+    $videoSrc = $(this).data("src");
+  });
+  console.log($videoSrc);
+
+  // when the modal is opened autoplay it
+  $("#myModal").on("shown.bs.modal", function(e) {
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    $("#video").attr(
+      "src",
+      $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+    );
+  });
+
+  // stop playing the youtube video when I close the modal
+  $("#myModal").on("hide.bs.modal", function(e) {
+    // a poor man's stop video
+    $("#video").attr("src", $videoSrc);
+  });
+
+  // document ready
+});
+
+
+</script>
+	
+	<style>
+body {
+  margin: 2rem;
+}
+
+.modal-dialog {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+</style>
+
+
+	
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="files/bootstrap.min.css">
+    <link rel="stylesheet" href="files/font-awesome.min.css">
+    <link href="files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="files/animate.min.css">
+    
+	
+    <!-- Main Style -->
+    <!--<link id="main-style" rel="stylesheet" href="css/style.css">-->
+    <script type="text/javascript">
+        var mainStyle = "style.css";
+        if (typeof localStorage != "undefined") {
+            var colorSkin = localStorage.getItem("colorSkin");
+            if (colorSkin != null) {
+                mainStyle = "style-" + colorSkin + ".css";
+            }
+        }
+        document.write('<link id="main-style" rel="stylesheet" href="css/' + mainStyle + '">');
+    </script><link id="main-style" rel="stylesheet" href="files/style-light-yellow.css">
+    
+    <!-- Updated Styles -->
+    <link rel="stylesheet" href="files/updates.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="files/custom.css">
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="files/responsive.css">
+</head>
+
+<body>
+    <body class="post-404page" background="images/404-error.jpg">
+            <div id="page-wrapper" class="wrapper-blank">
+        <section id="content">
+            <div class="container">
+                <div id="main">
+                    <center>
+                    <div class="error-message uppercase"><strong><font color="white">Error 404:</strong> Internal Server Error</font></div><br><br>
+                    <div class="error-message-404 center">
+                        <img src="images/are-you-lost-somewhere.png" alt="">
+                    </div>
+                    <a href="http://www.thetravelsquare.in" class="button btn-large sky-blue1">GO BACK TO HOME</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="files/jquery-1.11.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.noconflict.js.download"></script>
+    <script type="text/javascript" src="files/modernizr.2.7.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery-migrate-1.2.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.placeholder.js.download"></script>
+    <script type="text/javascript" src="files/jquery-ui.1.10.4.min.js.download"></script>
+	
+	    
+    <script type="text/javascript" src="js/js"></script>
+    <script type="text/javascript" src="js/gmap3.min.js.download"></script>
+    <script type="text/javascript" src="js/theme-scripts.js.download"></script>
+    
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="files/bootstrap.js.download"></script>
+
+    <!-- Flex Slider -->
+    <script type="text/javascript" src="files/jquery.flexslider-min.js.download"></script>
+    
+    <!-- parallax -->
+    <script type="text/javascript" src="files/jquery.stellar.min.js.download"></script>
+    
+    <!-- waypoint -->
+    <script type="text/javascript" src="files/waypoints.min.js.download"></script>
+
+    <!-- load page Javascript -->
+    <script type="text/javascript" src="files/theme-scripts.js.download"></script>
+    <script type="text/javascript" src="files/scripts.js.download"></script>
+
+
+
+
+
+</body></html>

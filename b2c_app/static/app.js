@@ -35,7 +35,7 @@ angular.module('comparetravel', ['angular.filter'])
 
 
     .controller('stayController', ["$scope", "$http", "$location", function ($scope, $http, $filter, $location) {
-        var api_url = 'http://139.59.51.174';
+        var api_url = {{config.cfg['API_URL']}}
 
         $scope.hotelid = {};// hotel object on the basis of id
         $scope.hotel = {};
@@ -143,7 +143,7 @@ angular.module('comparetravel', ['angular.filter'])
                 $scope.message = 'enter valid location ';
             }
 
-            window.open($scope.location + "/list?" + searchKey + "=" + $scope.hotel.search + '&' + 'ci' + '=' + $scope.hotel.ci + '&' + 'co' + '=' + $scope.hotel.co, '_self');
+            window.open($scope.location + "hotel/list?" + searchKey + "=" + $scope.hotel.search, '_self');
             console.log("$scope.hotel.city", $scope.hotel.city)
         }
 
@@ -237,7 +237,7 @@ angular.module('comparetravel', ['angular.filter'])
         $scope.imagesData = {};
         $scope.min = 0;
         $scope.max = 200000;
-        var api_url = 'http://139.59.51.174';
+        var api_url = {{config.cfg['API_URL']}}
 
         }
 
@@ -938,7 +938,7 @@ angular.module('comparetravel', ['angular.filter'])
         $scope.margin_price = {};
         $scope.price = {};
         $scope.base_price = {};
-        var api_url = 'http://139.59.51.174';
+        var api_url = {{config.cfg['API_URL']}}
 
         $scope.showCreate = function () {
             $scope.hotelDetail = true;
@@ -1330,7 +1330,7 @@ angular.module('comparetravel', ['angular.filter'])
 
 
 
-    .controller('hotelController', ["$scope", "$http", function ($scope, $http, $filter) {
+    .controller('hotelController', ["$scope", "$http", "$filter", function ($scope, $http, $filter) {
         $scope.roomData = {};
         $scope.room = {};
         $scope.id = [];
@@ -1345,7 +1345,7 @@ angular.module('comparetravel', ['angular.filter'])
         $scope.limit = 10;
         $scope.roomPrice = {};
         $scope.deallimit = 1;
-        var api_url = 'http://139.59.51.174';
+        var api_url = {{config.cfg['API_URL']}}
 
         $scope.openGallery = function (data) {
             $scope.imagesData = data;

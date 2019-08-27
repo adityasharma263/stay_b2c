@@ -20,7 +20,7 @@ app.secret_key = "partner data session secret key"
 
 
 @app.route('/', methods=['GET'])
-def home():
+def hotel_home():
     return render_template('hotel/b2c_hotels/hotel.html')
 
 
@@ -106,47 +106,109 @@ def hotel_detail(slug):
 
 @app.route('/destinations/maldives')
 def destinations_maldive():
-    return render_template('/hotel/b2b_hotels/destinations/maldives.html')
+    return render_template('/hotel/b2c_hotels/destinations/maldives.html')
 
 
 @app.route('/destinations/bali')
 def destinations_bali():
-    return render_template('/hotel/b2b_hotels/destinations/bali.html')
+    return render_template('/hotel/b2c_hotels/destinations/bali.html')
 
 
 @app.route('/destinations/bangkok')
 def destinations_bangkok():
-    return render_template('/hotel/b2b_hotels/destinations/bangkok.html')
+    return render_template('/hotel/b2c_hotels/destinations/bangkok.html')
 
 
 @app.route('/destinations/dubai')
 def destinations_dubai():
-    return render_template('/hotel/b2b_hotels/destinations/dubai.html')
+    return render_template('/hotel/b2c_hotels/destinations/dubai.html')
 
 
 @app.route('/destinations/goa')
 def destinations_goa():
-    return render_template('/hotel/b2b_hotels/destinations/goa.html')
+    return render_template('/hotel/b2c_hotels/destinations/goa.html')
 
 
 @app.route('/destinations/krabi')
 def destinations_krabi():
-    return render_template('/hotel/b2b_hotels/destinations/krabi.html')
+    return render_template('/hotel/b2c_hotels/destinations/krabi.html')
 
 
 @app.route('/destinations/ladakh')
 def destinations_ladakh():
-    return render_template('/hotel/b2b_hotels/destinations/ladakh.html')
+    return render_template('/hotel/b2c_hotels/destinations/ladakh.html')
 
 
 @app.route('/destinations/london')
 def destinations_london():
-    return render_template('/hotel/b2b_hotels/destinations/london.html')
+    return render_template('/hotel/b2c_hotels/destinations/london.html')
 
 
-@app.route('/destinations/newyork')
+@app.route('/destinations/new-york')
 def destinations_newyork():
-    return render_template('/hotel/b2b_hotels/destinations/maldives.html')
+    return render_template('/hotel/b2c_hotels/destinations/new-york.html')
+
+@app.route('/destinations/pattaya')
+def destinations_pattaya():
+    return render_template('hotel/b2c_hotels/destinations/pattaya.html')
+
+@app.route('/destinations/singapore')
+def destinations_singapore():
+    return render_template('hotel/b2c_hotels/destinations/singapore.html')
+
+@app.route('/destinations/switzerland')
+def destinations_switzerland():
+    return render_template('hotel/b2c_hotels/destinations/switzerland.html')
+
+
+#================= Experience Pages ==========================
+
+@app.route('/experiences/bali')
+def experiences_bali():
+    return render_template('hotel/b2c_hotels/experiences/bali-rituals-experience-the-travel-square.html')
+
+@app.route('/experiences/dubai')
+def experiences_dubai():
+    return render_template('hotel/b2c_hotels/experiences/dubai-aquarim-and-under-water-zoo-the-travel-square.html')
+
+@app.route('/experiences/bangkok')
+def experiences_bangkok():
+    return render_template('hotel/b2c_hotels/experiences/floating-market-tour-bangkok.html')
+
+@app.route('/experiences/kasol')
+def experiences_kasol():
+    return render_template('hotel/b2c_hotels/experiences/kasol-valley-tour-the-travel-square.html')
+
+@app.route('/experiences/munnar')
+def experiences_munnar():
+    return render_template('hotel/b2c_hotels/experiences/munnar-wildlife-sanctuary-tour-the-travel-square.html')
+
+@app.route('/experiences/phi-phi')
+def experiences_phi_phi():
+    return render_template('hotel/b2c_hotels/experiences/phi-phi-island-tour-experience-the-travel-square.html')
+
+@app.route('/experiences/rishikesh')
+def experiences_rishikesh():
+    return render_template('hotel/b2c_hotels/experiences/rishikesh-rafting-tour-the-travel-square.html')
+
+
+#================= Add on Pages hotels ==========================
+
+@app.route('/travellers/uttrakhand')
+def travellers_uttrakhand():
+    return render_template('hotel/b2c_hotels/travellers/gusts-of-wind-at-uttrakhand-story-the-travel-square.html')
+
+
+@app.route('/travellers/kasol')
+def travellers_kasol():
+    return render_template('hotel/b2c_hotels/travellers/mesmerising-beauty-of-kasol-story-the-travel-square.html')
+
+
+@app.route('/travellers/london')
+def travellers_london():
+    return render_template('hotel/b2c_hotels/travellers/new-girl-in-london-town-story-the-travel-square.html')
+
+
 
 #================= Add on Pages hotels ==========================
 
