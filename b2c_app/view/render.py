@@ -302,7 +302,7 @@ def business_partner_care():
 def business_press_release():
     return render_template('hotel/footer_pages/press-release.html')
 
-@app.route('terms-and-conditions')
+@app.route('/terms-and-conditions')
 def terms_and_conditions():
     return render_template('hotel/footer_pages/terms-and-conditions.html')
 
