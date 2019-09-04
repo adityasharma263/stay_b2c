@@ -302,6 +302,10 @@ def business_partner_care():
 def business_press_release():
     return render_template('hotel/footer_pages/press-release.html')
 
+@app.route('terms-and-conditions')
+def terms_and_conditions():
+    return render_template('hotel/footer_pages/terms-and-conditions.html')
+
 
 
 #================= collection hotels ==========================
@@ -330,6 +334,12 @@ def collection4():
 @app.route('/hotel/collection/campsite-travel-beans', methods=['GET'])
 def collection5():
     return render_template('hotel/collections/campsite.html')   
+
+
+
+################################ Terms And Condition #########################################
+
+
 
 
 
