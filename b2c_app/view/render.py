@@ -306,6 +306,10 @@ def business_press_release():
 def terms_and_conditions():
     return render_template('hotel/footer_pages/terms-and-conditions.html')
 
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('hotel/footer_pages/privacy-policy.html')
+
 
 
 #================= collection hotels ==========================
@@ -334,11 +338,6 @@ def collection4():
 @app.route('/hotel/collection/campsite-travel-beans', methods=['GET'])
 def collection5():
     return render_template('hotel/collections/campsite.html')   
-
-
-
-################################ Terms And Condition #########################################
-
 
 
 
