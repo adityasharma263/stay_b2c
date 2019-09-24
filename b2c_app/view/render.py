@@ -342,3 +342,9 @@ def collection5():
 
 
 
+@app.route('/coming-soon')
+def coming_soon():
+    return render_template('hotel/b2c_hotels/coming-soon.html')  
+
+
+
