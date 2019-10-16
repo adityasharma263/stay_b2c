@@ -347,4 +347,20 @@ def coming_soon():
     return render_template('hotel/b2c_hotels/coming-soon.html')  
 
 
+#---------------------------Packages--------------------------#
 
+@app.route('/packages')
+def packages():
+    return render_template('hotel/b2c_hotels/packages/packages.html')
+
+@app.route('/packages/dubai')
+def packages_dubai():
+    return render_template('hotel/b2c_hotels/packages/TSP101CIA-luxurious-and-leisure-dubai-package.html')
+
+@app.route('/packages/bali')
+def packages_bali():
+    return render_template('hotel/b2c_hotels/packages/TSP102CIL-luxurious-and-leisure-bali-package.html')
+
+@app.route('/packages/goa')
+def packages_goa():
+    return render_template('hotel/b2c_hotels/packages/TSP103CDA-budget-goa-3-nights-package.html')
