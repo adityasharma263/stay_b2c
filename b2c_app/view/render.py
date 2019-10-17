@@ -364,3 +364,7 @@ def packages_bali():
 @app.route('/packages/goa')
 def packages_goa():
     return render_template('hotel/b2c_hotels/packages/TSP103CDA-budget-goa-3-nights-package.html')
+
+@app.route('/packages/phuket')
+def packages_phuket():
+    return render_template('hotel/b2c_hotels/packages/TSP123CIL-Phuket-and-Krabi-Land-Package-5-Nights.html')
