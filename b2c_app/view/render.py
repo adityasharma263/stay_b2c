@@ -353,6 +353,7 @@ def coming_soon():
 def packages():
     return render_template('hotel/b2c_hotels/packages/packages.html')
 
+
 @app.route('/packages/TSP101CIA')
 def packages_dubai():
     return render_template('hotel/b2c_hotels/packages/TSP101CIA-luxurious-and-leisure-dubai-package.html')
