@@ -397,6 +397,6 @@ def packages_andaman():
 
 @app.route('/packages/TSP126CIL')
 def packages_bali2():
-    return render_template('hotel/b2c_hotels/packages/TSP126CIL-luxurious-and-leisure-bali-package')
+    return render_template('hotel/b2c_hotels/packages/TSP126CIL-luxurious-and-leisure-bali-package.html')
 
     
