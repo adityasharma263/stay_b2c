@@ -399,4 +399,14 @@ def packages_andaman():
 def packages_bali2():
     return render_template('hotel/b2c_hotels/packages/TSP126CIL-luxurious-and-leisure-bali-package.html')
 
+@app.route('/packages/TSP106CIL')
+def packages_phuket2():
+    return render_template('hotel/b2c_hotels/packages/TSP106CIL-Phuket-and-Krabi-Honeymoon-Package-4-Nights.html')
+@app.route('/packages/TSP132CIA')
+def packages_dubai2():
+    return render_template('hotel/b2c_hotels/packages/TSP132CIA-dubai-3-nights-adventure-package.html')
+
+@app.route('/pakcages/TSP136CIL')
+def packages_bali3():
+    return render_template('hotel/b2c_hotels/packages/TSP136CIL-luxurious-and-leisure-bali-package.html')
     
