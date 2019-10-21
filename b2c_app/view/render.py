@@ -410,3 +410,8 @@ def packages_dubai2():
 def packages_bali3():
     return render_template('hotel/b2c_hotels/packages/TSP136CIL-luxurious-and-leisure-bali-package.html')
     
+
+@app.route('/packages/TSP134CIL')
+def packages_dubai3():
+    return render_template('hotel/b2c_hotels/packages/TSP134CIL-dubai-4-nights-package.html')
+    

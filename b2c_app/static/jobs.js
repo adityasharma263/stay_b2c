@@ -42,21 +42,13 @@ var data = {
 
 //Call the services
 
-$http.post('/api/users/post', JSON.stringify(data)).then(function (response) {
+
+
+$http.post('0.0.0.0:8000/api/v1/cab_enquiry/job_create.php', JSON.stringify(data)).then(function (response) {
 
 if (response.data)
 
 $scope.msg = "Post Data Submitted Successfully!";
-
-}, function (response) {
-
-$scope.msg = "Service not Exists";
-
-$scope.statusval = response.status;
-
-$scope.statustext = response.statusText;
-
-$scope.headers = response.headers();
 
 });
 
