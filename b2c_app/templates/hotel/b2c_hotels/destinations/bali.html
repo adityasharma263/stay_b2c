@@ -1,16 +1,97 @@
 <!DOCTYPE html>
 
-<html class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet" href="http://thetravelsquare.in/files/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
-</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">#dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8}#dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}#dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}#dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}#dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}#dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
-</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
-</style>
+<html
+    class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="http://thetravelsquare.in/files/css">
+    <style type="text/css">
+        .gm-style .gm-style-cc span,
+        .gm-style .gm-style-cc a,
+        .gm-style .gm-style-mtc div {
+            font-size: 10px
+        }
+    </style>
+    <style type="text/css">
+        @media print {
+
+            .gm-style .gmnoprint,
+            .gmnoprint {
+                display: none
+            }
+        }
+
+        @media screen {
+
+            .gm-style .gmnoscreen,
+            .gmnoscreen {
+                display: none
+            }
+        }
+    </style>
+    <style type="text/css">
+        #dismissButton {
+            background-color: #fff;
+            border: 1px solid #dadce0;
+            color: #1a73e8
+        }
+
+        #dismissButton:hover {
+            background-color: rgba(66, 133, 244, 0.04);
+            border: 1px solid #d2e3fc
+        }
+
+        #dismissButton:focus {
+            background-color: rgba(66, 133, 244, 0.12);
+            border: 1px solid #d2e3fc;
+            outline: 0
+        }
+
+        #dismissButton:hover:focus {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd
+        }
+
+        #dismissButton:active {
+            background-color: rgba(66, 133, 244, 0.16);
+            border: 1px solid #d2e2fd;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)
+        }
+
+        #dismissButton:disabled {
+            background-color: #fff;
+            border: 1px solid #f1f3f4;
+            color: #3c4043
+        }
+    </style>
+    <style type="text/css">
+        .gm-style-pbc {
+            transition: opacity ease-in-out;
+            background-color: rgba(0, 0, 0, 0.45);
+            text-align: center
+        }
+
+        .gm-style-pbt {
+            font-size: 22px;
+            color: white;
+            font-family: Roboto, Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+    </style>
     <!-- Page Title -->
     <title>Bali | The Travel Square</title>
-    
+
     <!-- Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Travel Beans">
+    <meta name="author" content="Travel Beans">
     <meta name="description" content="">
     <meta name="distribution" content="global">
     <meta name="country" content="india">
@@ -23,78 +104,79 @@
     <meta name="publisher" content="The Travel Square">
 
     <meta property="og:title" content="The Travel Square">
-    <meta property="og:description" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta property="og:description"
+        content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
     <meta property="og:image" content="">
-  
-    <meta name="twitter:card" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
-  
-    <meta name="keywords" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+
+    <meta name="twitter:card"
+        content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+
+    <meta name="keywords"
+        content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
     <meta name="format-detection" content="7428558566">
-	
-    
-	<link rel="shortcut icon" href="" type="image/x-icon">
-    
+
+
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
     <!-- Theme Styles -->
     <link rel="stylesheet" href="http://thetravelsquare.in/files/bootstrap.min.css">
     <link rel="stylesheet" href="http://thetravelsquare.in/files/font-awesome.min.css">
     <link href="http://thetravelsquare.in/files/css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://thetravelsquare.in/files/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 
 
-    
+
+
     <!-- Main Style -->
     <!--<link id="main-style" rel="stylesheet" href="css/style.css">-->
-    <script type="text/javascript">
-        var mainStyle = "style.css";
-        if (typeof localStorage != "undefined") {
-            var colorSkin = localStorage.getItem("colorSkin");
-            if (colorSkin != null) {
-                mainStyle = "style-" + colorSkin + ".css";
-            }
-        }
-        document.write('<link id="main-style" rel="stylesheet" href="css/' + mainStyle + '">');
-    </script><link id="main-style" rel="stylesheet" href="http://thetravelsquare.in/files/style-light-yellow.css">
     
+    <link id="main-style" rel="stylesheet" href="/files/style-light-yellow.css">
+
     <!-- Updated Styles -->
     <link rel="stylesheet" href="http://thetravelsquare.in/files/updates.css">
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="http://thetravelsquare.in/files/custom.css">
-    
+
     <!-- Responsive Styles -->
     <link rel="stylesheet" href="http://thetravelsquare.in/files/responsive.css">
-    
-  
-	<script type="text/javascript" charset="UTF-8" src="http://thetravelsquare.in/files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://thetravelsquare.in/files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://thetravelsquare.in/files/map.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://thetravelsquare.in/files/marker.js.download"></script><style type="text/css">.gm-style {
-        font: 400 11px Roboto, Arial, sans-serif;
-        text-decoration: none;
-      }
-      .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="http://thetravelsquare.in/files/onion.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://thetravelsquare.in/files/controls.js.download"></script><script type="text/javascript" charset="UTF-8" src="http://thetravelsquare.in/files/stats.js.download"></script></head>
-	
-	
-	<body>
-    
-	<div id="page-wrapper">
-       
-	   <header id="header" class="navbar-static-top">
+    <style type="text/css">
+        .gm-style {
+            font: 400 11px Roboto, Arial, sans-serif;
+            text-decoration: none;
+        }
+
+        .gm-style img {
+            max-width: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="page-wrapper">
+
+        <header id="header" class="navbar-static-top">
             <div class="topnav hidden-xs">
                 <div class="container">
                     <ul class="quick-menu pull-left">
                         <li><a href="http://business.thetravelsqaure.in/partner-care"><b>Partner Care</b></a></li>
                     </ul>
                     <ul class="quick-menu pull-right">
-                        <li><a href="http://business.thetravelsquare.in/partner-login.php" class="button white btn-small" style="height: 30px; font-size: 1em;">
-						<font color="black">PARTNER SIGN UP / LOGIN</font></a></li>
+                        <li><a href="http://business.thetravelsquare.in/partner-login.php"
+                                class="button white btn-small" style="height: 30px; font-size: 1em;">
+                                <font color="black">PARTNER SIGN UP / LOGIN</font>
+                            </a></li>
                         <li><a href="http://business.thetravelsquare.in/booking-cart"><b><big>Cart</big></b></a></li>
 
                     </ul>
                 </div>
             </div>
-            
+
             <div class="main-header">
-                
+
                 <a href="" data-toggle="collapse" class="mobile-menu-toggle">
                     Menu
                 </a>
@@ -102,114 +184,121 @@
                 <div class="container">
                     <h1 class="navbar-brand" style="height: 0%; ">
                         <a href="http://business.thetravelsqaure.in" title="The Travel Sqaure">
-                            <img src="http://thetravelsquare.in//images/the-travel-square-india-logo.png" alt="The Travel Sqaure">
+                            <img src="http://thetravelsquare.in/images/the-travel-square-india-logo.png"
+                                alt="The Travel Sqaure">
                         </a>
                     </h1><br>
-                    
+
                     <nav id="main-menu" role="navigation">
                         <ul class="menu">
-							<li class="menu-item-has-children active">
+                            <li class="menu-item-has-children active">
                                 <a href="http://business.thetravelsquare.in/index"><b><big>Holidays</big></b></a>
-                                
+
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="http://business.thetravelsquare.in/hotels"><b>Hotels</b></a>
-                                
+
                             </li>
-							<li class="menu-item-has-children">
+                            <li class="menu-item-has-children">
                                 <a href="http://business.thetravelsquare.in/flights"><b>Flights</b></a>
-                                
+
                             </li>
-							<li class="menu-item-has-children">
+                            <li class="menu-item-has-children">
                                 <a href="http://business.thetravelsquare.in/experiences"><b>Experiences</b></a>
-                                
+
                             </li>
-                           <li class="menu-item-has-children">
+                            <li class="menu-item-has-children">
                                 <a href="http://business.thetravelsquare.in/cabs"><b>Cabs</b></a>
-                                
+
                             </li>
-							<li class="menu-item-has-children">
+                            <li class="menu-item-has-children">
                                 <a href="http://business.thetravelsquare.in/visa"><b>Visa</b></a>
-                                
+
                             </li>
-							<li class="menu-item-has-children">
+                            <li class="menu-item-has-children">
                                 <a href="http://business.thetravelsquare.in/visa"><b>Buses</b></a>
-                                
+
                             </li>
-                           
-                            
-                            
+
+
+
                         </ul>
                     </nav>
                 </div>
-                
+
                 <nav id="mobile-menu-01" class="mobile-menu collapse">
                     <ul id="mobile-primary-menu" class="menu">
                         <li class="menu-item-has-children active">
-                                <a href="http://business.thetravelsquare.in/index"><b><big>Holidays</big></b></a>
-                                
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="http://business.thetravelsquare.in/hotels"><b>Hotels</b></a>
-                                
-                            </li>
-							<li class="menu-item-has-children">
-                                <a href="http://business.thetravelsquare.in/flights"><b>Flights</b></a>
-                                
-                            </li>
-							<li class="menu-item-has-children">
-                                <a href="http://business.thetravelsquare.in/experiences"><b>Experiences</b></a>
-                                
-                            </li>
-                           <li class="menu-item-has-children">
-                                <a href="http://business.thetravelsquare.in/cabs"><b>Cabs</b></a>
-                                
-                            </li>
-							<li class="menu-item-has-children">
-                                <a href="http://business.thetravelsquare.in/visa"><b>Visa</b></a>
-                                
-                            </li>
-							<li class="menu-item-has-children">
-                                <a href="http://business.thetravelsquare.in/visa"><b>Buses</b></a>
-                                
-                            </li>
-                           
+                            <a href="http://business.thetravelsquare.in/index"><b><big>Holidays</big></b></a>
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="http://business.thetravelsquare.in/hotels"><b>Hotels</b></a>
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="http://business.thetravelsquare.in/flights"><b>Flights</b></a>
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="http://business.thetravelsquare.in/experiences"><b>Experiences</b></a>
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="http://business.thetravelsquare.in/cabs"><b>Cabs</b></a>
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="http://business.thetravelsquare.in/visa"><b>Visa</b></a>
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="http://business.thetravelsquare.in/visa"><b>Buses</b></a>
+
+                        </li>
+
                     </ul>
-                    
+
                     <ul class="mobile-topnav container">
                         <center><br>
-						<button class="button full-width white uppercase animated" data-animation-type="tada"><b><big><font color="black">Login / Sign Up</font></big></b></button>
-                        
+                            <button class="button full-width white uppercase animated"
+                                data-animation-type="tada"><b><big>
+                                        <font color="black">Login / Sign Up</font>
+                                    </big></b></button>
+
                     </ul>
                     <br>
                 </nav>
-				
-				
+
+
             </div>
-          
-            
+
+
         </header>
 
 
-         <section id="content" class="tour">
+        <section id="content" class="tour">
             <div id="slideshow" class="slideshow-bg full-screen" style="height: 616px;">
                 <div class="flexslider">
                     <ul class="slides">
-                        
-						<li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;">
-                            <div class="slidebg" style="background-image: url(http://thetravelsquare.in/images/city/bali-packages-the-travel-square-b2b.jpg);"></div>
+
+                        <li class="flex-active-slide"
+                            style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;">
+                            <div class="slidebg"
+                                style="background-image: url(http://thetravelsquare.in/images/city/bali-packages-the-travel-square-b2b.jpg);">
+                            </div>
                         </li>
                     </ul>
                 </div>
                 <div class="container">
                     <div class="table-wrapper full-width">
                         <div class="table-cell">
-                            
+
                             <div class="heading box">
                                 <h1 class="title">Bali</h1>
                             </div>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -220,157 +309,223 @@
                         <h1>Most Popular Bali Tour Packages</h1>
                         <p>Crafted With perfection by The Travel Square Team , B2B Bali Packages</p>
                     </div>
-                    
-					<div class="block">
-                    
-                    <div class="row image-box style5">
-                        <div class="col-sm-4">
-                            <article class="box">
-                                <figure>
-                                    <a href="#" title=""><img src="http://thetravelsquare.in/images/city/bali-luxury-package-the-travel-square.jpg" alt="" width="370" height="161" /></a>
-                                    <figcaption>
-                                        <h3 class="caption-title">Adventure Package</h3>
-                                        <span>3 Nights 4 Days</span>
-                                    </figcaption>
-                                </figure>
-                                <div class="details">
-                                    <div class="detail">
-                                        <span class="price"><center><small>Starting From</small></center>INR 19,000</span>
-                                        <h4 class="box-title uppercase"><a href="#">Luxury Bali</a></h4>
+
+                    <div class="block">
+
+                        <div class="row image-box style5">
+                            <div class="col-sm-4">
+                                <article class="box">
+                                    <figure>
+                                        <a href="#" title=""><img
+                                                src="http://thetravelsquare.in/images/city/bali-luxury-package-the-travel-square.jpg"
+                                                alt="" width="370" height="161" /></a>
+                                        <figcaption>
+                                            <h3 class="caption-title">Adventure Package</h3>
+                                            <span>3 Nights 4 Days</span>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="details">
+                                        <div class="detail">
+                                            <span class="price">
+                                                <center><small>Starting From</small></center>INR 19,000
+                                            </span>
+                                            <h4 class="box-title uppercase"><a href="#">Luxury Bali</a></h4>
+                                        </div>
+
                                     </div>
-                                    
-                                </div>
-                                
-                            </article>
-                        </div>
-                        <div class="col-sm-4">
-                            <article class="box">
-                                <figure>
-                                    <a href="#" title=""><img src="http://thetravelsquare.in//images/city/bali-packages-the-travel-square.jpg" alt="" width="370" height="161" /></a>
-                                    <figcaption>
-                                        <h3 class="caption-title">Exotic Bali Tour</h3>
-                                        <span>4 Nights 5 Days</span>
-                                    </figcaption>
-                                </figure>
-                                <div class="details">
-                                    <div class="detail">
-                                        <span class="price"><center><small>Starting From</small></center>INR 24,000</span>
-                                        <h4 class="box-title uppercase"><a href="#">Exotic Bali Tour</a></h4>
+
+                                </article>
+                            </div>
+                            <div class="col-sm-4">
+                                <article class="box">
+                                    <figure>
+                                        <a href="#" title=""><img
+                                                src="http://thetravelsquare.in/images/city/bali-packages-the-travel-square.jpg"
+                                                alt="" width="370" height="161" /></a>
+                                        <figcaption>
+                                            <h3 class="caption-title">Exotic Bali Tour</h3>
+                                            <span>4 Nights 5 Days</span>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="details">
+                                        <div class="detail">
+                                            <span class="price">
+                                                <center><small>Starting From</small></center>INR 24,000
+                                            </span>
+                                            <h4 class="box-title uppercase"><a href="#">Exotic Bali Tour</a></h4>
+                                        </div>
+
                                     </div>
-                                    
-                                </div>
-                                
-                            </article>
-                        </div>
-                        <div class="col-sm-4">
-                            <article class="box">
-                                <figure>
-                                    <a href="#" title=""><img src="http://thetravelsquare.in//images/city/bali-adventure-package-the-travel-square.jfif" alt="" width="370" height="161" /></a>
-                                    <figcaption>
-                                        <h3 class="caption-title">Adventure in Bali</h3>
-                                        <span>4 Nights 5 Days</span>
-                                    </figcaption>
-                                </figure>
-                                <div class="details">
-                                    <div class="detail">
-                                        <span class="price"><center><small>Starting From</small></center>INR 22,000</span>
-                                        <h4 class="box-title uppercase"><a href="#">Adventure in Bali</a></h4>
+
+                                </article>
+                            </div>
+                            <div class="col-sm-4">
+                                <article class="box">
+                                    <figure>
+                                        <a href="#" title=""><img
+                                                src="http://thetravelsquare.in/images/city/bali-adventure-package-the-travel-square.jfif"
+                                                alt="" width="370" height="161" /></a>
+                                        <figcaption>
+                                            <h3 class="caption-title">Adventure in Bali</h3>
+                                            <span>4 Nights 5 Days</span>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="details">
+                                        <div class="detail">
+                                            <span class="price">
+                                                <center><small>Starting From</small></center>INR 22,000
+                                            </span>
+                                            <h4 class="box-title uppercase"><a href="#">Adventure in Bali</a></h4>
+                                        </div>
+
                                     </div>
-                                    
-                                </div>
-                                
-                            </article>
+
+                                </article>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-					
+
                 </div>
             </div>
-            
+
         </section>
-        
-     <footer id="footer" class="style5">
+
+        <footer id="footer" class="style5">
             <div class="footer-wrapper">
                 <div class="container">
                     <div class="row">
-                       
-						
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <h2>The Travel Square</h2>
                             <ul class="discover triangle hover row">
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">About Company</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/jobs.html">Jobs & Carreers</a></li>
-								<li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">Corporate Offices</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">Legal Information</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/press.html">Press Release</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">T & C</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/customer-care.html">Customer Care</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">Privacy Policies</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/partner-Care.html">Partner Help</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/faq.html">FAQ's</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/site-map.html">Site Map</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/contact-Us.html">Contact Us</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">About Company</a>
+                                </li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/jobs">Jobs & Carreers</a>
+                                </li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">Corporate Office</a>
+                                </li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal">Legal Info</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/press-release">Press
+                                        Release</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/terms-and-conditions">T &
+                                        C</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/customer-care">Customer
+                                        Care</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/privacy-policy">Privacy
+                                        Policies</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/partner-care">Partner
+                                        Help</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/faq">FAQ's</a></li>
+                                <li class="col-xs-6"><a href="http://www.business.thetravelsquare.in/site-map">Site
+                                        Map</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/contact-us">Contact Us</a>
+                                </li>
                             </ul>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <h2>More of us !</h2>
                             <ul class="discover triangle hover row">
-                                <li class="col-xs-"><a href="http://www.thetravelsquare.in/pro">Travel Square Business</a></li>
-                                <li class="col-xs-"><a href="http://www.signatureclubmembership.com/">Signature Club</a></li>
-                                <li class="col-xs-"><a href="http://www.cruisader.com/">Cruisader</a></li>
-                                <li class="col-xs-"><a href="http://www.cruisingindia.in/">Cruising India</a></li>
-                                <li class="col-xs-"><a href="http://www.happenings.ind.in/">Happenings</a></li>
-                                <li class="col-xs-"><a href="http://www.shoppist.in/">Shoppist</a></li>
-                                
+                                <li class="col-xs-6"><a href="http://www.signatureclubmembership.com/"
+                                        target="_blank">Signature Club</a></li><br><br>
+                                <li class="col-xs-6"><a href="http://www.cruisader.com/" target="_blank">Cruisader</a>
+                                </li><br><br>
+                                <li class="col-xs-6"><a href="http://www.cruisingindia.in/" target="_blank">Cruising
+                                        India</a></li><br><br>
+                                <li class="col-xs-6"><a href="http://www.happenings.ind.in/"
+                                        target="_blank">Happenings</a></li><br><br>
+                                <li class="col-xs-6"><a href="http://www.shoppist.in/" target="_blank">Shoppist</a></li>
+                                <br><br>
+
                             </ul>
-                        </div><hr>
+                        </div>
+                        <hr>
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <h2>About Us</h2>
-                            <p>The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . </p>
+                            <b>
+                                <p>The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains
+                                    Inspiring the World to Travel In Style With Luxury at Affordable Pricing . </p>
+                            </b>
                             <br>
                             <ul class="social-icons clearfix">
-                                <li class="twitter"><a title="Join Us on Twitter" href="https://twitter.com/travelsquare_" data-toggle="tooltip"  Target="_blank" data-original-title="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li class="facebook"><a title="Join Us on Facebook" href="https://www.facebook.com/thetravelsquare/" Target="_blank" data-toggle="tooltip" data-original-title="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li class="linkedin"><a title="Join Us on Linked In" href="https://www.linkedin.com/company/thetravelsquare" Target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <li class="vimeo"><a title="Join Us on Instagram" href="https://www.instagram.com/The_Travel_Square/" data-toggle="tooltip" Target="_blank" data-original-title="vimeo"><i class="fa fa-instagram"></i></a></li>
-                                <li class="dribble"><a title="Join Us on Youtube" href="https://www.youtube.com/channel/UCqi_w8JlO-1VEmVUItvr8og" Target="_blank" data-toggle="tooltip" data-original-title="dribble"><i class="fa fa-youtube"></i></a></li>
- 
-                            </ul><br>
-                        </div><center>
-						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-						<br>
-                            <img src="http://thetravelsquare.in//images/the-travel-square-logo-200x200.png">
-                        </div></center>
+                                <li class="twitter"><a title="Join Us on Twitter"
+                                        href="https://twitter.com/travelsquareb2b" rel="nofollow" data-toggle="tooltip"
+                                        Target="_blank" data-original-title="twitter"><i
+                                            class="soap-icon-twitter"></i></a></li>
+                                <li class="facebook"><a title="Join Us on Facebook"
+                                        href="https://www.facebook.com/thetravelsquareb2b/" rel="nofollow"
+                                        Target="_blank" data-toggle="tooltip" data-original-title="facebook"><i
+                                            class="soap-icon-facebook"></i></a></li>
+                                <li class="linkedin"><a title="Join Us on Linked In"
+                                        href="https://www.linkedin.com/company/thetravelsquareb2b" rel="nofollow"
+                                        Target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i
+                                            class="soap-icon-linkedin"></i></a></li>
+                                <li class="vimeo"><a title="Join Us on Instagram"
+                                        href="https://www.instagram.com/thetravelsquareb2b/" data-toggle="tooltip"
+                                        rel="nofollow" Target="_blank" data-original-title="vimeo"><i
+                                            class="soap-icon-instagram"></i></a></li>
+                                <li class="dribble"><a title="Join Us on Youtube"
+                                        href="https://www.youtube.com/channel/UCqi_w8JlO-1VEmVUItvr8og" rel="nofollow"
+                                        Target="_blank" data-toggle="tooltip" data-original-title="dribble"><i
+                                            class="soap-icon-youtube"></i></a></li>
+
+                            </ul><br><br>
+
+                        </div>
+                        <center>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <br>
+                                <img src="http://thetravelsquare.in/images/the-travel-square-logo-200x200.png"
+                                    alt="the travel square b2b" title="the travel square b2b">
+                                <br><br>
+                                <div class="row">
+                                    <a rel="nofollow" href="https://play.google.com/store?hl=en"><img
+                                            src="http://thetravelsquare.in/images/the-travel-square-google-playstore.png"
+                                            alt="the travel square b2b" title="the travel square b2b" height="35"
+                                            width="100">
+                                        <a rel="nofollow" href="https://www.apple.com/in/"><img
+                                                src="http://thetravelsquare.in/images/the-travel-square-apple-store-ios.png"
+                                                alt="the travel square b2b" title="the travel square b2b" height="35"
+                                                width="100"></div>
+                            </div>
+                        </center>
                     </div>
-					<center><br><br><br>
-					<a href="https://play.google.com/store?hl=en"><img src="http://thetravelsquare.in//images/the-travel-square-google-playstore.png" height="60" width="300">
-					<a href="https://www.apple.com/in/"><img src="http://thetravelsquare.in//images/the-travel-square-apple-store-ios.png" height="60" width="300">
-					</center><br>
+
                 </div>
-				
-			<center>
-			<a href="https://www.paypal.com/in/home"><img src="http://thetravelsquare.in//images/the-travel-square-visa-debit-credit-card.png" height="70" width="350">
-			<a href="https://www.payumoney.com/"><img src="http://thetravelsquare.in//images/the-travel-square-payu-paypal.png" height="70" width="300">
-			</center><br>
+
+                <center>
+                    <a rel="nofollow" href="https://www.paypal.com/in/home"><img alt="the travel square b2b"
+                            title="the travel square b2b"
+                            src="http://thetravelsquare.in/images/the-travel-square-visa-debit-credit-card.png"
+                            height="70" width="350">
+                        <a rel="nofollow" href="https://www.payumoney.com/"><img alt="the travel square b2b"
+                                title="the travel square b2b"
+                                src="http://thetravelsquare.in/images/the-travel-square-payu-paypal.png" height="70"
+                                width="300">
+                </center><br>
             </div>
-			
-			
+
+
             <div class="bottom gray-area">
                 <div class="container">
-                    
+
                     <div class="pull-right">
-                        <a id="back-to-top" href="" class="animated bounce" data-animation-type="bounce" style="animation-duration: 1s; visibility: visible;"><i class="fa fa-arrow-up circle"></i></a>
+                        <a id="back-to-top" href="" class="animated bounce" data-animation-type="bounce"
+                            style="animation-duration: 1s; visibility: visible;"><i
+                                class="soap-icon-longarrow-up circle"></i></a>
                     </div>
                     <div class="copyright pull-right">
-                        <p>© 2019 Bali | The Travel Square</p>
+                        <p>Bali | The Travel Square</p>
                     </div>
                 </div>
             </div>
         </footer>
-	  
+
     </div>
-   
+
+    </div>
+
 
 
     <!-- Javascript -->
@@ -380,17 +535,13 @@
     <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-migrate-1.2.1.min.js.download"></script>
     <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.placeholder.js.download"></script>
     <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-ui.1.10.4.min.js.download"></script>
-    
+
     <!-- Twitter Bootstrap -->
     <script type="text/javascript" src="http://thetravelsquare.in/files/bootstrap.js.download"></script>
 
-    <!-- Google Map Api -->
-    <script type="text/javascript" src="http://thetravelsquare.in/files/js"></script>
-    <script type="text/javascript" src="http://thetravelsquare.in/files/gmap3.min.js.download"></script>
-    
     <!-- parallax -->
     <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.stellar.min.js.download"></script>
-    
+
     <!-- waypoint -->
     <script type="text/javascript" src="http://thetravelsquare.in/files/waypoints.min.js.download"></script>
 
@@ -398,26 +549,8 @@
     <script type="text/javascript" src="http://thetravelsquare.in/files/theme-scripts.js.download"></script>
     <script type="text/javascript" src="http://thetravelsquare.in/files/scripts.js.download"></script>
 
-    <script type="text/javascript">
-        tjq(".travelo-google-map").gmap3({
-            map: {
-                options: {
-                    center: [48.85661, 2.35222],
-                    zoom: 12
-                }
-            },
-            marker:{
-                values: [
-                    {latLng:[48.85661, 2.35222], data:"Paris"}
-
-                ],
-                options: {
-                    draggable: false
-                },
-            }
-        });
-    </script>
 
 
+</body>
 
-</body></html>
+</html>
