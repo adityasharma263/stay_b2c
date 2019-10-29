@@ -1,7 +1,7 @@
 pycrypto==2.6
 alembic==0.9.2
 xlrd==1.1.0
-Flask==0.12
+Flask==1.0
 Flask-API==0.7.1
 Flask-Script==2.0.6
 flask-marshmallow==0.8.0
