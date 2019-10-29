@@ -303,6 +303,10 @@ def packages():
     return render_template('hotel/b2c_hotels/packages/packages.html')
 
 
+@app.route('/packages/<string:package>', methods=['GET'])
+def dynamic_packages(package):
+    return render_template('hotel/b2c_hotels/packages/'+str(package)+'.html')
+
 @app.route('/packages/TSP101CIA')
 def packages_dubai():
     return render_template('hotel/b2c_hotels/packages/TSP101CIA-luxurious-and-leisure-dubai-package.html')
@@ -363,4 +367,4 @@ def packages_bali3():
 @app.route('/packages/TSP134CIL')
 def packages_dubai3():
     return render_template('hotel/b2c_hotels/packages/TSP134CIL-dubai-4-nights-package.html')
-    
+
