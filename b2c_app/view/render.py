@@ -252,6 +252,14 @@ def business_partner_care():
 def business_press_release():
     return render_template('hotel/footer_pages/press-release.html')
 
+@app.route('/terms-and-conditions')
+def terms_and_conditions():
+    return render_template('hotel/footer_pages/terms-and-conditions.html')
+
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('hotel/footer_pages/privacy-policy.html')
+
 
 #================= collection hotels ==========================
 
@@ -282,3 +290,77 @@ def collection5():
 
 
 
+
+@app.route('/coming-soon')
+def coming_soon():
+    return render_template('hotel/b2c_hotels/coming-soon.html')  
+
+
+#---------------------------Packages--------------------------#
+
+@app.route('/packages')
+def packages():
+    return render_template('hotel/b2c_hotels/packages/packages.html')
+
+
+@app.route('/packages/TSP101CIA')
+def packages_dubai():
+    return render_template('hotel/b2c_hotels/packages/TSP101CIA-luxurious-and-leisure-dubai-package.html')
+
+@app.route('/packages/TSP102CIL')
+def packages_bali():
+    return render_template('hotel/b2c_hotels/packages/TSP102CIL-luxurious-and-leisure-bali-package.html')
+
+@app.route('/packages/TSP103CDA')
+def packages_goa():
+    return render_template('hotel/b2c_hotels/packages/TSP103CDA-budget-goa-3-nights-package.html')
+
+@app.route('/packages/TSP123CIL')
+def packages_phuket():
+    return render_template('hotel/b2c_hotels/packages/TSP123CIL-Phuket-and-Krabi-Land-Package-5-Nights.html')
+
+@app.route('/packages/TSP107CIL')
+def packages_bangkok():
+    return render_template('hotel/b2c_hotels/packages/TSP107CIL-Bangkok & Pattaya 4N.html')
+
+
+@app.route('/packages/TSP108CIL')
+def packages_krabi():
+    return render_template('hotel/b2c_hotels/packages/TSP108CIL Krabi 3N.html')
+
+
+@app.route('/packages/TSP109CIL')
+def packages_malaysia():
+    return render_template('hotel/b2c_hotels/packages/TSP109CIL Malaysia 5N.html')
+
+
+@app.route('/packages/TSP110CIL')
+def packages_singapore():
+    return render_template('hotel/b2c_hotels/packages/TSP110CIL Singapore 3N.html')
+
+
+@app.route('/packages/TSP111CIL')
+def packages_andaman():
+    return render_template('hotel/b2c_hotels/packages/TSP111CIL Andaman 4N.html')
+
+
+@app.route('/packages/TSP126CIL')
+def packages_bali2():
+    return render_template('hotel/b2c_hotels/packages/TSP126CIL-luxurious-and-leisure-bali-package.html')
+
+@app.route('/packages/TSP106CIL')
+def packages_phuket2():
+    return render_template('hotel/b2c_hotels/packages/TSP106CIL-Phuket-and-Krabi-Honeymoon-Package-4-Nights.html')
+@app.route('/packages/TSP132CIA')
+def packages_dubai2():
+    return render_template('hotel/b2c_hotels/packages/TSP132CIA-dubai-3-nights-adventure-package.html')
+
+@app.route('/packages/TSP136CIL')
+def packages_bali3():
+    return render_template('hotel/b2c_hotels/packages/TSP136CIL-luxurious-and-leisure-bali-package.html')
+    
+
+@app.route('/packages/TSP134CIL')
+def packages_dubai3():
+    return render_template('hotel/b2c_hotels/packages/TSP134CIL-dubai-4-nights-package.html')
+    

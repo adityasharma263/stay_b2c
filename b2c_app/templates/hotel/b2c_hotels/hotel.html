@@ -1,9 +1,289 @@
-{% extends '/hotel/components/header.html' %} {% block controller%}stayController{% endblock %} {% block
-    content%}
-    <script src="/app.js"></script>
-            <div class="search-box-wrapper">
-               
+<!DOCTYPE html>
 
+<html  ngclass=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Page Title -->
+    <title>The Travel Square | India's Largest Travel Community</title>
+    
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="The Travel Square">
+    <meta name="description" content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta name="distribution" content="global">
+    <meta name="country" content="india">
+    <meta name="copyright" content="The Travel Square">
+    <meta name="revisit-after" content="1 hour">
+    <meta name="designer" content="The Travel Square">
+    <meta name="language" content="english">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="publisher" content="The Travel Square">
+
+    <meta property="og:title" content="The Travel Square">
+    <meta property="og:description" content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    
+	<meta property="og:image" content="http://www.thetravelsquare/the-travel-square-logo-thumbnail.png">
+	<meta property="og:url" content="http://business.thetravelsquare.in/">
+  
+    <meta name="twitter:card" content="India's Largest B2B Travel Network . The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+  
+    <meta name="keywords" content="b2b travel, the travel square, b2b hotels, b2b flights, partner login b2b, b2b travel portal, b2b travel agencies, b2b dmc, hotel dmc's, b2b travel agency, b2b travel group, best b2b travel agency, India's Largest B2B Travel Network">
+    <meta name="format-detection" content="7428558566">
+    
+	<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: anton;
+  font-size: 17px;
+}
+
+.overlaycity {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.overlaycity img {vertical-align: middle;}
+
+.overlaycity .picturecity {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.2); 
+  color: #f1f1f1;
+  width: 120%;
+  padding: 70px;
+  left: -25px;
+}
+</style>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 17px;
+}
+
+.overlay {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.overlay img {vertical-align: middle;}
+
+.overlay .picture {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+</style>
+	
+	<style>
+	.responsive {
+	width: 100%;
+	max-height: 200%;
+	height: auto;
+	}
+	</style>
+	
+	<link rel="shortcut icon" href="" type="image/x-icon">
+    
+	<script>
+
+$(document).ready(function() {
+  // Gets the video src from the data-src on each button
+
+  var $videoSrc;
+  $(".video-btn").click(function() {
+    $videoSrc = $(this).data("src");
+  });
+  console.log($videoSrc);
+
+  // when the modal is opened autoplay it
+  $("#myModal").on("shown.bs.modal", function(e) {
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    $("#video").attr(
+      "src",
+      $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+    );
+  });
+
+  // stop playing the youtube video when I close the modal
+  $("#myModal").on("hide.bs.modal", function(e) {
+    // a poor man's stop video
+    $("#video").attr("src", $videoSrc);
+  });
+
+  // document ready
+});
+
+
+</script>
+	
+	<style>
+body {
+  margin: 2rem;
+}
+
+.modal-dialog {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+</style>
+
+
+	
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="files/bootstrap.min.css">
+    <link rel="stylesheet" href="files/font-awesome.min.css">
+    <link rel="stylesheet" href="files/animate.min.css">
+    
+	
+    <!-- Main Style -->
+   <link id="main-style" rel="stylesheet" href="files/style-light-yellow.css">
+    
+    <!-- Updated Styles -->
+    <link rel="stylesheet" href="files/updates.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="files/custom.css">
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="files/responsive.css">
+	<script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</head>
+
+<body ng-app="comparetravel">
+    <div  ng-controller="stayController" id="page-wrapper">
+       
+	           <header id="header" class="navbar-static-top">
+            <div class="topnav hidden-xs">
+                <div class="container">
+                    <ul class="quick-menu pull-left">
+						 
+						
+						
+                    </ul>
+                    <ul class="quick-menu pull-right">
+						<li><a href="" data-toggle="modal" data-target="#customerlogin" class="button white btn-small" style="height: 30px; font-size: 1em;">
+						<img src="images/login-icon.png" height="18" width="20">&nbsp; <font color="black">LOGIN</font></a></li>
+						<li><a href="" data-toggle="modal" data-src="" data-target="#offer">Claim Offers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="main-header">
+                
+                <a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
+                    Menu
+                </a>
+
+                <div class="container">
+                    <h1 class="navbar-brand" style="height: 0%; ">
+                        <a href="http://www.thetravelsquare.com" title="The Travel square">
+                            <img src="images/the-travel-square-india-logo.png" alt="The Travel square">
+                        </a>
+                    </h1><br>
+                    
+                    <nav id="main-menu" role="navigation">
+                        <ul class="menu">
+                            <li class="menu-item-has-children">
+                                <a href="http://thetravelsquare.in/packages">Holidays</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://thetravelsquare.in/hotel">Hotels</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/coming-soon">Flights</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/coming-soon">Experiences</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/coming-soon">Cabs</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/coming-soon">Visa</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/coming-soon">Buses</a>
+                            </li>
+                           
+                        </ul>
+                    </nav>
+                </div>
+                
+                <nav id="mobile-menu-01" class="mobile-menu collapse">
+                    <ul id="mobile-primary-menu" class="menu">
+                        <li class="menu-item-has-children active">
+                                <a href="http://www.thetravelsquare.in/packages"><b>Holidays</b></a>
+                                
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://www.thetravelsquare.in/hotel"><b>Hotels</b></a>
+                                
+                            </li>
+							<li class="menu-item-has-children">
+                                <a href="http://www.thetravelsquare.in/coming-soon"><b>Flights</b></a>
+                                
+                            </li>
+							<li class="menu-item-has-children">
+                                <a href="http://www.thetravelsquare.in/coming-soon"><b>Experiences</b></a>
+                                
+                            </li>
+                           <li class="menu-item-has-children">
+                                <a href="http://www.thetravelsquare.in/coming-soon"><b>Cabs</b></a>
+                                
+                            </li>
+							<li class="menu-item-has-children">
+                                <a href="http://www.thetravelsquare.in/coming-soon"><b>Visa</b></a>
+                                
+                            </li>
+                    </ul>
+                    
+                    <ul class="mobile-topnav container">
+                        <center><br>
+				<button class="button full-width white uppercase animated" data-animation-type="tada" data-toggle="modal" data-target="#customerlogin">
+				<b><big><font color="black">Login / Sign Up</font></big></b></button>
+                        
+                    </ul>
+                    <br>
+                </nav>
+				
+				
+            </div>
+			
+        </header>
 
  
 		<section id="content" class="tour">
@@ -11,16 +291,16 @@
                 <div class="flexslider">
                     <ul class="slides">
                         <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;">
-                            <div class="slidebg" style="background-image: url(/images/the-travel-square-yours-to-explore.jpg);"></div>
+                            <div class="slidebg" style="background-image: url(images/the-travel-square-yours-to-explore.jpg);"></div>
                         </li>
 						<li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;">
-                            <div class="slidebg" style="background-image: url(/images/the-travel-square.jpg);"></div>
+                            <div class="slidebg" style="background-image: url(images/the-travel-square.jpg);"></div>
                         </li>
 						<li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; transition: opacity 0.6s ease; z-index: 2;">
-                            <div class="slidebg" style="background-image: url(/images/the-travel-square-hotel-and-accomodations.jpg);"></div>
+                            <div class="slidebg" style="background-image: url(images/the-travel-square-hotel-and-accomodations.jpg);"></div>
                         </li>
 						<li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; transition: opacity 0.6s ease; z-index: 1;">
-                            <div class="slidebg" style="background-image: url(/images/the-travel-square-experiences.jpg);"></div>
+                            <div class="slidebg" style="background-image: url(images/the-travel-square-experiences.jpg);"></div>
                         </li>
 
                     </ul>
@@ -36,46 +316,18 @@
                             <div class="search-box">
                                 <form>
                                     <div class="row">
-                                        <div class="col-sm-4 col-md-8 form-group" onmouseover="myFunction(event)">
-                                            <input type="text" class="input-text full-width" ng-keyup="[search() , show()]" ng-model="hotel.search" placeholder="Where Do You Wish To Travel ? .... ">
+                                        <div class="col-sm-4 col-md-8 form-group">
+                                            <input type="text" class="input-text full-width" placeholder="Where Do You Wish To Travel ? .... ">
                                         </div>
                                         
                                             
                                             <div class="col-sm-4 form-group">
-                                                <button class="button btn-medium full-width uppercase sky-blue1 animated" ng-click="getHotel()" data-animation-type="tada">Search Now</button>
+                                                <button class="button btn-medium full-width uppercase sky-blue1 animated" data-animation-type="tada">Search Now</button>
                                             </div>
                                         
                                     </div>
                                 </form>
                             </div>
-                            <div class="row col-md-8" id="demo" style="margin-left:10px; top:-19px; z-index:999"  onmouseover="myFunction(event)" onmouseout="clearCoor()">
-                                <div class="col-sm-12" style="position: relative; z-index: 99;"> 
-                                    <div style="max-height:100px; text-align: left;
-                                    margin: 0;
-                                    box-sizing: border-box;
-                                    z-index: 99;
-                                    width: 96%;
-                                    padding: 0;
-                                    position: absolute;">
-                                <table id="search" class="table table-hover " style="background-color:white">
-
-                                        <tbody>
-                                          <tr ng-repeat="city in cities | limitTo:3">
-                                            <td ng-click="result([[city]],'city')">[[city]]</td>
-
-                                          </tr>
-                                          <tr ng-repeat="name in names | limitTo:3">
-                                            <td ng-click="result([[name]],'name')">[[name]]</td>
-
-                                          </tr>
-                                          <tr ng-if="resp">
-                                              <td>No result found</td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                    </div>
-                                </div>
                             <div class="text-center">
                                 &nbsp;&nbsp;
                             </div>
@@ -99,62 +351,159 @@
                         
                         <li style="width: 170px; float: left; display: block;">
                             <a href="destinations/maldives" class="hover-effect">
-                                <img src="/images/maldives-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Maldives</p>
+							<div class="overlaycity">
+                            <figure>
+                                <img src="images/maldives-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Maldives</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
+                                
                             </a>
                             <a href="destinations/singapore" class="hover-effect">
-                                <img src="/images/singapore-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Singapore</p>
+							<div class="overlaycity">
+                            <figure>
+                                <img src="images/singapore-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Singapore</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                         </li>
                         <li style="width: 170px; float: left; display: block;">
                             <a href="destinations/ladakh" class="hover-effect">
-                                <img src="/images/ladakh-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Ladakh</p>
+							<div class="overlaycity">
+                            <figure>
+                                <img src="images/ladakh-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Ladakh</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                             <a href="destinations/london" class="hover-effect">
-                                <img src="/images/london-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">London</p>
+							<div class="overlaycity">
+                            <figure>
+                                <img src="images/london-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>London</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                         </li>
                         <li style="width: 170px; float: left; display: block;">
                             <a href="destinations/new-york" class="hover-effect">
-                                <img src="/images/new-york-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">New York</p>
+                            <div class="overlaycity">
+                            <figure>
+                                <img src="images/new-york-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>NewYork</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                             <a href="destinations/bali" class="hover-effect">
-                                <img src="/images/bali-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Bali</p>
+                            <div class="overlaycity">
+                            <figure>
+                                <img src="images/bali-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Bali</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                         </li>
                         <li style="width: 170px; float: left; display: block;">
                             <a href="destinations/goa" class="hover-effect">
-                                <img src="/images/goa-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Goa</p>
+                            <div class="overlaycity">
+                            <figure>
+								<img src="images/goa-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Goa</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                             <a href="destinations/krabi" class="hover-effect">
-                                <img src="/images/krabi-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Krabi</p>
+                            <div class="overlaycity">
+                            <figure>
+								<img src="images/krabi-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Krabi</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                         </li>
                         <li style="width: 170px; float: left; display: block;">
                             <a href="destinations/pattaya" class="hover-effect">
-                                <img src="/images/pattaya-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Pattaya</p>
+                            <div class="overlaycity">
+                            <figure>
+								<img src="images/pattaya-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Pattaya</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                             <a href="destinations/dubai" class="hover-effect">
-                                <img src="/images/dubai-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Dubai</p>
+                            <div class="overlaycity">
+                            <figure>
+								<img src="images/dubai-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Dubai</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                         </li>
-                        <li style="width: 170px; height: 161px; float: left; display: block;">
-                            <a href="destinations/switzerland" class="hover-effect">
-                                <img style="width: 170px; height: 161px;" src="/images/switzerland-packages-the-travel-square.jpg" alt="" draggable="false">
-                                <p class="caption uppercase">Switzerland</p>
+                        <li style="width: 170px; float: left; display: block;">
+                            <a href="destinations/egypt" class="hover-effect">
+                            <div class="overlaycity">
+                            <figure>
+								<img src="images/egypt-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Egypt</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                             <a href="destinations/bangkok" class="hover-effect">
-                                <img src="/images/bangkok-packages-the-travel-square.png" alt="" draggable="false">
-                                <p class="caption uppercase">Bangkok</p>
+                            <div class="overlaycity">
+                            <figure>
+								<img src="images/bangkok-packages-the-travel-square.png" alt="" draggable="false">
+                            <div class="picturecity">
+								<center>
+								<h4 class="post-title entry-title upperc"><font color="white" ><big><b>Bangkok</b></big></font></h4>
+								</center>
+							</div>
+                            </figure>
+							</div>
                             </a>
                         </li>
 						
@@ -164,7 +513,7 @@
 			</div>
 			
 					 <a href="#" class="video" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-					 <img src="/images/the-travel-square-banner.png" width="1570" height="550">
+					 <img src="images/the-travel-square-banner.png" class="responsive" width="1570" height="550">
 					 </a>
 				<br><br><br><br>
 			
@@ -176,118 +525,134 @@
                     
                 <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides image-box style10" style="width: 800%; transition-duration: 0s; transform: translate3d(-400px, 0px, 0px);">
                         <li class="box post" style="width: 370px; float: left; display: block;">
+                        <div class="overlay">
                             <figure>
-                                <a href="/experiences/phi-phi" class="hover-effect"><img src="/images/phi-phi-island-boat-tour-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
-                                <figcaption class="entry-date">
-                                    <label class="month uppercase"><b>Krabi</b></label>
-                                </figcaption>
-                            </figure>
-                            <div class="details">
-							<a href="" class="button btn-small sky-blue1 uppercase">View Details</a>
-                            <h4 class="post-title entry-title">Phi Phi Island Tour</h4>
-								
-								<label class="price-wrapper uppercase">
-									Starting @ <span class="price-per-unit">₹1499<span>
-                                </label>
-                            </div>
-                        </li>
-						<li class="box post" style="width: 370px; float: left; display: block;">
-                            <figure>
-                                <a href="/experiences/munnar" class="hover-effect"><img src="/images/munnar-wildlife-santuary-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
-                                <figcaption class="entry-date">
-                                    <label class="month"><b>Munnar</b></label>
-                                </figcaption>
-                            </figure>
-                            <div class="details">
-							<a href="/experiences/munnar" class="button btn-small sky-blue1 uppercase">View Details</a>
-                            <h4 class="post-title entry-title">Munnar Sanctuary</h4>
-								
+                                <a href="experiences/phi-phi" class="hover-effect"><img src="images/phi-phi-island-boat-tour-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
                                 
+                            <div class="picture">
+								<div class="details">
+							<a href="" class="button btn-small sky-blue1 uppercase">View Details</a>
+                            <h4 class="post-title entry-title"><font color="white">Phi Phi Island Tour</font></h4>
+								
 								<label class="price-wrapper uppercase">
 									Starting @ <span class="price-per-unit">₹1499<span>
                                 </label>
-                            </div>
+								</div>
+							</div>
+                            </figure>
+                        </div>
                         </li>
 						<li class="box post" style="width: 370px; float: left; display: block;">
+                        <div class="overlay">
                             <figure>
-                                <a href="/experiences/dubai" class="hover-effect"><img src="/images/dubai-underwater-zoo.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
-                                <figcaption class="entry-date">
-                                    <label class="month"><b>Dubai</b></label>
-                                </figcaption>
+                                <a href="experiences/munnar" class="hover-effect"><img src="images/munnar-wildlife-santuary-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
+                                
+                            <div class="picture">
+								<div class="details">
+									<a href="experiences/munnar" class="button btn-small sky-blue1 uppercase">View Details</a>
+									<h4 class="post-title entry-title"><font color="white">Munnar Sanctuary</font></h4>
+								
+									<label class="price-wrapper uppercase">
+									Starting @ <span class="price-per-unit">₹1499<span>
+									</label>
+									
+                            </div>
+							</div>
                             </figure>
-                            <div class="details">
-							<a href="/experiences/dubai" class="button btn-small sky-blue1 uppercase">View Details</a>
-                            <h4 class="post-title entry-title">Dubai Aquarium</h4>
+                        </div>    
+                        </li>
+						<li class="box post" style="width: 370px; float: left; display: block;">
+						<div class="overlay">
+                            <figure>
+                                <a href="experiences/dubai" class="hover-effect"><img src="images/dubai-underwater-zoo.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
+                               
+                            <div class="picture">
+								<div class="details">
+								<a href="experiences/dubai" class="button btn-small sky-blue1 uppercase">View Details</a>
+								<h4 class="post-title entry-title"><font color="white">Dubai Aquarium</font></h4>
 								
                                
 								<label class="price-wrapper uppercase">
 									Starting @ <span class="price-per-unit">₹1499<span>
                                 </label>
+								
                             </div>
+							</div>
+                            </figure>
+                        </div>
                         </li>
 						<li class="box post" style="width: 370px; float: left; display: block;">
+                        <div class="overlay">
                             <figure>
-                                <a href="/experiences/rishikesh" class="hover-effect"><img src="/images/rishikesh-river-rafting-tour-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
-                                <figcaption class="entry-date">
-                                    <label class="month"><b>Rishikesh</b></label>
-                                </figcaption>
+                                <a href="experiences/rishikesh" class="hover-effect"><img src="images/rishikesh-river-rafting-tour-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
+                                
+                            <div class="picture">
+								<div class="details">
+								<a href="experiences/rishikesh" class="button btn-small sky-blue1 uppercase">View Details</a>
+								<h4 class="post-title entry-title"><font color="white">Rishikesh Rafting</font></h4>
+								
+								<label class="price-wrapper uppercase">
+									Starting @ <span class="price-per-unit">₹1499<span>
+                                </label>
+								
+								</div>
+							</div>
                             </figure>
-                            <div class="details">
-							<a href="/experiences/rishikesh" class="button btn-small sky-blue1 uppercase">View Details</a>
-                            <h4 class="post-title entry-title">Rishikesh Rafting</h4>
+                        </div>
+                        </li>
+						<li class="box post" style="width: 370px; float: left; display: block;">
+						<div class="overlay">
+                            <figure>
+                                <a href="experiences/kasol" class="hover-effect"><img src="images/malana-tosh-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
+                            <div class="picture">
+								<div class="details">
+								<a href="experiences/rishikesh" class="button btn-small sky-blue1 uppercase">View Details</a>
+								<h4 class="post-title entry-title"><font color="white">Kasol Valley Tour</font></h4>
+							
+									<label class="price-wrapper uppercase">
+									Starting @ <span class="price-per-unit">₹1499<span>
+									</label>
+									
+								</div>
+							</div>
+                            </figure>
+                        </div>
+                        </li>
+						<li class="box post" style="width: 370px; float: left; display: block;">
+                        <div class="overlay">
+                            <figure>
+                                <a href="experiences/bali" class="hover-effect"><img src="images/bali-the-travel-square-temple-tour.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
+                                
+                            <div class="picture">
+								<div class="details">
+							<a href="experiences/bali" class="button btn-small sky-blue1 uppercase">View Details</a>
+                            <h4 class="post-title entry-title"><font color="white">Bali Ritual</font></h4>
 								
 								<label class="price-wrapper uppercase">
 									Starting @ <span class="price-per-unit">₹1499<span>
                                 </label>
                             </div>
+							</div>
+                            </figure>
+                        </div>
                         </li>
 						<li class="box post" style="width: 370px; float: left; display: block;">
+                        <div class="overlay">
                             <figure>
-                                <a href="/experiences/kasol" class="hover-effect"><img src="/images/malana-tosh-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
-                                <figcaption class="entry-date">
-                                    <label class="month"><b>KASOL</b></label>
-                                </figcaption>
-                            </figure>
-                            <div class="details">
-							<a href="/experiences/kasol" class="button btn-small sky-blue1 uppercase">View Details</a>
-                            <h4 class="post-title entry-title">Kasol Valley</h4>
+                                <a href="experiences/bangkok" class="hover-effect"><img src="images/floating-markets-in-bangkok-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
+                                
+                            <div class="picture">
+								<div class="details">
+							<a href="experiences/bangkok" class="button btn-small sky-blue1 uppercase">View Details</a>
+                            <h4 class="post-title entry-title"><font color="white">Floating Market</font></h4>
 								
 								<label class="price-wrapper uppercase">
 									Starting @ <span class="price-per-unit">₹1499<span>
                                 </label>
                             </div>
-                        </li>
-						<li class="box post" style="width: 370px; float: left; display: block;">
-                            <figure>
-                                <a href="/experiences/bali" class="hover-effect"><img src="/images/bali-the-travel-square-temple-tour.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
-                                <figcaption class="entry-date">
-                                    <label class="month uppercase"><b>BALI</b></label>
-                                </figcaption>
+							</div>
                             </figure>
-                            <div class="details">
-							<a href="/experiences/bali" class="button btn-small sky-blue1 uppercase">View Details</a>
-                            <h4 class="post-title entry-title">Bali Ritual</h4>
-								
-								<label class="price-wrapper uppercase">
-									Starting @ <span class="price-per-unit">₹1499<span>
-                                </label>
-                            </div>
-                        </li>
-						<li class="box post" style="width: 370px; float: left; display: block;">
-                            <figure>
-                                <a href="/experiences/bangkok" class="hover-effect"><img src="/images/floating-markets-in-bangkok-the-travel-square.jpg" alt="Phi Phi Island Tour" draggable="false"></a>
-                                <figcaption class="entry-date">
-                                    <label class="month"><b>Bangkok</b></label>
-                                </figcaption>
-                            </figure>
-                            <div class="details">
-							<a href="/experiences/bangkok" class="button btn-small sky-blue1 uppercase">View Details</a>
-                            <h4 class="post-title entry-title">Floating Market</h4>
-								
-								<label class="price-wrapper uppercase">
-									Starting @ <span class="price-per-unit">₹1499<span>
-                                </label>
-                            </div>
+                        </div>
                         </li>
                         
                     </ul></div><ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="">Previous</a></li><li><a class="flex-next" href="">Next</a></li></ul>
@@ -307,36 +672,36 @@
 						<div class="col-sm-4">
                             <article class="box">
                                 <figure>
-                                    <a class="hover-effect" href="/travellers/london" title="new-girl-in-london-town-story-the-travel-square">
-									<img src="/images/the-travel-square-traveller.jpg" alt="" width="370" height="172"></a>
+                                    <a class="hover-effect" href="travellers/london" title="new-girl-in-london-town-story-the-travel-square">
+									<img src="images/the-travel-square-traveller.jpg" alt="" width="370" height="172"></a>
                                 </figure>
                                 <div class="details">
                                     <h4 class="box-title">The New Girl in London Town</h4>
-                                    <a href="/travellers/london" class="goto-detail"><span class="glyphicon glyphicon-arrow-right"></span></a>
+                                    <a href="travellers/london" class="goto-detail"><span class="glyphicon glyphicon-arrow-right"></span></a>
                                 </div>
                             </article>
                         </div>
                         <div class="col-sm-4">
                             <article class="box">
                                 <figure>
-                                    <a class="hover-effect" href="/travellers/uttrakhand" title="gusts-of-wind-at-uttrakhand-story-th-travel-square">
-									<img src="/images/the-travel-square-travellers-images.jpg" alt="" width="370" height="172"></a>
+                                    <a class="hover-effect" href="travellers/uttrakhand" title="gusts-of-wind-at-uttrakhand-story-th-travel-square">
+									<img src="images/the-travel-square-travellers-images.jpg" alt="" width="370" height="172"></a>
                                 </figure>
                                 <div class="details">
                                     <h4 class="box-title">Gusts of Wind at Uttrakhand</h4>
-                                    <a href="/travellers/uttrakhand" class="goto-detail"><span class="glyphicon glyphicon-arrow-right"></span></a>
+                                    <a href="travellers/uttrakhand" class="goto-detail"><span class="glyphicon glyphicon-arrow-right"></span></a>
                                 </div>
                             </article>
                         </div>
 						<div class="col-sm-4">
                             <article class="box">
                                 <figure>
-                                    <a class="hover-effect" href="/travellers/kasol" title="mesmerising-beauty-of-kasol-story-the-travel-square">
-									<img src="/images/the-travel-square-sexy-girl.jpg" alt="" width="370" height="172"></a>
+                                    <a class="hover-effect" href="travellers/kasol" title="mesmerising-beauty-of-kasol-story-the-travel-square">
+									<img src="images/the-travel-square-sexy-girl.jpg" alt="" width="370" height="172"></a>
                                 </figure>
                                 <div class="details">
                                     <h4 class="box-title">Mesmerising Beauty of Kasol</h4>
-                                    <a href="/travellers/kasol" class="goto-detail"><span class="glyphicon glyphicon-arrow-right"></span></a>
+                                    <a href="travellers/kasol" class="goto-detail"><span class="glyphicon glyphicon-arrow-right"></span></a>
                                 </div>
                             </article>
                         </div>
@@ -361,87 +726,87 @@
 					<ul class="slides" style="width: 1200%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
                             <li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.theleela.com/en_us/" target="_blank"><img src="/images/partners/the-leela-palaces-and-resort-the-travel-square-partners.png" alt="" draggable="false"></a>
+                                    <a href="https://www.theleela.com/en_us/" target="_blank"><img src="images/partners/the-leela-palaces-and-resort-the-travel-square-partners.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
                             <li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.thelalit.com/" target="_blank"><img src="/images/partners/the-lalit-the-travel-square-partners.jpg" alt="" draggable="false"></a>
+                                    <a href="https://www.thelalit.com/" target="_blank"><img src="images/partners/the-lalit-the-travel-square-partners.jpg" alt="" draggable="false"></a>
                                 </div>
                             </li>
                             <li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.hyatt.com/" target="_blank"><img src="/images/partners/the-travel-square-hyatt-hotels-and-resorts-partners.jpg" alt="" draggable="false"></a>
+                                    <a href="https://www.hyatt.com/" target="_blank"><img src="images/partners/the-travel-square-hyatt-hotels-and-resorts-partners.jpg" alt="" draggable="false"></a>
                                 </div>
                             </li>
                             <li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.itchotels.in/" target="_blank"><img src="/images/partners/itc-hotel-group-the-travel-square-partners.jpg" alt="" draggable="false"></a>
+                                    <a href="https://www.itchotels.in/" target="_blank"><img src="images/partners/itc-hotel-group-the-travel-square-partners.jpg" alt="" draggable="false"></a>
                                 </div>
                             </li>
                             <li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.oyorooms.com" target="_blank"><img src="/images/partners/oyo-the-travel-square-partner.png" alt="" draggable="false"></a>
+                                    <a href="https://www.oyorooms.com" target="_blank"><img src="images/partners/oyo-the-travel-square-partner.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
                             <li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.wyndhamhotels.com/ramada" target="_blank"><img src="/images/partners/ramada-the-travel-square-partners.jpg" alt="" draggable="false"></a>
+                                    <a href="https://www.wyndhamhotels.com/ramada" target="_blank"><img src="images/partners/ramada-the-travel-square-partners.jpg" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.radissonhotels.com/" target="_blank"><img src="/images/partners/the-travel-square-park-plaza-hotels-and-resorts.png" alt="" draggable="false"></a>
+                                    <a href="https://www.radissonhotels.com/" target="_blank"><img src="images/partners/the-travel-square-park-plaza-hotels-and-resorts.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.sarovarhotels.com/" target="_blank"><img src="/images/partners/the-travel-square-sarovar-hotel-and-resorts-partners.png" alt="" draggable="false"></a>
+                                    <a href="https://www.sarovarhotels.com/" target="_blank"><img src="images/partners/the-travel-square-sarovar-hotel-and-resorts-partners.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.shangri-la.com/"target="_blank"><img src="/images/partners/shangri-la-hotels-and-resorts-the-travel-square.png" alt="" draggable="false"></a>
+                                    <a href="https://www.shangri-la.com/"target="_blank"><img src="images/partners/shangri-la-hotels-and-resorts-the-travel-square.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://four-points.marriott.com/" target="_blank"><img src="/images/partners/the-travel-square-four-points-by-sheraton.png" alt="" draggable="false"></a>
+                                    <a href="https://four-points.marriott.com/" target="_blank"><img src="images/partners/the-travel-square-four-points-by-sheraton.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.radisson.com/" target="_blank"><img src="/images/partners/radisson-hotel-group-the-travel-square-partners.jpg" alt="" draggable="false"></a>
+                                    <a href="https://www.radisson.com/" target="_blank"><img src="images/partners/radisson-hotel-group-the-travel-square-partners.jpg" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="http://cruisader.com/" target="_blank"><img src="/images/partners/cruisader-by-the-travel-square.png" alt="" draggable="false"></a>
+                                    <a href="http://cruisader.com/" target="_blank"><img src="images/partners/cruisader-by-the-travel-square.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="http://cruisingindia.com/" target="_blank"><img src="/images/partners/cruising-india-the-travel-square.png" alt="" draggable="false"></a>
+                                    <a href="http://cruisingindia.com/" target="_blank"><img src="images/partners/cruising-india-the-travel-square.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.goibibo.com/" target="_blank"><img src="/images/partners/the-travel-square-partner-goibibo.png" alt="" draggable="false"></a>
+                                    <a href="https://www.goibibo.com/" target="_blank"><img src="images/partners/the-travel-square-partner-goibibo.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.tajhotels.com/" target="_blank"><img src="/images/partners/taj-hotel-the-travel-square-partners.png" alt="" draggable="false"></a>
+                                    <a href="https://www.tajhotels.com/" target="_blank"><img src="images/partners/taj-hotel-the-travel-square-partners.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.countryholidaysinnsuites.com/" target="_blank"><img src="/images/partners/chis-the-travel-square-partners.png" alt="" draggable="false"></a>
+                                    <a href="https://www.countryholidaysinnsuites.com/" target="_blank"><img src="images/partners/chis-the-travel-square-partners.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 							<li style="width: 170px; float: left; display: block;">
                                 <div class="travelo-box">
-                                    <a href="https://www.easemytrip.com/" target="_blank"><img src="/images/partners/the-travel-square-easemytrip.png" alt="" draggable="false"></a>
+                                    <a href="https://www.easemytrip.com/" target="_blank"><img src="images/partners/the-travel-square-easemytrip.png" alt="" draggable="false"></a>
                                 </div>
                             </li>
 														
@@ -462,31 +827,35 @@
 					<ul class="slides image-box" style="width: 1000%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
 					
                             <li style="width: 270px; float: left; display: block;">
+                                <a href="destinations/maldives">
 								<article class="box">
                                     <figure>
-                                       <img src="/images/gif/maldives-the-travel-square.gif" alt="" draggable="false">
+                                       <img src="images/gif/maldives-the-travel-square.gif" alt="" draggable="false">
                                     </figure>
                                     <div class="details">
                                         <h4>Visit Madlives This Summer</h4>
                                         <p>This Summer Visit The City of Beaches , Explore Maldives With Us . Unlimited Fun , Adventure and Luxury.</p>
                                     </div>
                                 </article>
+								</a>
                             </li>
                             <li style="width: 270px; float: left; display: block;">
+                                <a href="destinations/maldives">
 								<article class="box">
                                     <figure>
-                                        <img src="/images/gif/travel-luggage-the-travel-square.gif" alt="" draggable="false">
+                                        <img src="images/gif/travel-luggage-the-travel-square.gif" alt="" draggable="false">
                                     </figure>
                                     <div class="details">
                                         <h4>Bagpack Hacks</h4>
                                         <p>Do You Travel a Lot ? Know The Best Hack to Utilize 100% Space of Your Bagpack</p>
                                     </div>
                                 </article>
+								</a>
                             </li>
 							<li style="width: 270px; float: left; display: block;">
                                 <article class="box">
                                     <figure>
-                                        <img src="/images/gif/maldives-the-travel-square-private-pool-villa.gif" alt="" draggable="false">
+                                        <img src="images/gif/maldives-the-travel-square-private-pool-villa.gif" alt="" draggable="false">
                                     </figure>
                                     <div class="details">
                                         <h4>Private Pool Accommodation</h4>
@@ -497,7 +866,7 @@
 							<li style="width: 270px; float: left; display: block;">
                                 <article class="box">
                                     <figure>
-                                        <img src="/images/gif/travel-bagpack-the-travel-square.gif" alt="" draggable="false">
+                                        <img src="images/gif/travel-bagpack-the-travel-square.gif" alt="" draggable="false">
                                     </figure>
                                     <div class="details">
                                         <h4>Right Way to Align</h4>
@@ -508,7 +877,7 @@
 							<li style="width: 270px; float: left; display: block;">
                                 <article class="box">
                                     <figure>
-                                        <img src="/images/gif/read-while-you-travel-square.gif" alt="" draggable="false">
+                                        <img src="images/gif/read-while-you-travel-square.gif" alt="" draggable="false">
                                     </figure>
                                     <div class="details">
                                         <h4>Read While You Travel</h4>
@@ -519,7 +888,7 @@
 							<li style="width: 270px; float: left; display: block;">
                                 <article class="box">
                                     <figure>
-                                        <img src="/images/gif/travel-make-up-bag-for-women-the-travel-square.gif" alt="" draggable="false">
+                                        <img src="images/gif/travel-make-up-bag-for-women-the-travel-square.gif" alt="" draggable="false">
                                     </figure>
                                     <div class="details">
                                         <h4>Travel Accesories For Women</h4>
@@ -531,7 +900,7 @@
 							<li style="width: 270px; float: left; display: block;">
                                 <article class="box">
                                     <figure>
-                                        <img src="/images/gif/how-to-pack-the-travel-square.gif" alt="" draggable="false">
+                                        <img src="images/gif/how-to-pack-the-travel-square.gif" alt="" draggable="false">
                                     </figure>
                                     <div class="details">
                                         <h4>New Style Bagpacks</h4>
@@ -571,7 +940,7 @@
                         </div>
                     </div>
                     <div class="image-container col-sm-4" style="height: 300px; margin-left: -5%; position: relative;">
-                        <img src="/images/bagpack-the-travel-square.png" alt="" width="200" height="275" class="animated" data-animation-type="fadeInUp" data-animation-duration="2" style="position: absolute; bottom: 0px; left: 0px;">
+                        <img src="images/bagpack-the-travel-square.png" alt="" width="200" height="275" class="animated" data-animation-type="fadeInUp" data-animation-duration="2" style="position: absolute; bottom: 0px; left: 0px;">
                    
 				   </div>
                 </div>
@@ -590,17 +959,17 @@
                             <h2>The Travel Square</h2>
                             <ul class="discover triangle hover row">
                                 <li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">About Company</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/jobs.html">Jobs & Carreers</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/jobs">Jobs & Carreers</a></li>
 								<li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">Corporate Offices</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">Legal Information</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/press.html">Press Release</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">T & C</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/customer-care.html">Customer Care</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">Privacy Policies</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/partner-Care.html">Partner Help</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/faq.html">FAQ's</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/site-map.html">Site Map</a></li>
-                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/contact-Us.html">Contact Us</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal">Legal Information</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/press-release">Press Release</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal">T & C</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/customer-care">Customer Care</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal">Privacy Policies</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/partner-Care">Partner Help</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/faq">FAQ's</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/site-map">Site Map</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/contact-Us">Contact Us</a></li>
                             </ul>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -620,28 +989,32 @@
                             <p>The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . </p>
                             <br>
                             <ul class="social-icons clearfix">
-                                <li class="twitter"><a title="Join Us on Twitter" href="https://twitter.com/travelsquare_" data-toggle="tooltip"  Target="_blank" data-original-title="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li class="facebook"><a title="Join Us on Facebook" href="https://www.facebook.com/thetravelsquare/" Target="_blank" data-toggle="tooltip" data-original-title="facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li class="linkedin"><a title="Join Us on Linked In" href="https://www.linkedin.com/company/thetravelsquare" Target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                <li class="vimeo"><a title="Join Us on Instagram" href="https://www.instagram.com/The_Travel_Square/" data-toggle="tooltip" Target="_blank" data-original-title="vimeo"><i class="fa fa-instagram"></i></a></li>
-                                <li class="dribble"><a title="Join Us on Youtube" href="https://www.youtube.com/channel/UCqi_w8JlO-1VEmVUItvr8og" Target="_blank" data-toggle="tooltip" data-original-title="dribble"><i class="fa fa-youtube"></i></a></li>
+                                <li class="twitter"><a title="Join Us on Twitter" href="https://twitter.com/travelsquare_" data-toggle="tooltip"  Target="_blank" data-original-title="twitter"><i class="soap-icon-twitter"></i></a></li>
+                                <li class="facebook"><a title="Join Us on Facebook" href="https://www.facebook.com/thetravelsquare/" Target="_blank" data-toggle="tooltip" data-original-title="facebook"><i class="soap-icon-facebook"></i></a></li>
+                                <li class="linkedin"><a title="Join Us on Linked In" href="https://www.linkedin.com/company/thetravelsquare" Target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i class="soap-icon-linkedin"></i></a></li>
+                                <li class="vimeo"><a title="Join Us on Instagram" href="https://www.instagram.com/The_Travel_Square/" data-toggle="tooltip" Target="_blank" data-original-title="vimeo"><i class="soap-icon-instagram"></i></a></li>
+                                <li class="dribble"><a title="Join Us on Youtube" href="https://www.youtube.com/channel/UCqi_w8JlO-1VEmVUItvr8og" Target="_blank" data-toggle="tooltip" data-original-title="dribble"><i class="soap-icon-youtube"></i></a></li>
  
-                            </ul><br>
-                        </div><center>
+                            </ul><br><br>
+							
+                        </div>
+						<center>
 						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 						<br>
-                            <img src="/images/the-travel-square-logo-200x200.png">
-                        </div></center>
+                            <img src="images/the-travel-square-logo-200x200.png">
+							<br><br>
+							<div class="row">
+							<a href="https://play.google.com/store?hl=en"><img src="images/the-travel-square-google-playstore.png" height="35" width="100">
+							<a href="https://www.apple.com/in/"><img src="images/the-travel-square-apple-store-ios.png" height="35" width="100"></div>
+                        </div>
+						</center>
                     </div>
-					<center><br><br><br>
-					<a href="https://play.google.com/store?hl=en"><img src="/images/the-travel-square-google-playstore.png" height="60" width="300">
-					<a href="https://www.apple.com/in/"><img src="images/the-travel-square-apple-store-ios.png" height="60" width="300">
-					</center><br>
+					
                 </div>
 				
 			<center>
-			<a href="https://www.paypal.com/in/home"><img src="/images/the-travel-square-visa-debit-credit-card.png" height="70" width="350">
-			<a href="https://www.payumoney.com/"><img src="/images/the-travel-square-payu-paypal.png" height="70" width="300">
+			<a href="https://www.paypal.com/in/home"><img src="images/the-travel-square-visa-debit-credit-card.png" height="70" width="350">
+			<a href="https://www.payumoney.com/"><img src="images/the-travel-square-payu-paypal.png" height="70" width="300">
 			</center><br>
             </div>
 			
@@ -650,7 +1023,7 @@
                 <div class="container">
                     
                     <div class="pull-right">
-                        <a id="back-to-top" href="" class="animated bounce" data-animation-type="bounce" style="animation-duration: 1s; visibility: visible;"><i class="fa fa-arrow-up circle"></i></a>
+                        <a id="back-to-top" href="" class="animated bounce" data-animation-type="bounce" style="animation-duration: 1s; visibility: visible;"><i class="soap-icon-longarrow-up circle"></i></a>
                     </div>
                     <div class="copyright pull-right">
                         <p>© 2019 Copyright | The Travel Square</p>
@@ -663,33 +1036,29 @@
 
 
     <!-- Javascript -->
-    <script type="text/javascript" src="/files/jquery-1.11.1.min.js.download"></script>
-    <script type="text/javascript" src="/files/jquery.noconflict.js.download"></script>
-    <script type="text/javascript" src="/files/modernizr.2.7.1.min.js.download"></script>
-    <script type="text/javascript" src="/files/jquery-migrate-1.2.1.min.js.download"></script>
-    <script type="text/javascript" src="/files/jquery.placeholder.js.download"></script>
-    <script type="text/javascript" src="/files/jquery-ui.1.10.4.min.js.download"></script>
-	
-	    
-    <script type="text/javascript" src="js/js"></script>
-    <script type="text/javascript" src="js/gmap3.min.js.download"></script>
-    <script type="text/javascript" src="js/theme-scripts.js.download"></script>
+    <script type="text/javascript" src="files/jquery-1.11.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.noconflict.js.download"></script>
+    <script type="text/javascript" src="files/modernizr.2.7.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery-migrate-1.2.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.placeholder.js.download"></script>
+    <script type="text/javascript" src="files/jquery-ui.1.10.4.min.js.download"></script>
+
     
     <!-- Twitter Bootstrap -->
-    <script type="text/javascript" src="/files/bootstrap.js.download"></script>
+    <script type="text/javascript" src="files/bootstrap.js.download"></script>
 
     <!-- Flex Slider -->
-    <script type="text/javascript" src="/files/jquery.flexslider-min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.flexslider-min.js.download"></script>
     
     <!-- parallax -->
-    <script type="text/javascript" src="/files/jquery.stellar.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.stellar.min.js.download"></script>
     
     <!-- waypoint -->
-    <script type="text/javascript" src="/files/waypoints.min.js.download"></script>
+    <script type="text/javascript" src="files/waypoints.min.js.download"></script>
 
     <!-- load page Javascript -->
-    <script type="text/javascript" src="/files/theme-scripts.js.download"></script>
-    <script type="text/javascript" src="/files/scripts.js.download"></script>
+    <script type="text/javascript" src="files/theme-scripts.js.download"></script>
+    <script type="text/javascript" src="files/scripts.js.download"></script>
 
     <script type="text/javascript">
         tjq("#slideshow .flexslider").flexslider({
@@ -741,7 +1110,7 @@
 						<div class="popup-wrapper">
 						<div class="col-xs-12 col-sm-9 popup-content">
 						<div class="travelo-signup-box travelo-box" style="display: block;">
-				<center><img src="/images/the-travel-square-logo-200x200.png"></center><br>
+				<center><img src="images/the-travel-square-logo-200x200.png"></center><br>
 				<br>
             <div class="">
                     <form action="" Method="POST">
@@ -790,4 +1159,3 @@
 
 
 </body></html>
-{% endblock %}

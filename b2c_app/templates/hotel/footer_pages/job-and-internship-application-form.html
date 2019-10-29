@@ -1,5 +1,206 @@
-{% extends '/hotel/components/header.html' %} {% block controller%}hotelController{% endblock %} {% block
-    content%}
+<!DOCTYPE html>
+<html ng-app="postserviceApp" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]-->
+<head>
+    <!-- Page Title -->
+
+    <title> The Travel Square </title>
+       
+    <!-- Meta Tags -->
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="The Travel Square">
+    <meta name="description" content="">
+    <meta name="distribution" content="global">
+    <meta name="country" content="india">
+    <meta name="copyright" content="The Travel Square">
+    <meta name="revisit-after" content="1 hour">
+    <meta name="designer" content="The Travel Square">
+    <meta name="language" content="english">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="publisher" content="The Travel Square">
+
+    <meta property="og:title" content="The Travel Square">
+    <meta property="og:description" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta property="og:image" content="">
+  
+    <meta name="twitter:card" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+  
+    <meta name="keywords" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta name="format-detection" content="7428558566">
+    
+    
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+   
+    
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="/files/bootstrap.min.css">
+    <link rel="stylesheet" href="/files/font-awesome.min.css">
+    <link href="/files/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/files/animate.min.css">
+    <link href="stylesheet" href="/font/flaticon.css">
+    
+    <!-- Current Page Styles -->
+    <link rel="stylesheet" type="text/css" href="/files/flexslider.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="/files/css/settings.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/files/css/jquery.bxslider.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/files/css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/files/styles.css" media="screen">
+
+    <link id="main-style" rel="stylesheet" href="/files/style-light-yellow.css">    
+    
+    
+    
+    <!-- Updated Styles -->
+    <link rel="stylesheet" href="/files/updates.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/files/custom.css">
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="/files/responsive.css">
+    
+  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script> -->
+
+    
+   <script>
+    function clearCoor() {
+        document.getElementById("demo").style.display = "none";
+    }
+    function myFunction(e) {
+        document.getElementById("demo").style.display="block"
+    }
+   </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js"></script> 
+    <!-- <script type="text/javascript" src="http://code.angularjs.org/1.2.1/angular-route.js"></script>   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="/js/common.js"></script><script type="text/javascript" charset="UTF-8" src="/js/util.js"></script><script type="text/javascript" charset="UTF-8" src="/js/stats.js"></script></head>
+    <script src="/jobs.js"></script>
+    <body >
+
+    <div>
+    <div id="page-wrapper">
+        <header id="header" class="navbar-static-top">
+            <div class="topnav hidden-xs">
+                <div class="container">
+                    <!-- <ul class="quick-menu pull-left">
+                        
+						<li class="ribbon currency">
+                            <a href="" title="">INR</a>
+                            <ul class="menu mini left">
+                            </ul>
+                        </li>
+                        <li class="ribbon">
+                            <a href="">English</a>
+                            <ul class="menu mini">
+                            </ul>
+                        </li>
+						<li class="ribbon">
+                            <a href="">India</a>
+                            <ul class="menu mini">
+                            </ul>
+                        </li>
+                    </ul> -->
+                    <!-- <ul class="quick-menu pull-right">
+                        <li><a href="" class="button yellow btn-small" style="height: 30px; font-size: 1em;">
+						<i class="soap-icon-shopping"></i> SIGN UP</a></li>
+                        <li><a href="#" class="soap-popupbox">LOGIN</a></li>
+						<li><a href="">Business CAPITAL</a></li>
+                        <li><a href="#" class="soap-popupbox">Customer Care</a></li>
+
+                    </ul> -->
+                </div>
+            </div>
+            
+            <div class="main-header">
+                
+               
+                <a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
+        
+                </a>
+
+
+                <div class="container">
+                   
+                    <h1 class="logo navbar-brand">
+                        <a href="index.html" title="The Travel Square">
+                            <img src="" alt="The Travel Square">
+                        </a>
+                    </h1>
+                    
+                    
+                    <nav id="main-menu" role="navigation">
+                        <ul class="menu">
+                            <li class="menu-item-has-children">
+                                <a href="http://thetravelsquare.in">Home</a>
+                            </li>
+                            <li class="menu-item-has-children active">
+                                <a href="/hotel">Hotels</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/flights.html">Flights</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/restaurants.html">Restaurants</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/cars.html">Cars</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/cruises.html">Cruises</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="http://business.thetravelsquare.in/tour.html">Tour</a>
+                            </li>
+                           
+                        </ul>
+                    </nav>
+                </div>
+                
+                <nav id="mobile-menu-01" class="mobile-menu collapse" aria-expanded="false" style="height: 0px;">
+                    <ul id="mobile-primary-menu" class="menu">
+                        <li class="menu-item-has-children">
+                            <a href="/business">Home</a><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-0"></button>
+                        </li>
+                        <li class="menu-item-has-children active">
+                            <a href="/hotel">Hotels</a><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-1"></button>
+                           
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="/flight">Flights</a><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-2"></button>
+                            
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="/restaurant">Restaurants</a><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-0"></button><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-0"></button><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-0"></button>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="/cab">Cars</a><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-3"></button>
+                            
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="/cruise">Cruises</a><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-4"></button>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="/tour">Tour</a><button class="dropdown-toggle collapsed" data-toggle="collapse" data-target="#mobile-menu-submenu-item-5"></button>
+                    
+                        </li>
+                        
+                    </ul>
+                    
+                </nav>
+            </div>
+               
+
+        </header>
+    
 
         <div class="page-title-container">
             <div class="container">
@@ -23,8 +224,8 @@
 					
 					
 					
-                        <div class="travelo-box booking-section">
-                            <form class="booking-form">
+                        <div class="travelo-box booking-section"  ng-app="postserviceApp" ng-controller="postserviceCtrl">
+                            <form class="booking-form" method="POST">
                                 <div class="person-information">
 								<center><img src="images/The-Travel-Square-Logo.png"></center><br><br>
 								
@@ -35,7 +236,7 @@
                                     <div class="form-group row">
                                         <div class="col-sm-3 col-md-10">
                                             <label>Full Name</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="Enter Your Full Name">
+                                            <input type="text" ng-model="full_name" class="input-text full-width" value="" placeholder="Enter Your Full Name" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -43,35 +244,102 @@
                                             <div>
                                                 <label>Date of Birth</label>
                                                 <div class="selector">
-                                                    <select class="full-width">
-                                                        <option>Date</option>
-                                                    </select><span class="custom-select full-width">Date</span>
+                                                    <select class="full-width" ng-model="dob_date" required>
+                                                        <option>01</option>
+                                                        <option>02</option>
+                                                        <option>03</option>
+                                                        <option>04</option>
+                                                        <option>05</option>
+                                                        <option>06</option>
+                                                        <option>07</option>
+                                                        <option>08</option>
+                                                        <option>09</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                        <option>13</option>
+                                                        <option>14</option>
+                                                        <option>15</option>
+                                                        <option>16</option>
+                                                        <option>17</option>
+                                                        <option>18</option>
+                                                        <option>19</option>
+                                                        <option>20</option>
+                                                        <option>21</option>
+                                                        <option>22</option>
+                                                        <option>23</option>
+                                                        <option>24</option>
+                                                        <option>25</option>
+                                                        <option>26</option>
+                                                        <option>27</option>
+                                                        <option>28</option>
+                                                        <option>29</option>
+                                                        <option>30</option>
+                                                        <option>31</option>
+                                                    </select><span class="custom-select full-width"></span>
                                                 </div>
                                             </div>
                                             <div>
                                                 <label>Month</label>
                                                 <div class="selector">
-                                                    <select class="full-width">
+                                                    <select class="full-width" ng-model="dob_month" required>
+                                                        <option>01</option>
                                                         <option>02</option>
-                                                    </select><span class="custom-select full-width">Jan</span>
+                                                        <option>03</option>
+                                                        <option>04</option>
+                                                        <option>05</option>
+                                                        <option>06</option>
+                                                        <option>07</option>
+                                                        <option>08</option>
+                                                        <option>09</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                    </select><span class="custom-select full-width"></span>
                                                 </div>
                                             </div>
                                             <div>
                                                 <label>Year</label>
                                                 <div class="selector">
-                                                    <select class="full-width">
-                                                        <option>01</option>
-                                                    </select><span class="custom-select full-width">1970</span>
+                                                    <select class="full-width" ng-model="dob_year" required>
+                                                        <option>1980</option>
+                                                        <option>1981</option>
+                                                        <option>1982</option>
+                                                        <option>1983</option>
+                                                        <option>1984</option>
+                                                        <option>1985</option>
+                                                        <option>1986</option>
+                                                        <option>1987</option>
+                                                        <option>1988</option>
+                                                        <option>1989</option>
+                                                        <option>1990</option>
+                                                        <option>1991</option>
+                                                        <option>1992</option>
+                                                        <option>1993</option>
+                                                        <option>1994</option>
+                                                        <option>1995</option>
+                                                        <option>1996</option>
+                                                        <option>1997</option>
+                                                        <option>1998</option>
+                                                        <option>1999</option>
+                                                        <option>2000</option>
+                                                        <option>2001</option>
+                                                        <option>2002</option>
+                                                        <option>2003</option>
+                                                        <option>2004</option>
+                                                        <option>2005</option>
+
+                                                    </select><span class="custom-select full-width"></span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-5">
-                                            <label>Gender</label>
+                                            <label>GENDER</label>
                                             <div class="selector">
-                                                <select class="full-width">
-                                                    <option>Male</option>
-                                                    <option>Female</option>
-                                                    <option>Unspecified</option>
+                                                <select ng-model="gender" autocomplete="off"  required class="full-width">
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Unspecified</option>
                                                 </select><span class="custom-select full-width"></span>
                                             </div>
                                         </div>
@@ -79,57 +347,62 @@
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>Home Address</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="">
+                                            <input type="text" ng-model="home_address" class="input-text full-width" value="" placeholder="Enter Home Address" required>
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Nearest Landmark</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="">
+                                            <input type="text" ng-model="landmark" class="input-text full-width" value="" placeholder="Enter Nearest Landmark" required>
                                         </div>
                                     </div>
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>E-mail Address</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="">
+                                            <input type="text" ng-model="email" class="input-text full-width" value="" placeholder="Enter Email Address" required>
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Contact Number</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="">
+                                            <input type="text" ng-model="mobile" class="input-text full-width" value="" placeholder="Enter Contact Number" required>
                                         </div>
                                     </div>
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
-                                            <label>Graduation</label>
+                                            <label>Qualification</label>
                                             <div class="selector">
-                                                <select class="full-width">
+                                                <select class="full-width" ng-model="degree" required>
                                                     <option>10+</option>
                                                     <option>12+</option>
+                                                    <option>Diploma</option>
                                                     <option>Under Graduate</option>
-                                                </select><span class="custom-select full-width">Graduate</span>
+                                                    <option>Post Graduate</option>
+                                                    <option>Masters </option>
+                                                </select><span class="custom-select full-width"></span>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Work Experience</label>
                                             <div class="selector">
-                                                <select class="full-width">
-                                                    <option>Under 1 Year Experience</option>
-                                                    <option>United Kingdom</option>
-                                                    <option>United State</option>
-                                                </select><span class="custom-select full-width">Fresher</span>
+                                                <select class="full-width" ng-model="work_experience" required>
+                                                    <option>0 to 1 Year</option>
+                                                    <option>2+ Year</option>
+                                                    <option>3+ Year</option>
+                                                    <option>4+ Year</option>
+                                                    <option>5+ Year</option>
+                                                </select><span class="custom-select full-width"></span>
                                             </div>
                                         </div>
                                     </div>
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>College/School Name</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="">
+                                            <input type="text" ng-model="school_name" class="input-text full-width" value="" placeholder="Enter Your School or College Name">
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Refferal Person</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="">
+                                            <input type="text" ng-model="referral_person" class="input-text full-width" value="" placeholder="Enter Refferal Person">
                                         </div>
                                     </div>
 									
-                                        <a href="" class="button btn-medium sky-blue1 uppercase">Submit Personal Details</a>
+                                        <!-- <a href="" class="button btn-medium sky-blue1 uppercase">Submit Personal Details</a> -->
                                 </div>
                                 <hr>
                                 <div class="group-details">
@@ -140,7 +413,7 @@
                                         <div class="col-sm-6 col-md-5">
                                             <label>Job Department</label>
                                             <div class="selector">
-                                                <select class="full-width">
+                                                <select class="full-width" ng-model="job_department" >
                                                     <option>Data Management Dept.</option>
                                                     <option>Marketing Dept.</option>
                                                     <option>Server Management</option>
@@ -148,14 +421,7 @@
                                             </div>
                                         </div>
 										<div class="col-sm-6 col-md-5">
-                                            <label>Job Post (Can Select Muliple For Post)</label>
-                                            <div class="selector">
-                                                <select class="full-width">
-                                                    <option>Buses</option>
-                                                    <option>Hotel Vendor</option>
-                                                    <option>Cabs</option>
-                                                </select><span class="custom-select full-width">Hotel Partner</span>
-                                            </div>
+                                           
                                         </div>
                                         
                                     </div>
@@ -170,27 +436,26 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>Applicants Resume</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="">
+                                            <input type="file" ng-model="cv" class="input-text full-width" value="" placeholder="">
                                         </div>
                                         
                                     </div>
-									
-									<a href="" class="button btn-medium sky-blue1 uppercase">Upload Documents</a>
                                 </div>
                                 <hr>
                                 
                                 
-                                <hr>
-                                <div class="form-group">
+                                <!-- <hr> -->
+                                <!-- <div class="form-group">
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox"> By Continuing , You Agree the Internship & Job Agreement <a href=""><span class="skin-color">Terms and Conditions</span></a>.
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <div class="col-sm-6 col-md-5">
-                                        <button type="submit" class="full-width btn-large">SUBMIT FORM</button>
+                                        <button type="submit" ng-click="postdata(full_name, dob_date, dob_month, dob_year, gender, home_address,
+                                        landmark, email, mobile,degree, work_experience, school_name, referral_person, job_department, cv)" class="full-width btn-large">SUBMIT FORM</button>
                                     </div>
 									<label>Your Details Will Be Verified & Interview Will Be Scheduled Over Call</label>
    
@@ -296,25 +561,24 @@
 
 
     <!-- Javascript -->
-    <script type="text/javascript" src="./About Travel Beans_files/jquery-1.11.1.min.js.download"></script>
-    <script type="text/javascript" src="./About Travel Beans_files/jquery.noconflict.js.download"></script>
-    <script type="text/javascript" src="./About Travel Beans_files/modernizr.2.7.1.min.js.download"></script>
-    <script type="text/javascript" src="./About Travel Beans_files/jquery-migrate-1.2.1.min.js.download"></script>
-    <script type="text/javascript" src="./About Travel Beans_files/jquery.placeholder.js.download"></script>
-    <script type="text/javascript" src="./About Travel Beans_files/jquery-ui.1.10.4.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-1.11.1.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.noconflict.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/modernizr.2.7.1.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-migrate-1.2.1.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.placeholder.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-ui.1.10.4.min.js.download"></script>
     
     <!-- Twitter Bootstrap -->
-    <script type="text/javascript" src="./About Travel Beans_files/bootstrap.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/bootstrap.js.download"></script>
     
     <!-- parallax -->
-    <script type="text/javascript" src="./About Travel Beans_files/jquery.stellar.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.stellar.min.js.download"></script>
     
     <!-- waypoint -->
-    <script type="text/javascript" src="./About Travel Beans_files/waypoints.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/waypoints.min.js.download"></script>
 
     <!-- load page Javascript -->
-    <script type="text/javascript" src="./About Travel Beans_files/theme-scripts.js.download"></script>
-    <script type="text/javascript" src="./About Travel Beans_files/scripts.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/theme-scripts.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/scripts.js.download"></script>
 </body></html>
 
-{% endblock %}

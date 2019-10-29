@@ -1,4 +1,4 @@
-angular.module('comparetravel', ['angular.filter'])
+var app = angular.module('comparetravel', ['angular.filter'])
     .config(['$interpolateProvider', function ($interpolateProvider, $locationProvider) {
         $interpolateProvider.startSymbol('[[');
         $interpolateProvider.endSymbol(']]');
@@ -244,43 +244,12 @@ angular.module('comparetravel', ['angular.filter'])
 
         }
 
-        // $scope.setCookies = function () {
-        //     console.log("debugg");
-        //     $cookies.put("username", $scope.username);
-        // };
-        // $scope.getCookies = function () {
-        //     console.log("debugg");
-        //     $window.alert($cookies.get('username'));
-        // };
-        // $scope.clearCookies = function () {
-        //     $cookies.remove('username');
-        // };
 
-
-
-
-        // Get the modal
-        //  var mymodal= ;
-        //  console.log("modal",mymodal);
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        //  var img = document.getElementById('myImg');
-        //  var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
 
-        // $scope.myimg = function(){
-        //   document.getElementById('myModal').style.display = "block";
-        //   document.getElementById("img01").src = document.getElementById('myImg').src;
-        //   // captionText.innerHTML = this.alt;
-        //  }
-
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks on <span> (x), close the modal
-        //  span.onclick = function() { 
-        //      modal.style.display = "none";
-        //  }
-
+      
         //for image pop up
         $scope.openGallery = function (data) {
             $scope.imagesData = data;
@@ -343,31 +312,7 @@ angular.module('comparetravel', ['angular.filter'])
             dots[slideIndex - 1].className += "w3-opacity-off";
         }
 
-        // var showDivs=function(n) {
-        //   var i;
-        //   var x = document.getElementsByClassName("mySlides");
-
-        //   var dots = document.getElementsByClassName("demo");
-
-        //   if (n > x.length) {slideIndex = 1}
-        //   if (n < 1) {slideIndex = x.length}
-        //   for (i = 0; i < x.length; i++) {
-        //       x[i].style.display = "none";
-        //   }
-        //   for (i = 0; i < dots.length; i++) {
-        //     dots[i].style.opacity = 0.5;
-        //     dots[i].getElementsByClassName("img")[0].style.opacity = 0.5;
-        //     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-        //     dots[i].className = dots[i].className.replace(".image-carousel.style1 .slides", ".image-carousel.style1 .slidesactive");
-
-
-        //   }
-        //   dots[slideIndex-1].getElementsByClassName("img")[0].style.opacity = 1;
-        //   dots[slideIndex-1].style.opacity = 1;
-
-        //   x[slideIndex-1].style.display = "block";
-        //   dots[slideIndex-1].className += "w3-opacity-off";
-        // }
+        
         var slideIndex = 1;
 
         var plusDivs = function (n) {
@@ -391,45 +336,7 @@ angular.module('comparetravel', ['angular.filter'])
                     var totalSlides = 1;
                 }
                 var onSlideImage = (slideIndex + 1) % 10
-                // var lastSlides=totalSlides.toString().split(".")[1]+1;
-                // if(onSlideImage==1){
-                //   if ((totalSlides-1)>i){
-                //     var transform=-800*i;
-                //     document.body.style.setProperty('--txx',transform+'px');
-                //     $(".demo").css("transform","translate3d(var(--txx), 0px, 0px)");
-                //     $scope.currentDiv((i*10)+1);
-
-                //     i++;
-                //     return i;
-                //   } 
-                //   else if(((lastSlides)>j)&&((totalSlides-1)<i)){
-                //     console.log("2nd if");
-                //     var transform=-(80*j+(800*(i-1)));
-                //     console.log("transform",transform);
-                //     document.body.style.setProperty('--txx',transform+'px');
-                //     $(".demo").css("transform","translate3d(var(--txx), 0px, 0px)");
-                //     $scope.currentDiv((i*10)+1);
-
-                //     j++;
-                //     return j;
-
-                //   }
-
-                // }
-                // else if(lastSlides < j) {
-                //   console.log("3 rd if");
-                //   $(".demo").css("transform","translate3d(0px, 0px, 0px)" );
-                //   $scope.currentDiv(1);
-                //   j=1;
-                //   i=1;
-                //   return i;
-                //   return j;
-                // }
-                // else{
-                //   slideIndex++;
-                //   $scope.currentDiv(slideIndex);
-                //   return slideIndex;
-                // }
+              
                 if (onSlideImage == 1) {
                     if (totalSlides > i) {
                         var transform = -800 * i;
@@ -537,153 +444,7 @@ angular.module('comparetravel', ['angular.filter'])
             });
 
         }
-        //   var i=0;
-        // if(window.screen.availWidth >=440){
-        //   console.log(window.screen.availWidth);
-        //   $( ".flex-next" ).click(function() {
-        //     if (($( ".demo" ).css( "transform","translate3d(0px, 0px, 0px)")) && ($scope.imagesData.images.length >= 10) && (i==0)){
-
-        //       $(".demo").css("transform","translate3d(-791px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-
-        //     if (($( ".demo" ).css( "transform","translate3d(-791px, 0px, 0px)")) && ($scope.imagesData.images.length >= 20) && (i==1)){
-
-        //       $(".demo").css("transform","translate3d(-1582px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     else {
-        //       $(".demo").css("transform","translate3d(0px, 0px, 0px)" );
-        //       i=0;
-        //       return i;
-        //     }
-        //   });
-
-        //   $( ".flex-prev" ).click(function() {
-
-        //     if ($( ".demo" ).css( "transform","translate3d(-1582px, 0px, 0px)") && (i==2)){
-        //       $(".demo").css("transform","translate3d(-791px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-
-        //     if ($( ".demo" ).css( "transform","translate3d(-791px, 0px, 0px)") && (i==1)){
-        //       $(".demo").css("transform","translate3d(0px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-        //     else {
-        //       $(".demo").css("transform","translate3d(0px, 0px, 0px)" );
-        //     }
-        //   });
-        // }
-        // if(window.screen.availWidth <=440){
-        //   console.log(window.screen.availWidth);
-
-        //   $( ".flex-next" ).click(function() {
-        //     if (($( ".demo" ).css( "transform","translate3d(0px, 0px, 0px)")) && ($scope.imagesData.images.length >= 10) && (i==0)){
-
-        //       $(".demo").css("transform","translate3d(-240px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-
-        //     if (($( ".demo" ).css( "transform","translate3d(-240px, 0px, 0px)")) && ($scope.imagesData.images.length >= 10) && (i==1)){
-
-        //       $(".demo").css("transform","translate3d(-480px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     if (($( ".demo" ).css( "transform","translate3d(-480px, 0px, 0px)")) && ($scope.imagesData.images.length >= 10) && (i==2)){
-
-        //       $(".demo").css("transform","translate3d(-760px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     if (($( ".demo" ).css( "transform","translate3d(-760px, 0px, 0px)")) && ($scope.imagesData.images.length >= 20) && (i==3)){
-
-        //       $(".demo").css("transform","translate3d(-1000px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     if (($( ".demo" ).css( "transform","translate3d(-1000px, 0px, 0px)")) && ($scope.imagesData.images.length >= 20) && (i==4)){
-
-        //       $(".demo").css("transform","translate3d(-1240px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     if (($( ".demo" ).css( "transform","translate3d(-1240px, 0px, 0px)")) && ($scope.imagesData.images.length >= 20) && (i==5)){
-
-        //       $(".demo").css("transform","translate3d(-1480px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     if (($( ".demo" ).css( "transform","translate3d(-1480px, 0px, 0px)")) && ($scope.imagesData.images.length >= 20) && (i==6)){
-
-        //       $(".demo").css("transform","translate3d(-1760px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     if (($( ".demo" ).css( "transform","translate3d(-1760px, 0px, 0px)")) && ($scope.imagesData.images.length >= 20) && (i==7)){
-
-        //       $(".demo").css("transform","translate3d(-2000px, 0px, 0px)");
-        //       i++;
-        //       return i;
-        //     } 
-        //     else {
-        //       $(".demo").css("transform","translate3d(0px, 0px, 0px)" );
-        //       i=0;
-        //       return i;
-        //     }
-        //   });
-
-        //   $( ".flex-prev" ).click(function() {
-
-        //     if ($( ".demo" ).css( "transform","translate3d(-2000px, 0px, 0px)") && (i==7)){
-        //       $(".demo").css("transform","translate3d(-1760px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-
-        //     if ($( ".demo" ).css( "transform","translate3d(-1760px, 0px, 0px)") && (i==6)){
-        //       $(".demo").css("transform","translate3d(-1480px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-        //     if ($( ".demo" ).css( "transform","translate3d(-1480px, 0px, 0px)") && (i==5)){
-        //       $(".demo").css("transform","translate3d(-1240px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-        //     if ($( ".demo" ).css( "transform","translate3d(-1240px, 0px, 0px)") && (i==4)){
-        //       $(".demo").css("transform","translate3d(-1000px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-        //     if ($( ".demo" ).css( "transform","translate3d(-1000px, 0px, 0px)") && (i==3)){
-        //       $(".demo").css("transform","translate3d(-760px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-        //     if ($( ".demo" ).css( "transform","translate3d(-760px, 0px, 0px)") && (i==2)){
-        //       $(".demo").css("transform","translate3d(-480px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-        //     if ($( ".demo" ).css( "transform","translate3d(-480px, 0px, 0px)") && (i==1)){
-        //       $(".demo").css("transform","translate3d(-240px, 0px, 0px)");
-        //       i--;
-        //       return i;
-        //     } 
-        //     else {
-        //       $(".demo").css("transform","translate3d(0px, 0px, 0px)" );
-        //     }
-        //   });
-        // }
-
-        //+++++++++++
+               //+++++++++++
         var str = document.location.search;
         var key = str.split("?");
         var key1 = key[1].split("=");
@@ -790,45 +551,7 @@ angular.module('comparetravel', ['angular.filter'])
 
         }
 
-        // $scope.getHotelweek = function(){
-
-        //   $scope.hotel.ci = Date.parse($scope.hotel.ci)/1000;
-        //   $scope.hotel.co = Date.parse($scope.hotel.co)/1000;
-        //   console.log("$scope.hotel.check_in",$scope.hotel.ci);
-        //   $http({
-        //     method: 'GET',
-        //     url: api_url + '/api/v1/deal?ci=' + $scope.hotel.ci + '&co=' + $scope.hotel.co
-        //   }).then(function successCallback(response) {
-        //       $scope.deals = response.data.result.deal;
-        //       if($scope.deals.length==0){
-        //         $scope.result = true;
-
-        //      }
-        //      else{
-        //        $scope.result = false;
-        //      }
-        //       for(var j=0; j<$scope.deals.length; j++){
-        //         $scope.roomobj=$scope.roomPrice[$scope.deals[j].room];
-        //         $scope.deals[j].roomdata=$scope.roomobj;
-        //         $scope.hotelobj=$scope.cityid[$scope.deals[j].roomdata.hotel];
-        //         $scope.deals[j].roomdata.hoteldata=$scope.hotelobj;
-
-        //       }
-        //       console.log("deals array",$scope.deals);
-        //       // this callback will be called asynchronously
-
-        //       // when the response is available
-        //     }, function errorCallback(response) {
-        //       // called asynchronously if an error occurs
-        //       // or server returns response with an error status.
-        //   })
-
-        // }
-
-
-
-
-        $scope.getHotels = function () {
+              $scope.getHotels = function () {
             // console.log("$location.path",$location.path);
             var pathname = window.location.pathname;
             var appId = pathname.split('/')[6];
@@ -846,47 +569,6 @@ angular.module('comparetravel', ['angular.filter'])
             window.open($scope.location + "/list?" + searchKey + "=" + $scope.hotel.search + '&' + 'ci' + '=' + $scope.hotel.ci + '&' + 'co' + '=' + $scope.hotel.co, '_self');
             console.log("$scope.hotel.city", $scope.hotel.city)
         }
-
-        // $scope.search = function()  {
-        //   $scope.hotel.search = $scope.hotel.search.toLowerCase();
-        //   console.log("$scope.hotel",$scope.hotel);
-        // $http({
-        //   method: 'POST',
-        //   url: api_url + '/hotel/search',
-        //   data: $scope.hotel
-
-        // }).then(function successCallback(response){
-        // console.log("response",response.data.result);
-        //     $scope.cities = response.data.result.cities;
-        //     $scope.names = response.data.result.names;
-        //     console.log("ye h",$scope.cities,response.data.result.names);
-        //     // if($scope.cities.length==0 && $scope.names.length==0){
-        //     //      $scope.resp = true;
-        //     //     $scope.error = function(){
-
-        //     //       $scope.message = 'dddsdsdss';
-
-        //     //   }
-        //     // }
-        //     // else{
-        //     //   $scope.resp = false;
-        //     // }
-        //     if($scope.cities.length==0 && $scope.names.length!=0){
-        //        searchKey = 'name';
-        //     }
-        //     if($scope.cities.length!=0 && $scope.names.length==0){
-        //       searchKey = 'city';
-        //    }
-        //    if($scope.cities.length!=0 && $scope.names.length!=0){
-        //     searchKey = 'city';
-        //  }
-
-
-
-        // })
-
-
-
 
 
 
@@ -1486,45 +1168,7 @@ angular.module('comparetravel', ['angular.filter'])
                     var totalSlides = 1;
                 }
                 var onSlideImage = (slideIndex + 1) % 10
-                // var lastSlides=totalSlides.toString().split(".")[1]+1;
-                // if(onSlideImage==1){
-                //   if ((totalSlides-1)>i){
-                //     var transform=-800*i;
-                //     document.body.style.setProperty('--txx',transform+'px');
-                //     $(".demo").css("transform","translate3d(var(--txx), 0px, 0px)");
-                //     $scope.currentDiv((i*10)+1);
-
-                //     i++;
-                //     return i;
-                //   } 
-                //   else if(((lastSlides)>j)&&((totalSlides-1)<i)){
-                //     console.log("2nd if");
-                //     var transform=-(80*j+(800*(i-1)));
-                //     console.log("transform",transform);
-                //     document.body.style.setProperty('--txx',transform+'px');
-                //     $(".demo").css("transform","translate3d(var(--txx), 0px, 0px)");
-                //     $scope.currentDiv((i*10)+1);
-
-                //     j++;
-                //     return j;
-
-                //   }
-
-                // }
-                // else if(lastSlides < j) {
-                //   console.log("3 rd if");
-                //   $(".demo").css("transform","translate3d(0px, 0px, 0px)" );
-                //   $scope.currentDiv(1);
-                //   j=1;
-                //   i=1;
-                //   return i;
-                //   return j;
-                // }
-                // else{
-                //   slideIndex++;
-                //   $scope.currentDiv(slideIndex);
-                //   return slideIndex;
-                // }
+             
                 if (onSlideImage == 1) {
                     if (totalSlides > i) {
                         var transform = -800 * i;
@@ -1631,9 +1275,13 @@ angular.module('comparetravel', ['angular.filter'])
                 }
             });
 
+
+            
         }
         /************************************************************************************************/
 
+       
 
 
     }]);
+    
