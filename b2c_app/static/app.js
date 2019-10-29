@@ -47,9 +47,6 @@ angular.module('comparetravel', ['angular.filter'])
         $scope.hotel.co.setDate($scope.hotel.co.getDate() + 1);
 
 
-
-
-
         // $location.search=
 
         $scope.showDetail = function (roomid) {
