@@ -309,15 +309,19 @@ def dynamic_packages(package):
 
 @app.route('/packages/TSP101CIA')
 def packages_dubai():
-    return render_template('hotel/b2c_hotels/packages/TSP101CIA-luxurious-and-leisure-dubai-package.html')
+    return render_template('hotel/b2c_hotels/packages/TSP101CIA.html')
 
 @app.route('/packages/TSP102CIL')
 def packages_bali():
-    return render_template('hotel/b2c_hotels/packages/TSP102CIL-luxurious-and-leisure-bali-package.html')
+    return render_template('hotel/b2c_hotels/packages/TSP102CIL.html')
 
 @app.route('/packages/TSP103CDA')
 def packages_goa():
-    return render_template('hotel/b2c_hotels/packages/TSP103CDA-budget-goa-3-nights-package.html')
+    return render_template('hotel/b2c_hotels/packages/TSP103CDA.html')
+
+@app.route('/packages/TSP104CIA')
+def packages_104cia():
+    return render_template('hotel/b2c_hotels/packages/TSP104CIA.html')
 
 @app.route('/packages/TSP123CIL')
 def packages_phuket():
@@ -355,6 +359,41 @@ def packages_bali2():
 @app.route('/packages/TSP106CIL')
 def packages_phuket2():
     return render_template('hotel/b2c_hotels/packages/TSP106CIL-Phuket-and-Krabi-Honeymoon-Package-4-Nights.html')
+
+@app.route('/packages/TSP131CIL')
+def packages_131cil():
+    return render_template('hotel/b2c_hotels/packages/TSP131CIL.html')
+
+@app.route('/packages/TSP132CIL')
+def packages_132cil():
+    return render_template('hotel/b2c_hotels/packages/TSP132CIL.html')
+
+@app.route('/packages/TSP134CIL')
+def packages_134cil():
+    return render_template('hotel/b2c_hotels/packages/TSP134CIL.html')
+
+@app.route('/packages/TSP135CIL')
+def packages_135il():
+    return render_template('hotel/b2c_hotels/packages/TSP135CIL.html')
+
+@app.route('/packages/TSP136CIL')
+def packages_136cil():
+    return render_template('hotel/b2c_hotels/packages/TSP136CIL.html')
+
+@app.route('/packages/TSP137CIL')
+def packages_137cil():
+    return render_template('hotel/b2c_hotels/packages/TSP137CIL.html')
+
+@app.route('/packages/TSP138CIL')
+def packages_138cil():
+    return render_template('hotel/b2c_hotels/packages/TSP138CIL.html')
+
+@app.route('/packages/TSP142CIL')
+def packages_142cil():
+    return render_template('hotel/b2c_hotels/packages/TSP142CIL.html')
+
+
+
 @app.route('/packages/TSP132CIA')
 def packages_dubai2():
     return render_template('hotel/b2c_hotels/packages/TSP132CIA-dubai-3-nights-adventure-package.html')
@@ -366,5 +405,16 @@ def packages_bali3():
 
 @app.route('/packages/TSP134CIL')
 def packages_dubai3():
-    return render_template('hotel/b2c_hotels/packages/TSP134CIL-dubai-4-nights-package.html')
+    return render_template('hotel/b2c_hotels/packages/TSP134CIL.html')
 
+@app.route('/packages/TSP139CIA')
+def packages_139cia():
+    return render_template('hotel/b2c_hotels/packages/TSP139CIA.html')
+
+@app.route('/packages/TSP140CIA')
+def packages_140cia():
+    return render_template('hotel/b2c_hotels/packages/TSP140CIA.html')
+
+@app.route('/packages/TSP141CIA')
+def packages_141cia():
+    return render_template('hotel/b2c_hotels/packages/TSP141CIA.html')
