@@ -35,7 +35,7 @@ var app = angular.module('comparetravel', ['angular.filter'])
 
 
     .controller('stayController', ["$scope", "$http", "$location", function ($scope, $http, $filter, $location) {
-        var api_url = {{config.cfg['API_URL']}}
+        // var api_url = {{config.cfg['API_URL']}}
 
         $scope.hotelid = {};// hotel object on the basis of id
         $scope.hotel = {};
@@ -234,9 +234,8 @@ var app = angular.module('comparetravel', ['angular.filter'])
         $scope.imagesData = {};
         $scope.min = 0;
         $scope.max = 200000;
-        var api_url = {{config.cfg['API_URL']}}
+        // var api_url = {{config.cfg['API_URL']}}
 
-        }
 
         $scope.bookingPage = function (room_id) {
             window.open('/business/hotel/booking/' + room_id, '_self');
@@ -617,7 +616,7 @@ var app = angular.module('comparetravel', ['angular.filter'])
         $scope.margin_price = {};
         $scope.price = {};
         $scope.base_price = {};
-        var api_url = {{config.cfg['API_URL']}}
+        // var api_url = {{config.cfg['API_URL']}}
 
         $scope.showCreate = function () {
             $scope.hotelDetail = true;
@@ -1024,7 +1023,7 @@ var app = angular.module('comparetravel', ['angular.filter'])
         $scope.limit = 10;
         $scope.roomPrice = {};
         $scope.deallimit = 1;
-        var api_url = {{config.cfg['API_URL']}}
+        // var api_url = {{config.cfg['API_URL']}}
 
         $scope.openGallery = function (data) {
             $scope.imagesData = data;

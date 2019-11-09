@@ -233,10 +233,14 @@ def business_customer_care():
     return render_template('hotel/footer_pages/customer-care.html')
 
 
-@app.route('/jobs', methods=['GET'])
-def business_jobs():
+@app.route('/job-application', methods=['GET'])
+def job_application():
     return render_template('hotel/footer_pages/job-and-internship-application-form.html')
 
+
+@app.route('/jobs', methods=['GET'])
+def business_jobs():
+    return render_template('hotel/b2c_hotels/jobs.html')
 
 @app.route('/legal', methods=['GET'])
 def business_legal():
@@ -287,8 +291,6 @@ def collection4():
 @app.route('/hotel/collection/campsite-travel-beans', methods=['GET'])
 def collection5():
     return render_template('hotel/collections/campsite.html')   
-
-
 
 
 @app.route('/coming-soon')
@@ -399,8 +401,6 @@ def packages_138cil():
 def packages_142cil():
     return render_template('hotel/b2c_hotels/packages/TSP142CIL.html')
 
-
-
 @app.route('/packages/TSP132CIA')
 def packages_dubai2():
     return render_template('hotel/b2c_hotels/packages/TSP132CIA-dubai-3-nights-adventure-package.html')
@@ -425,3 +425,20 @@ def packages_140cia():
 @app.route('/packages/TSP141CIA')
 def packages_141cia():
     return render_template('hotel/b2c_hotels/packages/TSP141CIA.html')
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('hotel/b2c_hotels/customer-dashboard.html')
+
+@app.route('/enquiry')
+def enquiry():
+    return render_template('hotel/b2c_hotels/enquiry.html')
+
+@app.route('/enquiry/hotel')
+def hotel_enquiry():
+    return render_template('hotel/b2c_hotels/enquiry/hotel-enquiry.html')
+
+
+@app.route('/bb')
+def bb():
+    return render_template('hotel/b2c_hotels/JLADI KRA.html')

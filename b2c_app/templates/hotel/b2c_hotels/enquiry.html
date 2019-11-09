@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+    <html ng-app="enquiryApp">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Page Title -->
+    <title>Customer Dashboard | The Travel Square | India's Largest Travel Community</title>
+    
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta ng-model="viewport" content="width=device-width, initial-scale=1.0">
+	<meta ng-model="author" content="The Travel Square">
+    <meta ng-model="description" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+    <meta ng-model="distribution" content="global">
+    <meta ng-model="country" content="india">
+    <meta ng-model="copyright" content="The Travel Square">
+    <meta ng-model="revisit-after" content="1 hour">
+    <meta ng-model="designer" content="The Travel Square">
+    <meta ng-model="language" content="english">
+    <meta ng-model="robots" content="index, follow">
+    <meta ng-model="rating" content="general">
+    <meta ng-model="publisher" content="The Travel Square">
+	
+	<meta property="og:title" content="The Travel Square">
+    <meta property="og:description" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+    
+	<meta property="og:image" content="http://www.thetravelsquare/the-travel-square-logo-thumbnail.png">
+	<meta property="og:url" content="http://www.thetravelsquare.in/">
+  
+    <meta ng-model="twitter:card" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+  
+    <meta ng-model="keywords" content="travel in india ,travel packages , dubai packages , holiday packages , travel, the travel square, hotels, flights, India's Largest Travel Community">
+    <meta ng-model="format-detection" content="7428558566">
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+        <!-- Theme Styles -->
+        <link rel="stylesheet" href="files/bootstrap.min.css">
+        <link rel="stylesheet" href="files/font-awesome.min(1).css">
+        <link href="files/css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="files/animate.min.css">
+
+        <!-- Current Page Styles -->
+        <link rel="stylesheet" type="text/css" href="files/settings.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="files/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="files/jquery.bxslider.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="files/flexslider.css" media="screen">
+
+        <!-- Main Style -->
+        <!--<link id="main-style" rel="stylesheet" href="css/style.css">-->
+        <script type="text/javascript">
+            var mainStyle = "style.css";
+            if (typeof localStorage != "undefined") {
+                var colorSkin = localStorage.getItem("colorSkin");
+                if (colorSkin != null) {
+                    mainStyle = "style-" + colorSkin + ".css";
+                }
+            }
+            document.write('<link id="main-style" rel="stylesheet" href="css/' + mainStyle + '">');
+        </script><link id="main-style" rel="stylesheet" href="files/style(1).css">
+        <link id="main-style" rel="stylesheet" href="files/style-light-yellow.css">
+
+        <!-- Updated Styles -->
+        <link rel="stylesheet" href="files/updates.css">
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="files/custom.css">
+
+        <!-- Responsive Styles -->
+        <link rel="stylesheet" href="files/responsive.css">
+
+<style>
+.responsive {
+  width: 100%;
+  max-width: 1200px;
+  height: 530;
+}
+</style>
+
+        <style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+
+
+
+    </head>
+
+    <body>
+
+        <div id="page-wrapper">
+           <header id="header" class="navbar-static-top">
+                <div class="topnav hidden-xs">
+                    <div class="container">
+                        <ul class="quick-menu pull-left">
+						
+                            <li><a href="http://www.thetravelsquare.in/customer-care"><img height="20" width="20" src="images/dashboard/24-7-customer-support-the-travel-square-icon.png">&nbsp;&nbsp;<b>Customer Support</b></a></li>
+                            <li><a href="http://www.thetravelsquare.in/enquiry"><img height="20" width="17" src="images/dashboard/travel-expert-the-travel-square-icon.png">&nbsp;&nbsp;<b>Travel Expert</b></a></li>
+							
+                            <li><a href="http://www.thetravelsquare.in/holidays"> <font color="black"><a class="button white btn-small uppercase" style="height: 30px; font-size: 1em; color:black">
+							<img height="25" width="25" src="images/holiday_ballon.png">&nbsp;&nbsp;<b>Customize Holiday</b></a></font></a></li>
+                            <li><a href="http://partner.thetravelsquare.in/offers-and-deals"><img height="18" width="20" src="images/dashboard/offer-and-deal-the-travel-square-icon.png">&nbsp;&nbsp;<b>Best Offers & Deals</b></a></li>
+                        </ul>
+                        <ul class="quick-menu pull-right">
+                            <li><a href="http://www.thetravelsquare.in/customer-care"><img height="17" width="12" src="images/dashboard/toll-free-the-travel-square-icon.png">&nbsp; <b>+91-7428558566</b></a></li>
+							<li class="ribbon">
+                                                                <a href="http://www.thetravelsquare.in/login.php"><font color="black"><a class="button white btn-small uppercase" style="height: 30px; font-size: 1em; color:black"><img src="images/login-icon.png" height="18" width="18">&nbsp; &nbsp; Login / Sign Up</a></font></a>
+
+                                <ul class="menu mini uppercase">
+                                                                        <li><a href="http://www.thetravelsquare.in/dashboard">Dashboard</a></li>
+                                    <li><a href="http://www.thetravelsquare.in/logout.php">Log Out</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://business.thetravelsquare.in/booking-cart"><img height="27" width="30" src="http://thetravelsquare.in/images/cart-image.png"></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-header">
+
+                    <a href="http://partner.thetravelsquare.in/#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
+                        Mobile Menu Toggle
+                    </a>
+
+                    <div class="container">
+                        <h1 class="navbar-brand" style="height:20%">
+                            <a href="http://partner.thetravelsquare.in/dashboard" title="The Travel Square">
+                                <img src="http://www.thetravelsquare.in/images/the-travel-square-india-logo.png" alt="The Travel Square">
+                            </a>
+                        </h1><br>
+
+                        <nav id="main-menu" role="navigation">
+                            <ul class="menu">
+                                <li><a href="http://business.thetravelsquare.in/flight"><img height="60" width="60" src="images/flights-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/hotel"><img height="60" width="60" src="images/hotels-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/holidays"><img height="60" width="60" src="images/holidays-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/cabs"><img height="60" width="60" src="images/cabs-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsqaure.in/experiencez"><img height="60" width="60" src="images/experiences-icon.png"></a> </li>
+                                <li><a href="http://business.thetravelsquare.info/visa.html"><img height="60" width="60" src="images/visa-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/bus"><img height="60" width="60" src="images/buses-icon.png"></a></li>
+                               
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <nav id="mobile-menu-01" class="mobile-menu collapse">
+					
+					<br><center>
+						<button class="button white uppercase animated" data-animation-type="tada" data-toggle="modal" data-target="#customerlogin">
+				<b><big><img src="images/login-icon.png" height="18" width="18">&nbsp; &nbsp; <font color="black">Login / Sign Up </font></big></b></button>
+				
+				<button class="button white uppercase animated" data-animation-type="tada" data-toggle="modal" data-target="#customerlogin">
+				<b><big><img src="images/dashboard-icon.png" height="18" width="18">&nbsp; &nbsp; <font color="black">Dashboard </font></big></b></button>
+				</center>
+					
+                        <ul id="mobile-primary-menu" class="menu">
+						
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Flight</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/hotel">Hotel</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/holiday">Holiday</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Cabs & Transfer</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Experiences & Activities</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Events & Shows</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Visa</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Bus</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Forex</a> </li>
+                        </ul>
+						<br>
+                        <ul class="mobile-topnav container">
+						
+							<button class="button full-width white uppercase animated" data-animation-type="tada" data-toggle="modal" data-target="#customerlogin">
+				<b><big><img height="35" width="35" src="images/travel-cart.png">&nbsp; &nbsp; <font color="black">Travel Cart</font></big></b></button>
+				<br>
+
+                        </ul>
+                </nav></div>
+        </header></div>
+
+    <section id="content">
+            <div id="main">
+                <div class="tab-container full-width  style arrow-left dashboard">
+    <div id="enquiry" class="tab-pane fade active in">
+
+            <div class="container">
+                <div class="row">
+                    <div id="main" class="col-sm-8 col-md-9">
+                        <div class="search-box-wrapper style1">
+                            <div class="container">
+                                <div class="search-box">
+
+                                    <ul class="tabs full-width col-md-3">
+                                        <li class="active"><a href="#hotels-tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-hotel"></i>HOTELS</a></li>
+                                        <li class=""><a href="#flights-tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-plane"></i>FLIGHT</a></li>
+                                        <li class=""><a href="#cars-tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-car"></i>TRANSFERS</a></li>
+                                        <li class=""><a href="#flight-and-hotel-tab" data-toggle="tab" aria-expanded="false"><i class="fa fa-bookmark"></i>PACKAGES</a></li>
+                                        <!-- <li class=""><a href="#cruises-tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-calendar"></i>CRUISES</a></li> -->
+                                        <!-- <li class=""><a href="#flight-status-tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-plane"></i>FLIGHT STATUS</a></li> -->
+
+                                    </ul>
+                                </div>
+
+
+
+                                <div class="search-tab-content full-width">
+                                        
+ <div class="tab-pane fade active in" ng-app="enquiryApp" ng-controller="hotelEnquiryCtrl" id="hotels-tab">
+        <form method="POST">
+    
+            <div class="search-content">
+    
+                <div class="row">
+                    <center>
+                        <h2>Hotel & Accomodation Enquiry</h2>
+                    </center>
+                    <hr>
+            
+                    <div class="col-xs-6">
+                        <label>Mobile Number</label>
+    
+                        <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
+    
+                    </div>
+                    <!-- <div class="col-xs-6">
+                        <label>Add New Vendor / Customer</label>
+    
+                        <button type="submit" ng-model="lead_submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
+    
+                    </div> -->
+                </div>
+    <hr>
+                <label>City</label>
+                <input type="text" ng-model="city" class="input-text full-width" autocomplete="off" placeholder="Enter The City Name" required><br><br>
+    
+                <label>Hotel / Property Name</label>
+                <input type="text" ng-model="hotel_name" class="input-text full-width" required autocomplete="off" placeholder="Enter Hotel / Property Name">
+                <hr>
+    
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>Check In</label>
+                        <div class="datepicker-wrap">
+                            <input type="text" ng-model="check_in" autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy" id="dp1562882459940" required>
+                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                        </div>
+                    </div>
+    
+                    <div class="col-xs-6">
+                        <label>Check Out</label>
+                        <div class="datepicker-wrap">
+                            <input type="text" ng-model="check_out" autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy" id="dp1562882459941" required>
+                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+    
+                <div class="row">
+                    <!-- <div class="col-xs-6">
+                        <label>Enquiry Type</label>
+                        <div class="selector">
+                            <select ng-model="enquiry_type" class="full-width">
+                                <option value="1">B2C - Customer</option>
+                            </select><span class="custom-select full-width">B2B - Vendor/Partner</span>
+                        </div>
+                    </div> -->
+    
+                    <div class="col-xs-6">
+                        <label>MEAL PLAN</label>
+                        <div class="selector">
+                            <select ng-model="meal_plan"  autocomplete="off"  required class="full-width">
+                                <option value="1">CP - With Breakfast</option>
+                                <option value="2">MAP - With Two Meals</option>
+                                <option value="3">AP - All Meals</option>
+                            </select><span class="custom-select full-width">EP - Room Only</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <label>ROOMS</label>
+                        <input type="text" ng-model="rooms"  autocomplete="off"  class="input-text full-width" placeholder="Enter Number Of Room" required>
+                    </div>
+                </div><br><br>
+                <div class="row">
+    
+                    
+                    <div class="col-xs-6">
+                        <label>Room Category</label>
+                        <input type="text" ng-model="room_category"  autocomplete="off" class="input-text full-width" placeholder="Enter The City Name" required>
+    
+                    </div>
+                    <div class="col-xs-6">
+                        <label>TOTAL PAX</label>
+                        <input type="text" ng-model="total_pax"  autocomplete="off" class="input-text full-width" placeholder="Enter Total Number Of Pax" required>
+                    </div><br>
+                </div><br>
+    
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label> ADULTS</label>
+                        <input type="text" ng-model="adults" min="0" autocomplete="off"  class="input-text full-width" placeholder="Enter Number Of Adults" required>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>CHILD</label>
+                        <input type="text" ng-model="child" min="0" class="input-text full-width" placeholder="Enter Number Of Children" required>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>CHILD AGE</label>
+                        <input type="text" ng-model="child_age" min="0" max="6" autocomplete="off"  class="input-text full-width" placeholder="Enter Child Age (Comma Seperated)" required>
+                    </div>
+                </div><br>
+    
+                <label>Description</label>
+                <input type="text" ng-model="descrip" class="input-text full-width" autocomplete="off"  placeholder="Special Request or Description">
+                <hr>
+                <!-- <div class="row choose-travel">
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" ng-model="types" value="Hotel Suppliers">Hotel Suppliers
+                        </label>
+                    </div>
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" ng-model="types" value="Demands & Leads">Demands & Leads
+                        </label>
+                    </div>
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" ng-model="types" value="B2B Dashboard">B2B Dashboard
+                        </label>
+                    </div>
+                </div> -->
+                <hr>
+    
+    
+                <button type="submit" ng-model="upload" class="full-width uppercase blue1">Send Enquiry</button>
+            </div>
+        </form>
+    </div>    
+
+    <div class="tab-pane fade" id="cars-tab">
+            <form method="POST">
+    
+                <div class="search-content">
+                    <div class="row">
+                        <center>
+                            <h2>Cabs & Sightseeing</h2>
+                        </center>
+                        <hr>
+                        <div class="col-xs-6">
+                            <label>Mobile Number</label>
+                           
+                            <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
+    
+                        </div>
+                        <!-- <div class="col-xs-6">
+                            <label>Add New Vendor / Customer</label>
+    
+                            <button type="submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
+    
+                        </div> -->
+                    </div><br>
+                    <hr>
+    
+                    <div class="row choose-travel">
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="cab_trip_way" value="1">Sightseeing
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="cab_trip_way" value="2">Self Drive
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="cab_trip_way" value="3">Multi-city
+                            </label>
+                        </div><br>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="cab_trip_way" value="1">Oneway
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="cab_trip_way" value="2">Round Trip
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="cab_trip_way" value="3">Multi-city
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+    
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>Pick Up</label>
+                            <input type="text" required ng-model="pick_up_city" class="input-text full-width" placeholder="city, distirct or specific airpot">
+                        </div>
+                        <div class="col-xs-6">
+                            <label>Drop Off</label>
+                            <input type="text" required  ng-model="drop_off_city" class="input-text full-width" placeholder="city, distirct or specific airpot">
+                        </div>
+                    </div>
+                    <hr>
+                    <label>Pick-Up Date / Time</label>
+                    <div class="form-group row">
+                        <div class="col-xs-6">
+                            <div class="datepicker-wrap">
+                                <input type="text" required  ng-model="pick_up_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="selector">
+                                <select ng-model="pick_up_time" required  class="full-width">
+                                    <option value="1">anytime</option>
+                                    <option value="2">morning</option>
+                                </select><span class="custom-select full-width">anytime</span>
+                            </div>
+                        </div>
+                    </div>
+                    <label>Drop-Off Date / Time</label>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="datepicker-wrap">
+                                <input type="text" required  ng-model="drop_off_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="selector">
+                                <select ng-model="drop_off_time" required  class="full-width">
+                                    <option value="1">anytime</option>
+                                    <option value="2">morning</option>
+                                </select><span class="custom-select full-width">anytime</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label>Vehicles</label>
+                            <input type="text" ng-model="vehicles" class="input-text full-width" required  placeholder="Enter Number Of Vehicle Required">
+                        </div>
+                        <div class="col-xs-3">
+                            <label>Total PAX</label>
+                            <input type="text" ng-model="total_pax" class="input-text full-width" required  placeholder="Enter Total Number Of Pax">
+                        </div>
+                        <div class="col-xs-3">
+                            <label>Adults</label>
+                            <input type="text" ng-model="adults" class="input-text full-width" required  placeholder="Enter Number Of Adults">
+                        </div>
+                        <div class="col-xs-3">
+                            <label>Kids</label>
+                                <input type="text" ng-model="kids" class="input-text full-width" required  placeholder="Enter Number Of Kids">
+                        </div>
+    
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>Car Type</label>
+                            <input type="text" ng-model="car_type" class="input-text full-width" required  placeholder="Enter Vehicle Name">
+                        </div>
+                        <div class="col-xs-6">
+                            <label>Car Type</label>
+                            <input type="text" ng-model="car_type_capacity" class="input-text full-width" required  placeholder="Enter Vehicle Capacity Required ">
+                        </div>
+                    </div>
+                    <hr>
+                    <label>Description</label>
+                    <input type="text" ng-model="descrip" class="input-text full-width" required  placeholder="Special Request or Description">
+                    <hr>
+                    <!-- <div class="row choose-travel">
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="suppliers" value="1">Hotel Suppliers
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="suppliers" value="2">Demands & Leads
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="suppliers" value="3">B2B Dashboard
+                            </label>
+                        </div>
+                    </div> -->
+                    <hr>
+                    <div class="form-group">
+                        <button type="submit" ng-model="cab_upload" class="full-width">PROCEED TO RESULT</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+     
+<!-- Flight Enquiry -->
+
+<div class="tab-pane fade" id="flights-tab">
+        <form method="POST">
+    
+            <div class="search-content">
+                <div class="row">
+                    <center>
+                        <h2>Flights & Airways Enquiry</h2>
+                    </center>
+                    <hr>
+                    <div class="col-xs-6">
+                        <label>Mobile Number</label>
+    
+                        <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number" >
+    
+                    </div>
+                    <!-- <div class="col-xs-6">
+                        <label>Add New Vendor / Customer</label>
+    
+                        <button type="submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
+    
+                    </div> -->
+                </div><br>
+                <hr>
+    
+                <div class="row choose-travel">
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" required autocomplete="off" ng-model="trip_way" value="Oneway">Oneway
+                        </label>
+                    </div>
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" required autocomplete="off" ng-model="trip_way" value="Round Trip">Round Trip
+                        </label>
+                    </div>
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" required autocomplete="off" ng-model="trip_way" value="Multi-city">Multi-city
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>From</label>
+                        <input type="text" ng-model="fr_om" required autocomplete="off" class="input-text full-width" placeholder="Enter Destination or Airport">
+                    </div>
+                    <div class="col-xs-6">
+                        <label>To</label>
+                        <input type="text" ng-model="t_o" required autocomplete="off" class="input-text full-width" placeholder="Enter Destination or Airport">
+                    </div>
+                </div><br>
+                <!-- <div class="row">
+                    <div class="col-xs-6">
+                        <label>From</label>
+                        <input type="text" ng-model="" class="input-text full-width" placeholder="Enter Destination or Airport">
+                    </div>
+                    <div class="col-xs-6">
+                        <label>To</label>
+                        <input type="text" class="input-text full-width" placeholder="Enter Destination or Airport">
+                    </div>
+                </div> -->
+                <hr>
+                <label>Departure Dates & Time</label>
+                <div class="row">
+                    <div class="col-xs-4 col-md-3">
+                        <div class="datepicker-wrap">
+                            <input type="text" ng-model="departure_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
+                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-md-3">
+                        <input type="text" ng-model="departure_time" required autocomplete="off" class="input-text full-width" placeholder="Enter Timming (eg: Morning)">
+    
+                    </div>
+                    <div class="col-xs-5 col-md-6">
+                        <input type="text" ng-model="departure_airline_name" required autocomplete="off" class="input-text full-width" placeholder="Enter Airlines Name">
+    
+                    </div>
+                </div><br>
+                <label>Arrival</label>
+                <div class="row">
+                    <div class="col-xs-4 col-md-3">
+                        <div class="datepicker-wrap">
+                            <input type="text" ng-model="arrival_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
+                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-md-3">
+                        <input type="text" ng-model="arrival_time" required autocomplete="off" class="input-text full-width" placeholder="Enter Timming (eg: Morning)">
+    
+                    </div>
+                    <div class="col-xs-5 col-md-6">
+                        <input type="text" ng-model="arrival_airline_name" required autocomplete="off" class="input-text full-width" placeholder="Enter Airlines Name">
+    
+                    </div>
+                </div><br>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-4 col-md-3">
+                        <label>Total Pax</label>
+                        <input type="text" ng-model="total_pax" required autocomplete="off" class="input-text full-width" placeholder="Enter Total Pax">
+                    </div>
+                    <div class="col-xs-4 col-md-3">
+                        <label>Adults</label>
+                        <input type="text" ng-model="adults" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Adults">
+                    </div>
+                    <div class="col-xs-4 col-md-3">
+                        <label>Kids</label>
+                        <input type="text" ng-model="kids" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Kids">
+                    </div>
+                    <div class="col-xs-4 col-md-3">
+                        <label>Infants</label>
+                        <input type="text" ng-model="infants" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Infants">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>Flight Ticket Class</label>
+                        <input type="text" ng-model="flight_ticket_class" required autocomplete="off" class="input-text full-width" placeholder="Enter Passenger Ticket Type">
+                    </div>
+                    <div class="col-xs-6">
+    
+                    </div>
+                </div>
+                <hr>
+                <label>Description</label>
+                <input type="text" ng-model="descrip" required autocomplete="off" class="input-text full-width" placeholder="Special Request or Description">
+                <hr>
+                <!-- <div class="row choose-travel">
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" ng-model="types" value="Hotel Suppliers">Hotel Suppliers
+                        </label>
+                    </div>
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" ng-model="types" value="Demands & Leads">Demands & Leads
+                        </label>
+                    </div>
+                    <div class="col-xs-4">
+                        <label class="radio radio-inline">
+                            <input type="radio" ng-model="types" value="B2B Dashboard">B2B Dashboard
+                        </label>
+                    </div>
+                </div> -->
+                <hr>
+                <button type="submit" ng-model="flight_upload" class="full-width btn-medium">Send Enquiry</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Package Enquiry -->
+                                
+    <div class="tab-pane fade" id="flight-and-hotel-tab">
+            <form action="" method="post">
+            
+                <div class="search-content">
+                    <div class="row">
+                        <center>
+                            <h2>Packages & Trips</h2>
+                        </center>
+                        <hr>
+                        <div class="col-xs-6">
+                            <label>Mobile Number</label>
+                        
+                            <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
+            
+                        </div>
+                        <!-- <div class="col-xs-6">
+                            <label>Add New Vendor / Customer</label>
+            
+                            <button type="submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
+            
+                        </div> -->
+                    </div><br>
+                    <hr>
+            
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>Leaving From</label>
+                            <input type="text" ng-model="leaving_from" required autocomplete="off" class="input-text full-width" placeholder="Enter City">
+                        </div>
+                        <div class="col-xs-6">
+                            <label>Going To</label>
+                            <input type="text" ng-model="going_to"  required autocomplete="off" class="input-text full-width" placeholder="Enter City">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>Start Date</label>
+                            <div class="datepicker-wrap">
+                                <input type="text" ng-model="start_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <label>End Date</label>
+                            <div class="datepicker-wrap">
+                                <input type="text" ng-model="end_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            </div>
+                        </div>
+                    </div><br>
+                    <hr>
+            
+                    <div class="row">
+                        <div class="col-xs-4 col-md-3">
+                            <label>Total PAX</label>
+                            <input type="text" ng-model="total_pax"  required autocomplete="off" class="input-text full-width" placeholder="Enter Total Number Of Pax">
+                        </div>
+                        <div class="col-xs-4 col-md-3">
+                            <label>Adults</label>
+                            <input type="text" ng-model="adults"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Adults">
+                        </div>
+                        <div class="col-xs-4 col-md-3">
+                            <label>Kids</label>
+                            <input type="text" ng-model="kids"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Kids">
+                        </div>
+                        <div class="col-xs-4 col-md-3">
+                            <label>Infants</label>
+                            <input type="text" ng-model="infants"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Infants">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>Class of travel</label>
+                            <div class="selector">
+                                <select ng-model="class_of_travel">
+                                    <option value="Economy">Economy</option>
+                                </select><span class="custom-select">Economy</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <label>Preferred Airline</label>
+                            <input type="text" ng-model="preferred_airline"  required autocomplete="off" class="input-text full-width" placeholder="Enter Airline Preference">
+                        </div>
+                    </div>
+                    <hr>
+                    <label>Description</label>
+                    <input type="text" ng-model="descrip" class="input-text full-width"  required autocomplete="off" placeholder="Special Request or Description">
+                    <hr>
+                    <!-- <div class="row choose-travel">
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="suppliers" value="Hotel Suppliers">Hotel Suppliers
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="suppliers" value="Demands & Leads">Demands & Leads
+                            </label>
+                        </div>
+                        <div class="col-xs-4">
+                            <label class="radio radio-inline">
+                                <input type="radio" ng-model="suppliers" value="B2B Dashboard">B2B Dashboard
+                            </label>
+                        </div>
+                    </div> -->
+                    <hr>
+                    <button type="submit" ng-model="package_upload" class="full-width btn-medium">PROCEED TO RESULT</button>
+                </div>
+            </form>
+            </div>
+ 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-1.11.1.min.js.download"></script>
+        <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.noconflict.js.download"></script>
+        <script type="text/javascript" src="http://thetravelsquare.in/files/modernizr.2.7.1.min.js.download"></script>
+        <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-migrate-1.2.1.min.js.download"></script>
+        <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.placeholder.js.download"></script>
+        <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-ui.1.10.4.min.js.download"></script>
+
+        <!-- Twitter Bootstrap -->
+        <script type="text/javascript" src="http://thetravelsquare.in/files/bootstrap.js.download"></script>
+
+        <!-- parallax -->
+        <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.stellar.min.js.download"></script>
+
+        <!-- waypoint -->
+        <script type="text/javascript" src="http://thetravelsquare.in/files/waypoints.min.js.download"></script>
+
+        <!-- load page Javascript -->
+        <script type="text/javascript" src="http://thetravelsquare.in/files/theme-scripts.js.download"></script>
+        <script type="text/javascript" src="http://thetravelsquare.in/files/scripts.js.download"></script>
+
