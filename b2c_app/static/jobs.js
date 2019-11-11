@@ -1,5 +1,16 @@
 
+
 var app = angular.module('postserviceApp', []);
+app.config(['$httpProvider', function($httpProvider) {
+
+    $httpProvider.defaults.useXDomain = true;
+
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+}
+
+]);
+
 
 app.controller('postserviceCtrl', function ($scope, $http) {
 
@@ -44,7 +55,7 @@ var data = {
 
 
 
-$http.post('0.0.0.0:8000/api/v1/cab_enquiry/job_create.php', JSON.stringify(data)).then(function (response) {
+$http.post('http://0.0.0.0:7000/api/v1/insert/job_create.php', JSON.stringify(data)).then(function (response) {
 
 if (response.data)
 
@@ -55,3 +66,4 @@ $scope.msg = "Post Data Submitted Successfully!";
 };
 
 });
+
