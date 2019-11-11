@@ -3,48 +3,50 @@ var app = angular.module('enquiryApp', []);
 
 app.controller('hotelEnquiryCtrl', function ($scope, $http) {
 
-$scope.full_name = null;
-$scope.dob_date = null;
-$scope.dob_month = null;
-$scope.dob_year = null;
-$scope.gender = null;
-$scope.home_address = null;
-$scope.landmark = null;
-$scope.email = null;
 $scope.mobile = null;
-$scope.degree = null;
-$scope.work_experience = null;
-$scope.school_name = null;
-$scope.referral_person = null;
-$scope.job_department = null;
-$scope.cv = null;
+$scope.city = null;
+$scope.hotel_name = null;
+$scope.check_in = null;
+$scope.check_out = null;
+$scope.enquiry_type = null;
+$scope.meal_plan = null;
+$scope.rooms = null;
+$scope.room_category = null;
+$scope.total_pax = null;
+$scope.adults = null;
+$scope.child = null;
+$scope.child_age = null;
+$scope.descrip = null;
+$scope.types = null;
+$scope.origin = "customer";
 
-$scope.postdata = function (full_name, dob_date,dob_month, dob_year, gender, home_address, landmark, email, mobile, degree, work_experience, school_name, referral_person, job_department, cv) {
+$scope.postdata = function (mobile, city, hotel_name, check_in, check_out, enquiry_type, meal_plan, rooms, room_category, total_pax, adults, child, child_age, descrip, types, origin) {
 
 var data = {
 
-    full_name: full_name,
-    dob_date: dob_date,
-    dob_month: dob_month,
-    dob_year: dob_year,
-    gender: gender,
-    home_address: home_address,
-    landmark: landmark,
-    email: email,
     mobile: mobile,
-    degree: degree,
-    work_experience: work_experience,
-    school_name: school_name,
-    referral_person: referral_person,
-    job_department: job_department,
-    cv: cv
+    city: city,
+    hotel_name: hotel_name,
+    check_in: check_in,
+    check_out: check_out,
+    enquiry_type: enquiry_type,
+    meal_plan: meal_plan,
+    rooms: rooms,
+    room_category: room_category,
+    total_pax: total_pax,
+    adults: adults,
+    child: child,
+    child_age: child_age,
+    descrip: descrip,
+    types: types,
+    origin: origin
 };
 
 //Call the services
 
 
 
-$http.post('0.0.0.0:8000/api/v1/cab_enquiry/job_create.php', JSON.stringify(data)).then(function (response) {
+$http.post('0.0.0.0:8000/api/v1/insert/create.php', JSON.stringify(data)).then(function (response) {
 
 if (response.data)
 

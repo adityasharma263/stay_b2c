@@ -439,6 +439,10 @@ def hotel_enquiry():
     return render_template('hotel/b2c_hotels/enquiry/hotel-enquiry.html')
 
 
+# @app.route('/bb')
+# def bb():
+#     return render_template('hotel/b2c_hotels/JLADI KRA.html')
+
 @app.route('/bb')
 def bb():
-    return render_template('hotel/b2c_hotels/JLADI KRA.html')
+    return render_template('hotel/b2c_hotels/bb.html')

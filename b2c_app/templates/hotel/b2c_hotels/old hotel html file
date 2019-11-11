@@ -49,7 +49,7 @@
 <link rel="stylesheet" type="text/css" href="files/style.css" media="screen">
 <link rel="stylesheet" type="text/css" href="files/jquery.bxslider.css" media="screen">
 <link rel="stylesheet" type="text/css" href="files/flexslider.css" media="screen">
-<script src="files/dropdown.js"></script>
+
 <!-- Main Style -->
 <!--<link id="main-style" rel="stylesheet" href="css/style.css">-->
 <script type="text/javascript">
@@ -73,87 +73,26 @@
 
 <!-- Responsive Styles -->
 <link rel="stylesheet" href="files/responsive.css">
-<link rel="stylesheet" href="files/responsive.css">
-<link rel="stylesheet" href="files/only-index.css">
-<link rel="stylesheet" href="files/dropdown.css">
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE16CRYW41"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EE16CRYW41');
-</script>
- 
-	
-	<style>
-	.responsive {
-	width: 100%;
-	max-height: 200%;
-	height: auto;
-	}
-	</style>
-	
-	<link rel="shortcut icon" href="" type="image/x-icon">
-    
-	<script>
-
-$(document).ready(function() {
-  // Gets the video src from the data-src on each button
-
-  var $videoSrc;
-  $(".video-btn").click(function() {
-    $videoSrc = $(this).data("src");
-  });
-  console.log($videoSrc);
-
-  // when the modal is opened autoplay it
-  $("#myModal").on("shown.bs.modal", function(e) {
-    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-    $("#video").attr(
-      "src",
-      $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
-    );
-  });
-
-  // stop playing the youtube video when I close the modal
-  $("#myModal").on("hide.bs.modal", function(e) {
-    // a poor man's stop video
-    $("#video").attr("src", $videoSrc);
-  });
-
-  // document ready
-});
-
-
-</script>
-	
-	<style>
-
-.modal-dialog {
-  max-width: 1000px;
-  margin: 30px auto;
-}
-
-.modal-body {
-  position: relative;
-  padding: 0px;
-}
-.close {
-  position: absolute;
-  right: -30px;
-  top: 0;
-  z-index: 999;
-  font-size: 2rem;
-  font-weight: normal;
-  color: #fff;
-  opacity: 1;
-}
-
+<style>
+    .responsive {
+        width: 100%;
+        max-width: 1200px;
+        height: 530;
+    }
 </style>
 
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+</style>
 
 
 
@@ -313,78 +252,22 @@ $(document).ready(function() {
                     <div class="table-wrapper full-width">
                         <div class="table-cell">
                             <div class="heading box">
-                                <h1 class="title">Yours To Explore</h1><br>
-                                <h2 class="uppercase"><b><font color="white">Discover , Customize and Book Amazing Experiences & Trips at Exclusive Prices</font></b></h2>
+                                <h1 class="title">Yours To Explore</h1>
                             </div>
                             <div class="search-box">
-								<form>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group row">
-                                            <div class="col-xs-6">
-                                                <input type="text" class="input-text full-width" placeholder="Leaving From, DELHI" value="Delhi">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-8 form-group">
+                                            <input type="text" class="input-text full-width" placeholder="Where Do You Wish To Travel ? .... ">
+                                        </div>
+                                        
+                                            
+                                            <div class="col-sm-4 form-group">
+                                                <button class="button btn-medium full-width uppercase sky-blue1 animated" data-animation-type="tada">Search Now</button>
                                             </div>
-                                            <div class="col-xs-6">
-                                                <input type="text" class="input-text full-width" onclick="myFunction()" autocomplete="off" id="myInput"  onkeyup="filterFunction()" placeholder="Your Travel Destination">
-
-                                                <div id="myDropdown" onclick="myFunction()" class="dropdown-content">
-                                                        <a href="http://thetravelsquare.info/holiday/dubai.html">Dubai</a>
-                                                        <a href="#base">Bali</a>
-                                                        <a href="#blog">Goa</a>
-                                                        <a href="#contact">Mauritius</a>
-                                                        <a href="#custom">Phuket/Krabi</a>
-                                                        <a href="#support">Malaysia</a>
-                                                        <a href="#tools">Singapore</a>
-                                                        <a href="http://thetravelsquare.info/holiday/andaman.html">Andaman</a>
-                                                        <a href="#tools">Meghalaya</a>
-                                                        <a href="#tools">Maldives</a>
-                                                        <a href="#tools">Kerala</a>
-                                                        <a href="#tools">Bangkok/Pattaya</a>
-                                                        <a href="#tools">Vietnam</a>
-                                                        <a href="#tools">Thailand</a>
-                                                        <a href="#tools">Jaipur</a>
-                                                        <a href="http://thetravelsquare.info/holiday/kerala.html">Kerala</a>
-                                                      </div>
-                                                    
-                                            </div>
-                                        </div>
+                                        
                                     </div>
-                                    
-                                    <div class="col-xs-6 col-md-2">
-                                        <div class="form-group">
-                                            <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">Nov 2019</option>
-                                                        <option value="1">Dec 2019</option>
-                                                        <option value="2">Jan 2020</option>
-                                                        <option value="2">Feb 2020</option>
-                                                        <option value="2">Mar 2020</option>
-                                                        <option value="2">Apr 2020</option>
-                                                    </select><span class="custom-select full-width">Select Month</span>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-xs-6 col-md-2">
-                                        <div class="form-group">
-                                            <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">01 Day Out</option>
-                                                        <option value="1">0-2 Nights</option>
-                                                        <option value="2">2-4 Nights</option>
-                                                        <option value="2">4-6 Nights</option>
-                                                        <option value="2">6-10 Nights</option>
-                                                        <option value="2">Long Staycations</option>
-                                                    </select><span class="custom-select full-width">Select Duration</span>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <button class="button btn-medium full-width uppercase sky-blue1 animated" data-animation-type="tada">Search Now</button>
-                                    </div>
-                                </div>
-                            </form>
-                                
+                                </form>
                             </div>
                             <div class="text-center">
                                 &nbsp;&nbsp;
@@ -1201,17 +1084,17 @@ $(document).ready(function() {
     </div>
   </div>
 
-<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
           <!-- 16:9 aspect ratio -->
-            <!-- <iframe height="600" width="900" class="autoplay embed-responsive-item" src="https://www.youtube.com/embed/tVHSTtQfbAI?autoplay=1" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+            <iframe height="600" width="900" class="autoplay embed-responsive-item" src="https://www.youtube.com/embed/tVHSTtQfbAI?autoplay=1" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
 
     </div>
-  </div> --> 
+  </div>
 
 
 

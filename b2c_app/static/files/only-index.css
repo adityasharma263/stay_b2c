@@ -1,0 +1,47 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .overlaycity {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .overlaycity img {vertical-align: middle;}
+  
+  .overlaycity .picturecity {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.2); 
+    color: #f1f1f1;
+    width: 120%;
+    padding: 70px;
+    left: -25px;
+  }
+  </style>
+  
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .overlay {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .overlay img {vertical-align: middle;}
+  
+  .overlay .picture {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }

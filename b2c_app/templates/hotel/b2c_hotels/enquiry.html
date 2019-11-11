@@ -140,14 +140,21 @@
 
                         <nav id="main-menu" role="navigation">
                             <ul class="menu">
-                                <li><a href="http://business.thetravelsquare.in/flight"><img height="60" width="60" src="images/flights-icon.png"></a></li>
-                                <li><a href="http://business.thetravelsquare.in/hotel"><img height="60" width="60" src="images/hotels-icon.png"></a></li>
-                                <li><a href="http://business.thetravelsquare.in/holidays"><img height="60" width="60" src="images/holidays-icon.png"></a></li>
-                                <li><a href="http://business.thetravelsquare.in/cabs"><img height="60" width="60" src="images/cabs-icon.png"></a></li>
-                                <li><a href="http://business.thetravelsqaure.in/experiencez"><img height="60" width="60" src="images/experiences-icon.png"></a> </li>
-                                <li><a href="http://business.thetravelsquare.info/visa.html"><img height="60" width="60" src="images/visa-icon.png"></a></li>
-                                <li><a href="http://business.thetravelsquare.in/bus"><img height="60" width="60" src="images/buses-icon.png"></a></li>
-                               
+                                <li><a href="http://business.thetravelsquare.in/coming-soon"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/flights-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/hotel"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/hotels-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/holidays"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/holidays-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/coming-soon"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/cabs-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsqaure.in/coming-soon"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/experiences-icon.png"></a> </li>
+                                <li><a href="http://business.thetravelsquare.info/coming-soon"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/visa-icon.png"></a></li>
+                                <li><a href="http://business.thetravelsquare.in/coming-soon"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/buses-icon.png"></a></li>
+    
                             </ul>
                         </nav>
                     </div>
@@ -224,17 +231,18 @@
                     <hr>
             
                     <div class="col-xs-6">
+                        <label>Your Name</label>
+    
+                        <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+    
+                    </div>
+
+                    <div class="col-xs-6">
                         <label>Mobile Number</label>
     
                         <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
     
                     </div>
-                    <!-- <div class="col-xs-6">
-                        <label>Add New Vendor / Customer</label>
-    
-                        <button type="submit" ng-model="lead_submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
-    
-                    </div> -->
                 </div>
     <hr>
                 <label>City</label>
@@ -340,7 +348,8 @@
                 <hr>
     
     
-                <button type="submit" ng-model="upload" class="full-width uppercase blue1">Send Enquiry</button>
+                <button type="submit" ng-click="post_hotel_enq(name, mobile, city, hotel_name, check_in, check_out, enquiry_type, meal_plan,
+                            rooms, room_category, total_pax, adults, child, child_age, descrip, types, 'customer')" class="full-width uppercase blue1">Send Enquiry</button>
             </div>
         </form>
     </div>    
@@ -354,18 +363,21 @@
                             <h2>Cabs & Sightseeing</h2>
                         </center>
                         <hr>
+
+                        <div class="col-xs-6">
+                            <label>Your Name</label>
+    
+                            <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+    
+                        </div>
+
                         <div class="col-xs-6">
                             <label>Mobile Number</label>
                            
                             <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
     
                         </div>
-                        <!-- <div class="col-xs-6">
-                            <label>Add New Vendor / Customer</label>
-    
-                            <button type="submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
-    
-                        </div> -->
+                        
                     </div><br>
                     <hr>
     
@@ -500,7 +512,8 @@
                     </div> -->
                     <hr>
                     <div class="form-group">
-                        <button type="submit" ng-model="cab_upload" class="full-width">PROCEED TO RESULT</button>
+                        <button type="submit" ng-click="post_cab_enq(mobile, cab_trip_way, pick_up_city, drop_off_city, pick_up_date, pick_up_time,
+                        drop_off_date, drop_off_time, vehicles, total_pax, adults, kids, car_type, car_type_capacity, descrip, suppliers, 'business')" class="full-width">PROCEED TO RESULT</button>
                     </div>
                 </div>
             </form>
@@ -517,18 +530,20 @@
                         <h2>Flights & Airways Enquiry</h2>
                     </center>
                     <hr>
+                    
+                    <div class="col-xs-6">
+                        <label>Your Name</label>
+    
+                        <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+    
+                    </div>
+
                     <div class="col-xs-6">
                         <label>Mobile Number</label>
     
                         <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number" >
     
-                    </div>
-                    <!-- <div class="col-xs-6">
-                        <label>Add New Vendor / Customer</label>
-    
-                        <button type="submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
-    
-                    </div> -->
+                    </div>  
                 </div><br>
                 <hr>
     
@@ -656,7 +671,8 @@
                     </div>
                 </div> -->
                 <hr>
-                <button type="submit" ng-model="flight_upload" class="full-width btn-medium">Send Enquiry</button>
+                <button type="submit" ng-click="post_flight_enq(name, mobile, trip_way, fr_om, t_o, departure_date, departure_time, departure_airline_name,
+                arrival_date, arrival_time, arrival_airline_name, total_pax, adults, kids, infants, flight_ticket_class, descrip, types, 'business')" class="full-width btn-medium">Send Enquiry</button>
             </div>
         </form>
     </div>
@@ -672,18 +688,21 @@
                             <h2>Packages & Trips</h2>
                         </center>
                         <hr>
+
+                        <div class="col-xs-6">
+                            <label>Your Name</label>
+            
+                            <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+            
+                        </div>
+
                         <div class="col-xs-6">
                             <label>Mobile Number</label>
                         
                             <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
             
                         </div>
-                        <!-- <div class="col-xs-6">
-                            <label>Add New Vendor / Customer</label>
-            
-                            <button type="submit" class="button btn-medium dark-blue1 full-width uppercase">Create +</button>
-            
-                        </div> -->
+                       
                     </div><br>
                     <hr>
             
@@ -768,8 +787,9 @@
                             </label>
                         </div>
                     </div> -->
-                    <hr>
-                    <button type="submit" ng-model="package_upload" class="full-width btn-medium">PROCEED TO RESULT</button>
+                  
+                    <button type="submit" ng-click="post_package_enq(mobile, leaving_from, going_to, start_date, end_date, total_pax, adults, kids,
+                    infants, class_of_travel, preferred_airline, descrip, suppliers, 'business')" class="full-width btn-medium">PROCEED TO RESULT</button>
                 </div>
             </form>
             </div>
