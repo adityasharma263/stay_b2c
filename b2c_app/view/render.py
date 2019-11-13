@@ -194,17 +194,17 @@ def experiences_rishikesh():
 
 #================= Add on Pages hotels ==========================
 
-@app.route('/travellers/uttrakhand')
+@app.route('/travellers/gusts-of-wind-at-uttrakhand')
 def travellers_uttrakhand():
     return render_template('hotel/b2c_hotels/travellers/gusts-of-wind-at-uttrakhand-story-the-travel-square.html')
 
 
-@app.route('/travellers/kasol')
+@app.route('/travellers/mesmerising-beauty-of-kasol')
 def travellers_kasol():
     return render_template('hotel/b2c_hotels/travellers/mesmerising-beauty-of-kasol-story-the-travel-square.html')
 
 
-@app.route('/travellers/london')
+@app.route('/travellers/new-girl-in-london-town')
 def travellers_london():
     return render_template('hotel/b2c_hotels/travellers/new-girl-in-london-town-story-the-travel-square.html')
 
@@ -443,6 +443,16 @@ def hotel_enquiry():
 # def bb():
 #     return render_template('hotel/b2c_hotels/JLADI KRA.html')
 
-@app.route('/bb')
+# @app.route('/bb')
+# def bb():
+#     return render_template('hotel/b2c_hotels/bb.html')
+
+
+@app.route('/offers-and-deals')
+def offers():
+    return render_template('hotel/b2c_hotels/offers-and-deal.html')
+
+
+@app.route('/supplier-verification')
 def bb():
-    return render_template('hotel/b2c_hotels/bb.html')
+    return render_template('hotel/b2c_hotels/supplier-verification-form.html')

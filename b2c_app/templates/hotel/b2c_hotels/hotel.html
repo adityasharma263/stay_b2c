@@ -143,6 +143,14 @@ $(document).ready(function() {
 
 
 </script>
+
+<script>
+(function() {
+    var some_id = document.getElementById('myInput');
+    some_id.type = 'text';
+    some_id.removeAttribute('autocomplete');
+})();
+</script>
 	
 	<style>
 body {
@@ -190,6 +198,9 @@ body {
     
     <!-- Responsive Styles -->
     <link rel="stylesheet" href="files/responsive.css">
+    <link rel="stylesheet" href="files/dropdown.css">
+
+    <script src="files/dropdown.js"></script>
 	
 	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -209,7 +220,7 @@ body {
 							
                             <li><a href="http://www.thetravelsquare.in/holidays"> <font color="black"><a class="button white btn-small uppercase" style="height: 30px; font-size: 1em; color:black">
 							<img height="25" width="25" src="images/holiday_ballon.png">&nbsp;&nbsp;<b>Customize Holiday</b></a></font></a></li>
-                            <li><a href="http://partner.thetravelsquare.in/offers-and-deals"><img height="18" width="20" src="http://thetravelsquare.in/images/dashboard/offer-and-deal-the-travel-square-icon.png">&nbsp;&nbsp;<b>Best Offers & Deals</b></a></li>
+                            <li><a href="http://thetravelsquare.in/offers-and-deals"><img height="18" width="20" src="http://thetravelsquare.in/images/dashboard/offer-and-deal-the-travel-square-icon.png">&nbsp;&nbsp;<b>Best Offers & Deals</b></a></li>
                         </ul>
                         <ul class="quick-menu pull-right">
                             <li><a href="http://www.thetravelsquare.in/customer-care"><img height="17" width="12" src="http://thetravelsquare.in/images/dashboard/toll-free-the-travel-square-icon.png">&nbsp; <b>+91-7428558566</b></a></li>
@@ -246,7 +257,7 @@ body {
                                             src="images/flights-icon.png"></a></li>
                                 <li><a href="http://business.thetravelsquare.in/hotel"><img height="47" width="48"
                                             src="images/hotels-icon.png"></a></li>
-                                <li><a href="http://business.thetravelsquare.in/holidays"><img height="47" width="48"
+                                <li><a href="http://business.thetravelsquare.in/coming-soon"><img height="47" width="48"
                                             src="images/holidays-icon.png"></a></li>
                                 <li><a href="http://business.thetravelsquare.in/coming-soon"><img height="47" width="48"
                                             src="images/cabs-icon.png"></a></li>
@@ -273,13 +284,13 @@ body {
 					
                         <ul id="mobile-primary-menu" class="menu">
 						
-                            <li><a href="http://business.thetravelsquare.in/flight">Flight</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Flight</a> </li>
                             <li><a href="http://business.thetravelsquare.in/hotel">Hotel</a> </li>
-                            <li><a href="http://business.thetravelsquare.in/flight">Holiday</a> </li>
-                            <li><a href="http://business.thetravelsquare.in/cab">Cabs & Transfer</a> </li>
-                            <li><a href="http://business.thetravelsquare.in/cab">Experiences & Activities</a> </li>
-                            <li><a href="http://business.thetravelsquare.in/cab">Events & Shows</a> </li>
-                            <li><a href="http://business.thetravelsquare.in/restaurant">Visa</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/holiday">Holiday</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Cabs & Transfer</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Experiences & Activities</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Events & Shows</a> </li>
+                            <li><a href="http://business.thetravelsquare.in/coming-soon">Visa</a> </li>
                             <li><a href="http://business.thetravelsquare.in/coming-soon">Bus</a> </li>
                             <li><a href="http://business.thetravelsquare.in/coming-soon">Forex</a> </li>
                         </ul>
@@ -326,46 +337,70 @@ body {
                             <div class="search-box">
 								<form>
                                 <div class="row">
+
+
+                                        <div class="col-xs-6 col-md-2">
+                                                <div class="form-group">
+                                                    <div class="selector">
+                                                            <select class="full-width">
+                                                                <option value="1">Nov 2019</option>
+                                                                <option value="1">Dec 2019</option>
+                                                                <option value="2">Jan 2020</option>
+                                                                <option value="2">Feb 2020</option>
+                                                                <option value="2">Mar 2020</option>
+                                                                <option value="2">Apr 2020</option>
+                                                            </select><span class="custom-select full-width">Select Month</span>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-xs-6 col-md-2">
+                                                <div class="form-group">
+                                                    <div class="selector">
+                                                            <select class="full-width">
+                                                                <option value="1">01 Day Out</option>
+                                                                <option value="1">0-2 Nights</option>
+                                                                <option value="2">2-4 Nights</option>
+                                                                <option value="2">4-6 Nights</option>
+                                                                <option value="2">6-10 Nights</option>
+                                                                <option value="2">Long Staycations</option>
+                                                            </select><span class="custom-select full-width">Select Duration</span>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                                <form>
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <div class="col-xs-6">
-                                                <input type="text" class="input-text full-width active in" placeholder="Leaving From, DELHI">
+                                                <input type="text" class="input-text full-width active in" placeholder="Leaving From, Delhi" value="Delhi">
                                             </div>
                                             <div class="col-xs-6">
-                                                <input type="text" class="input-text full-width" placeholder="Your Travel Destination">
+                                                    <input type="text" class="input-text full-width" onclick="myFunction()" autocomplete="off" id="myInput"  onkeyup="filterFunction()" placeholder="Search Your Travel Destination">
+
+                                                    <div id="myDropdown" onclick="myFunction()" class="dropdown-content">
+                                                            <a href="http://thetravelsquare.info/holiday/dubai.html">Dubai</a>
+                                                            <a href="#base">Bali</a>
+                                                            <a href="#blog">Goa</a>
+                                                            <a href="#contact">Mauritius</a>
+                                                            <a href="#custom">Phuket/Krabi</a>
+                                                            <a href="#support">Malaysia</a>
+                                                            <a href="#tools">Singapore</a>
+                                                            <a href="http://thetravelsquare.info/holiday/andaman.html">Andaman</a>
+                                                            <a href="#tools">Meghalaya</a>
+                                                            <a href="#tools">Maldives</a>
+                                                            <a href="#tools">Kerala</a>
+                                                            <a href="#tools">Bangkok/Pattaya</a>
+                                                            <a href="#tools">Vietnam</a>
+                                                            <a href="#tools">Thailand</a>
+                                                            <a href="#tools">Jaipur</a>
+                                                            <a href="http://thetravelsquare.info/holiday/kerala.html">Kerala</a>
+                                                          </div>
                                             </div>
                                         </div>
                                     </div>
                                     
-                                    <div class="col-xs-6 col-md-2">
-                                        <div class="form-group">
-                                            <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">Nov 2019</option>
-                                                        <option value="1">Dec 2019</option>
-                                                        <option value="2">Jan 2020</option>
-                                                        <option value="2">Feb 2020</option>
-                                                        <option value="2">Mar 2020</option>
-                                                        <option value="2">Apr 2020</option>
-                                                    </select><span class="custom-select full-width">Select Month</span>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-xs-6 col-md-2">
-                                        <div class="form-group">
-                                            <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">01 Day Out</option>
-                                                        <option value="1">0-2 Nights</option>
-                                                        <option value="2">2-4 Nights</option>
-                                                        <option value="2">4-6 Nights</option>
-                                                        <option value="2">6-10 Nights</option>
-                                                        <option value="2">Long Staycations</option>
-                                                    </select><span class="custom-select full-width">Select Duration</span>
-                                                </div>
-                                        </div>
-                                    </div>
+                                  
                                     <div class="form-group col-md-2">
                                         <button class="button btn-medium full-width uppercase sky-blue1 animated" data-animation-type="tada">Search Now</button>
                                     </div>
@@ -448,13 +483,13 @@ body {
                             </a>
                         </li>
                         <li style="width: 170px; float: left; display: block;">
-                            <a href="http://thetravelsquare.info/holiday/new-york.html" class="hover-effect">
+                            <a href="http://thetravelsquare.info/holiday/malaysia.html" class="hover-effect">
                             <div class="overlaycity">
                             <figure>
                                 <img src="images/new-york-packages-the-travel-square.png" alt="" draggable="false">
                             <div class="picturecity">
 								<center>
-								<h4 class="post-title entry-title"><font color="white" ><big><b>NewYork</b></big></font></h4>
+								<h4 class="post-title entry-title"><font color="white" ><big><b>Malaysia</b></big></font></h4>
 								</center>
 							</div>
                             </figure>
