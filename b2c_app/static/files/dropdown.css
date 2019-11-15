@@ -34,12 +34,12 @@
   border: 1px solid #ddd;
   z-index: 1;
 }
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
   .dropdown-content{
   min-width: 100px;
     
   }
-} */
+}
 
 
 
