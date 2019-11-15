@@ -2,6 +2,11 @@
 * {
     box-sizing: border-box;
   }
+
+  body {
+    font-family: anton;
+    font-size: 17px;
+  }
   
   .overlaycity {
     position: relative;
@@ -21,9 +26,7 @@
     padding: 70px;
     left: -25px;
   }
-  </style>
-  
-  <style>
+ 
   * {
     box-sizing: border-box;
   }
@@ -44,4 +47,10 @@
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+  }
+
+  .responsive {
+    width: 100%;
+    max-height: 200%;
+    height: auto;
   }

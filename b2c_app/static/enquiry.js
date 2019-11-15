@@ -20,7 +20,8 @@ $scope.descrip = null;
 $scope.types = null;
 $scope.origin = "customer";
 
-$scope.postdata = function (mobile, city, hotel_name, check_in, check_out, enquiry_type, meal_plan, rooms, room_category, total_pax, adults, child, child_age, descrip, types, origin) {
+$scope.postdata = function (mobile, city, hotel_name, check_in, check_out, enquiry_type,
+     meal_plan, rooms, room_category, total_pax, adults, child, child_age, descrip, types, origin) {
 
 var data = {
 
