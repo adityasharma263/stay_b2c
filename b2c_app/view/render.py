@@ -36,7 +36,7 @@ def flight():
 def cabs():
     return render_template('hotel/b2c_hotels/coming-soon.html')
 
-@app.route('/activities')
+@app.route('/experience')
 def activities():
     return render_template('hotel/b2c_hotels/coming-soon.html')
 
