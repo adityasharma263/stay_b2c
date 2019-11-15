@@ -28,6 +28,37 @@ def hotel_home():
 def hotel():
     return render_template('hotel/b2c_hotels/hotel.html')
 
+@app.route('/flight')
+def flight():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
+
+@app.route('/cabs')
+def cabs():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
+
+@app.route('/activities')
+def activities():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
+
+@app.route('/visa')
+def visa():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
+
+@app.route('/buses')
+def buses():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
+
+@app.route('/events')
+def events():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
+
+@app.route('/bus')
+def bus():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
+
+@app.route('/forex')
+def forex():
+    return render_template('hotel/b2c_hotels/coming-soon.html')
 
 @app.route('/hotel/list', methods=['GET'])
 def hotel_list():
@@ -456,3 +487,5 @@ def offers():
 @app.route('/supplier-verification')
 def bb():
     return render_template('hotel/b2c_hotels/supplier-verification-form.html')
+
+
