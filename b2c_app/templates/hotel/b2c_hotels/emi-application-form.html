@@ -1,104 +1,3 @@
-<?php
-session_start();
-include("connection.php");
-if (isset($_SESSION['mobile'])) {
-    if (isset($_POST['vsubmit'])) {
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $date_birth = $_POST['date_birth'];
-        $month_birth = $_POST['month_birth'];
-        $year_birth = $_POST['year_birth'];
-        $gender = $_POST['gender'];
-        $country= $_POST['country'];
-        $state = $_POST['state'];
-        $home_address = $_POST['home_address'];
-        $landmark = $_POST['landmark'];
-        $email = $_POST['email'];
-        $mobile = $_POST['mobile'];
-        $employment_type = $_POST['employment_type'];
-        $company_name = $_POST['company_name'];
-        $year_in_service = $_POST['year_in_service'];
-        $ofc_city = $_POST['ofc_city'];
-        $ofc_address = $_POST['ofc_address'];
-
-
-        $ocn = $_POST['ocn'];
-        $omid = $_POST['omid'];
-        $web = $_POST['web'];
-        $pcno = $_POST['pcno'];
-        $acno = $_POST['acno'];
-        $bn = $_POST['bn'];
-        $ahn = $_POST['ahn'];
-        $ifsc = $_POST['ifsc'];
-        $an = $_POST['an'];
-
-        if ($_FILES['adhar_front']['name'] != '') {
-            $ucl  = "ids/" . $_FILES['ucl']['name'];
-            move_uploaded_file($_FILES['ucl']['tmp_name'], "ids/" . $_FILES['adhar_fron']['name']);
-        } else {
-            $ucl = $_POST['uucl'];;
-        }
-        if ($_FILES['adhar_back']['name'] != '') {
-            $elecb  = "ids/" . $_FILES['elecb']['name'];
-            move_uploaded_file($_FILES['elecb']['tmp_name'], "ids/" . $_FILES['adhar_bac']['name']);
-        } else {
-            $elecb = $_POST['eelecb'];;
-        }
-        if ($_FILES['photograph']['name'] != '') {
-            $int1  = "ids/" . $_FILES['int1']['name'];
-            move_uploaded_file($_FILES['int1']['tmp_name'], "ids/" . $_FILES['photograph']['name']);
-        } else {
-            $int1 = $_POST['iint1'];;
-        }
-        if ($_FILES['elec_bill']['name'] != '') {
-            $int2  = "ids/" . $_FILES['int2']['name'];
-            move_uploaded_file($_FILES['int2']['tmp_name'], "ids/" . $_FILES['elec_bill']['name']);
-        } else {
-            $int2 = $_POST['iint2'];;
-        }
-        if ($_FILES['pancard']['name'] != '') {
-            $ext1  = "ids/" . $_FILES['ext1']['name'];
-            move_uploaded_file($_FILES['ext1']['tmp_name'], "ids/" . $_FILES['pancard']['name']);
-        } else {
-            $ext1 = $_POST['eext1'];;
-        }
-        if ($_FILES['cancelled_checque']['name'] != '') {
-            $ext2  = "ids/" . $_FILES['ext2']['name'];
-            move_uploaded_file($_FILES['ext2']['tmp_name'], "ids/" . $_FILES['cancelled_checque']['name']);
-        } else {
-            $ext2 = $_POST['eext2'];;
-        }
-        if ($_FILES['upc']['name'] != '') {
-            $upc  = "ids/" . $_FILES['upc']['name'];
-            move_uploaded_file($_FILES['upc']['tmp_name'], "ids/" . $_FILES['upc']['name']);
-        } else {
-            $upc = $_POST['uupc'];;
-        }
-        if ($_FILES['uac']['name'] != '') {
-            $uac  = "ids/" . $_FILES['uac']['name'];
-            move_uploaded_file($_FILES['uac']['tmp_name'], "ids/" . $_FILES['uac']['name']);
-        } else {
-            $uac = $_POST['uuac'];;
-        }
-
-        $query = mysqli_query($con, "update partner set dob='$dob',gender='$gender',state='$state',address='$address',lm='$lm',email='$email',tags='$tags',noe='$noe',coe='$coe',tof='$tof',st='$st',ct='$ct',oa='$oa',ato='$ato',gst='$gst',ocn='$ocn',omid='$omid',web='$web',pcno='$pcno',acno='$acno',bn='$bn',ahn='$ahn',ifsc='$ifsc',an='$an',ucl='$ucl',elecb='$elecb',inta='$int1',intb='$int2',exta='$ext1',extb='$ext2',upc='$upc',uac='$uac', status='Pending', type='3' where mobile='$mobile'");
-        if (!$query) {
-            die('Error: ' . mysqli_error($con));
-        } else {
-            ?>
-            <SCRIPT LANGUAGE='JavaScript'>
-                alert('Successfully Updated!!');
-                window.location.href = '/dashboard';
-            </Script>
-    <?php
-            }
-        }
-        ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 
@@ -167,12 +66,12 @@ if (isset($_SESSION['mobile'])) {
                     <div class="container">
                         <ul class="quick-menu pull-left">
 						
-                            <li><a href="http://partner.thetravelsquare.in/partner-care.html"><img height="20" width="20" src="http://thetravelsquare.in/images/dashboard/24-7-customer-support-the-travel-square-icon.png">&nbsp;&nbsp;<b>Customer Support</b></a></li>
-                            <li><a href="http://partner.thetravelsquare.in/partner-care.html"><img height="20" width="17" src="http://thetravelsquare.in/images/dashboard/travel-expert-the-travel-square-icon.png">&nbsp;&nbsp;<b>Travel Expert</b></a></li>
+                            <li><a href="http://thetravelsquare.in/customer-care"><img height="20" width="20" src="http://thetravelsquare.in/images/dashboard/24-7-customer-support-the-travel-square-icon.png">&nbsp;&nbsp;<b>Customer Support</b></a></li>
+                            <li><a href="http://thetravelsquare.in/enquiry"><img height="20" width="17" src="http://thetravelsquare.in/images/dashboard/travel-expert-the-travel-square-icon.png">&nbsp;&nbsp;<b>Travel Expert</b></a></li>
 							
                             <li> <font color="black"><a class="button white btn-small uppercase" style="height: 30px; font-size: 1em; color:black">
 							<img height="25" width="25" src="http://thetravelsquare.in/images/holiday_ballon.png">&nbsp;&nbsp;<b>Customize Holiday</b></a></font></li>
-                            <li><a href="http://partner.thetravelsquare.in/partner-care.html"><img height="18" width="20" src="http://thetravelsquare.in/images/dashboard/offer-and-deal-the-travel-square-icon.png">&nbsp;&nbsp;<b>Best Offers & Deals</b></a></li>
+                            <li><a href="http://thetravelsquare.in/holidays"><img height="18" width="20" src="http://thetravelsquare.in/images/dashboard/offer-and-deal-the-travel-square-icon.png">&nbsp;&nbsp;<b>Best Offers & Deals</b></a></li>
                         </ul>
                         <ul class="quick-menu pull-right">
                             <li><a href="http://business.thetravelsquare.in/booking-cart"><img height="17" width="12" src="http://thetravelsquare.in/images/dashboard/toll-free-the-travel-square-icon.png">&nbsp; <b>+91-7428558566</b></a></li>
@@ -200,7 +99,7 @@ if (isset($_SESSION['mobile'])) {
 
                     <div class="container">
                         <h1 class="navbar-brand" style="height:20%">
-                            <a href="http://partner.thetravelsquare.in/dashboard" title="The Travel Square">
+                            <a href="http://thetravelsquare.in/dashboard" title="The Travel Square">
                                 <img src="http://www.thetravelsquare.in/images/the-travel-square-india-logo.png" alt="The Travel Square">
                             </a>
                         </h1><br>
@@ -217,7 +116,7 @@ if (isset($_SESSION['mobile'])) {
                                             src="http://thetravelsquare.in/images/cabs-icon.png"></a></li>
                                 <li><a href="http://thetravelsqaure.in/experience"><img height="47" width="48"
                                             src="http://thetravelsquare.in/images/experiences-icon.png"></a> </li>
-                                <li><a href="http://thetravelsquare.info/visa"><img height="47" width="48"
+                                <li><a href="http://thetravelsquare.in/visa"><img height="47" width="48"
                                             src="http://thetravelsquare.in/images/visa-icon.png"></a></li>
                                 <li><a href="http://thetravelsquare.in/buses"><img height="47" width="48"
                                             src="http://thetravelsquare.in/images/buses-icon.png"></a></li>

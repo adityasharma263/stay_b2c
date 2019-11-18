@@ -295,7 +295,7 @@ def terms_and_conditions():
 def privacy_policy():
     return render_template('hotel/footer_pages/privacy-policy.html')
     
-@app.route('/emi-application')
+@app.route('/emi-application-form')
 def emi_app():
     return render_template('hotel/b2c_hotels/emi-application-form.html')
 
