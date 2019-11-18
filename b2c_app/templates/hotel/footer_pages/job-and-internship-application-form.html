@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="postserviceApp" >
+<html ng-app="jobs" >
 <head>
     <!-- Page Title -->
 
@@ -255,7 +255,7 @@
 					
 					
 					
-                        <div class="travelo-box booking-section"  ng-app="postserviceApp" ng-controller="postserviceCtrl">
+                        <div class="travelo-box booking-section" ng-controller="jobsCtrl">
                             <form class="booking-form" >
                                 <div class="person-information">
 								<!-- <center><img src="images/The-Travel-Square-Logo.png"></center><br><br> -->
@@ -267,7 +267,7 @@
                                     <div class="form-group row">
                                         <div class="col-sm-3 col-md-10">
                                             <label>Full Name</label>
-                                            <input type="text" ng-model="full_name" class="input-text full-width" value="" placeholder="Enter Your Full Name" required>
+                                            <input type="text" ng-model="jobs.full_name" class="input-text full-width" value="" placeholder="Enter Your Full Name" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -275,7 +275,7 @@
                                             <div>
                                                 <label>Date of Birth</label>
                                                 <div class="selector">
-                                                    <select class="full-width" ng-model="dob_date" required>
+                                                    <select class="full-width" ng-model="jobs.dob_date" required>
                                                         <option>01</option>
                                                         <option>02</option>
                                                         <option>03</option>
@@ -313,7 +313,7 @@
                                             <div>
                                                 <label>Month</label>
                                                 <div class="selector">
-                                                    <select class="full-width" ng-model="dob_month" required>
+                                                    <select class="full-width" ng-model="jobs.dob_month" required>
                                                         <option>01</option>
                                                         <option>02</option>
                                                         <option>03</option>
@@ -332,7 +332,7 @@
                                             <div>
                                                 <label>Year</label>
                                                 <div class="selector">
-                                                    <select class="full-width" ng-model="dob_year" required>
+                                                    <select class="full-width" ng-model="jobs.dob_year" required>
                                                         <option>1980</option>
                                                         <option>1981</option>
                                                         <option>1982</option>
@@ -367,7 +367,7 @@
                                         <div class="col-sm-6 col-md-5">
                                             <label>GENDER</label>
                                             <div class="selector">
-                                                <select ng-model="gender" autocomplete="off"  required class="full-width">
+                                                <select ng-model="jobs.gender" autocomplete="off"  required class="full-width">
                                                     <option value="1">Male</option>
                                                     <option value="2">Female</option>
                                                     <option value="3">Unspecified</option>
@@ -378,28 +378,28 @@
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>Home Address</label>
-                                            <input type="text" ng-model="home_address" class="input-text full-width" value="" placeholder="Enter Home Address" required>
+                                            <input type="text" ng-model="jobs.home_address" class="input-text full-width" value="" placeholder="Enter Home Address" required>
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Nearest Landmark</label>
-                                            <input type="text" ng-model="landmark" class="input-text full-width" value="" placeholder="Enter Nearest Landmark" required>
+                                            <input type="text" ng-model="jobs.landmark" class="input-text full-width" value="" placeholder="Enter Nearest Landmark" required>
                                         </div>
                                     </div>
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>E-mail Address</label>
-                                            <input type="text" ng-model="email" class="input-text full-width" value="" placeholder="Enter Email Address" required>
+                                            <input type="text" ng-model="jobs.email" class="input-text full-width" value="" placeholder="Enter Email Address" required>
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Contact Number</label>
-                                            <input type="text" ng-model="mobile" class="input-text full-width" value="" placeholder="Enter Contact Number" required>
+                                            <input type="text" ng-model="jobs.mobile" class="input-text full-width" value="" placeholder="Enter Contact Number" required>
                                         </div>
                                     </div>
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>Qualification</label>
                                             <div class="selector">
-                                                <select class="full-width" ng-model="degree" required>
+                                                <select class="full-width" ng-model="jobs.degree" required>
                                                     <option>10+</option>
                                                     <option>12+</option>
                                                     <option>Diploma</option>
@@ -412,7 +412,7 @@
                                         <div class="col-sm-6 col-md-5">
                                             <label>Work Experience</label>
                                             <div class="selector">
-                                                <select class="full-width" ng-model="work_experience" required>
+                                                <select class="full-width" ng-model="jobs.work_experience" required>
                                                     <option>0 to 1 Year</option>
                                                     <option>2+ Year</option>
                                                     <option>3+ Year</option>
@@ -425,11 +425,11 @@
 									<div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>College/School Name</label>
-                                            <input type="text" required ng-model="school_name" class="input-text full-width" value="" placeholder="Enter Your School or College Name">
+                                            <input type="text" required ng-model="jobs.school_name" class="input-text full-width" value="" placeholder="Enter Your School or College Name">
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Refferal Person</label>
-                                            <input type="text" ng-model="referral_person" class="input-text full-width" value="" placeholder="Enter Refferal Person">
+                                            <input type="text" ng-model="jobs.referral_person" class="input-text full-width" value="" placeholder="Enter Refferal Person">
                                         </div>
                                     </div>
 									
@@ -444,7 +444,7 @@
                                         <div class="col-sm-6 col-md-5">
                                             <label>Job Department</label>
                                             <div class="selector">
-                                                <select class="full-width" required ng-model="job_department" >
+                                                <select class="full-width" required ng-model="jobs.job_department" >
                                                     <!-- <option>Data Management Dept.</option> -->
                                                     <option>Reservation & PR Manager</option>
                                                     <option>BPO Sales</option>
@@ -474,7 +474,7 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>Applicants Resume</label>
-                                            <input type="file" ng-model="cv" resume class="input-text full-width" value="" placeholder="Insert PDF File">
+                                            <input type="file"  class="input-text full-width" value="" placeholder="Insert PDF File">
                                         </div>
                                         
                                     </div>
@@ -492,8 +492,7 @@
                                 </div> -->
                                 <div class="form-group row">
                                     <div class="col-sm-6 col-md-5">
-                                        <button type="submit" ng-click="postdata(full_name, dob_date, dob_month, dob_year, gender, home_address,
-                                        landmark, email, mobile,degree, work_experience, school_name, referral_person, job_department, cv)" class="full-width btn-large">SUBMIT FORM</button>
+                                        <button type="submit" ng-click="onSubmit()" class="full-width btn-large">SUBMIT FORM</button>
                                     </div>
 									<label>Your Details Will Be Verified & Interview Will Be Scheduled Over Call</label>
    

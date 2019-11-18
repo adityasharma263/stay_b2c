@@ -1,0 +1,674 @@
+<?php
+session_start();
+include("connection.php");
+if (isset($_SESSION['mobile'])) {
+    if (isset($_POST['vsubmit'])) {
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $date_birth = $_POST['date_birth'];
+        $month_birth = $_POST['month_birth'];
+        $year_birth = $_POST['year_birth'];
+        $gender = $_POST['gender'];
+        $country= $_POST['country'];
+        $state = $_POST['state'];
+        $home_address = $_POST['home_address'];
+        $landmark = $_POST['landmark'];
+        $email = $_POST['email'];
+        $mobile = $_POST['mobile'];
+        $employment_type = $_POST['employment_type'];
+        $company_name = $_POST['company_name'];
+        $year_in_service = $_POST['year_in_service'];
+        $ofc_city = $_POST['ofc_city'];
+        $ofc_address = $_POST['ofc_address'];
+
+
+        $ocn = $_POST['ocn'];
+        $omid = $_POST['omid'];
+        $web = $_POST['web'];
+        $pcno = $_POST['pcno'];
+        $acno = $_POST['acno'];
+        $bn = $_POST['bn'];
+        $ahn = $_POST['ahn'];
+        $ifsc = $_POST['ifsc'];
+        $an = $_POST['an'];
+
+        if ($_FILES['adhar_front']['name'] != '') {
+            $ucl  = "ids/" . $_FILES['ucl']['name'];
+            move_uploaded_file($_FILES['ucl']['tmp_name'], "ids/" . $_FILES['adhar_fron']['name']);
+        } else {
+            $ucl = $_POST['uucl'];;
+        }
+        if ($_FILES['adhar_back']['name'] != '') {
+            $elecb  = "ids/" . $_FILES['elecb']['name'];
+            move_uploaded_file($_FILES['elecb']['tmp_name'], "ids/" . $_FILES['adhar_bac']['name']);
+        } else {
+            $elecb = $_POST['eelecb'];;
+        }
+        if ($_FILES['photograph']['name'] != '') {
+            $int1  = "ids/" . $_FILES['int1']['name'];
+            move_uploaded_file($_FILES['int1']['tmp_name'], "ids/" . $_FILES['photograph']['name']);
+        } else {
+            $int1 = $_POST['iint1'];;
+        }
+        if ($_FILES['elec_bill']['name'] != '') {
+            $int2  = "ids/" . $_FILES['int2']['name'];
+            move_uploaded_file($_FILES['int2']['tmp_name'], "ids/" . $_FILES['elec_bill']['name']);
+        } else {
+            $int2 = $_POST['iint2'];;
+        }
+        if ($_FILES['pancard']['name'] != '') {
+            $ext1  = "ids/" . $_FILES['ext1']['name'];
+            move_uploaded_file($_FILES['ext1']['tmp_name'], "ids/" . $_FILES['pancard']['name']);
+        } else {
+            $ext1 = $_POST['eext1'];;
+        }
+        if ($_FILES['cancelled_checque']['name'] != '') {
+            $ext2  = "ids/" . $_FILES['ext2']['name'];
+            move_uploaded_file($_FILES['ext2']['tmp_name'], "ids/" . $_FILES['cancelled_checque']['name']);
+        } else {
+            $ext2 = $_POST['eext2'];;
+        }
+        if ($_FILES['upc']['name'] != '') {
+            $upc  = "ids/" . $_FILES['upc']['name'];
+            move_uploaded_file($_FILES['upc']['tmp_name'], "ids/" . $_FILES['upc']['name']);
+        } else {
+            $upc = $_POST['uupc'];;
+        }
+        if ($_FILES['uac']['name'] != '') {
+            $uac  = "ids/" . $_FILES['uac']['name'];
+            move_uploaded_file($_FILES['uac']['tmp_name'], "ids/" . $_FILES['uac']['name']);
+        } else {
+            $uac = $_POST['uuac'];;
+        }
+
+        $query = mysqli_query($con, "update partner set dob='$dob',gender='$gender',state='$state',address='$address',lm='$lm',email='$email',tags='$tags',noe='$noe',coe='$coe',tof='$tof',st='$st',ct='$ct',oa='$oa',ato='$ato',gst='$gst',ocn='$ocn',omid='$omid',web='$web',pcno='$pcno',acno='$acno',bn='$bn',ahn='$ahn',ifsc='$ifsc',an='$an',ucl='$ucl',elecb='$elecb',inta='$int1',intb='$int2',exta='$ext1',extb='$ext2',upc='$upc',uac='$uac', status='Pending', type='3' where mobile='$mobile'");
+        if (!$query) {
+            die('Error: ' . mysqli_error($con));
+        } else {
+            ?>
+            <SCRIPT LANGUAGE='JavaScript'>
+                alert('Successfully Updated!!');
+                window.location.href = '/dashboard';
+            </Script>
+    <?php
+            }
+        }
+        ?>
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html class=" js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Page Title -->
+    <title>EMI Application Form | The Travel Square</title>
+    
+    <!-- Meta Tags -->
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Travel Beans">
+    <meta name="description" content="">
+    <meta name="distribution" content="global">
+    <meta name="country" content="india">
+    <meta name="copyright" content="The Travel Square">
+    <meta name="revisit-after" content="1 hour">
+    <meta name="designer" content="The Travel Square">
+    <meta name="language" content="english">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="publisher" content="The Travel Square">
+
+    <meta property="og:title" content="The Travel Square">
+    <meta property="og:description" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta property="og:image" content="">
+  
+    <meta name="twitter:card" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+  
+    <meta name="keywords" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta name="format-detection" content="7428558566">
+    
+  
+    <link rel="stylesheet" href="http://thetravelsquare.in/files/bootstrap.min.css">
+    <link rel="stylesheet" href="http://thetravelsquare.in/files/font-awesome.min.css">
+    <link href="http://thetravelsquare.in/files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://thetravelsquare.in/files/animate.min.css">
+    
+
+	
+    <script type="text/javascript">
+        var mainStyle = "style.css";
+        if (typeof localStorage != "undefined") {
+            var colorSkin = localStorage.getItem("colorSkin");
+            if (colorSkin != null) {
+                mainStyle = "style-" + colorSkin + ".css";
+            }
+        }
+        document.write('<link id="main-style" rel="stylesheet" href="css/' + mainStyle + '">');
+    </script><link id="main-style" rel="stylesheet" href="file:///D:/Office/Company%20Data/Travel%20Beans/Website/Login/css/style-dark-orange.css"><link id="main-style" rel="stylesheet" href="http://thetravelsquare.in/files/style-light-yellow.css">
+    
+    <!-- Updated Styles -->
+    <link rel="stylesheet" href="http://thetravelsquare.in/files/updates.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="http://thetravelsquare.in/files/custom.css">
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="http://thetravelsquare.in/files/responsive.css">
+    
+   
+</head>
+<body>
+    <div id="page-wrapper">
+        <header id="header" class="navbar-static-top">
+                <div class="topnav hidden-xs">
+                    <div class="container">
+                        <ul class="quick-menu pull-left">
+						
+                            <li><a href="http://partner.thetravelsquare.in/partner-care.html"><img height="20" width="20" src="http://thetravelsquare.in/images/dashboard/24-7-customer-support-the-travel-square-icon.png">&nbsp;&nbsp;<b>Customer Support</b></a></li>
+                            <li><a href="http://partner.thetravelsquare.in/partner-care.html"><img height="20" width="17" src="http://thetravelsquare.in/images/dashboard/travel-expert-the-travel-square-icon.png">&nbsp;&nbsp;<b>Travel Expert</b></a></li>
+							
+                            <li> <font color="black"><a class="button white btn-small uppercase" style="height: 30px; font-size: 1em; color:black">
+							<img height="25" width="25" src="http://thetravelsquare.in/images/holiday_ballon.png">&nbsp;&nbsp;<b>Customize Holiday</b></a></font></li>
+                            <li><a href="http://partner.thetravelsquare.in/partner-care.html"><img height="18" width="20" src="http://thetravelsquare.in/images/dashboard/offer-and-deal-the-travel-square-icon.png">&nbsp;&nbsp;<b>Best Offers & Deals</b></a></li>
+                        </ul>
+                        <ul class="quick-menu pull-right">
+                            <li><a href="http://business.thetravelsquare.in/booking-cart"><img height="17" width="12" src="http://thetravelsquare.in/images/dashboard/toll-free-the-travel-square-icon.png">&nbsp; <b>+91-7428558566</b></a></li>
+							<li class="ribbon">
+                                                                <font color="black"><a class="button white btn-small uppercase" style="height: 30px; font-size: 1em; color:black"> Vibhu Gupta</a></font>
+
+                                <!-- <ul class="menu mini uppercase">
+                                                                        <li><a href="http://partner.thetravelsquare.in/dashboard">Dashboard Home</a></li>
+                                    <li><a href="http://partner.thetravelsquare.in/lta-registration.php">Register</a></li>
+                                    <li><a href="http://partner.thetravelsquare.in/logout.php">Log Out</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="http://business.thetravelsquare.in/booking-cart">
+                                <img height="27" width="30" src="http://thetravelsquare.in/images/cart-image.png"></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-header">
+
+                    <a href="http://partner.thetravelsquare.in/#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
+                        Mobile Menu Toggle
+                    </a>
+
+                    <div class="container">
+                        <h1 class="navbar-brand" style="height:20%">
+                            <a href="http://partner.thetravelsquare.in/dashboard" title="The Travel Square">
+                                <img src="http://www.thetravelsquare.in/images/the-travel-square-india-logo.png" alt="The Travel Square">
+                            </a>
+                        </h1><br>
+
+                        <nav id="main-menu" role="navigation">
+                            <ul class="menu">
+                                <li><a href="http://thetravelsquare.in/flight"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/flights-icon.png"></a></li>
+                                <li><a href="http://thetravelsquare.in/hotel"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/hotels-icon.png"></a></li>
+                                <li><a href="http://thetravelsquare.in/holidays"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/holidays-icon.png"></a></li>
+                                <li><a href="http://thetravelsquare.in/cabs"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/cabs-icon.png"></a></li>
+                                <li><a href="http://thetravelsqaure.in/experience"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/experiences-icon.png"></a> </li>
+                                <li><a href="http://thetravelsquare.info/visa"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/visa-icon.png"></a></li>
+                                <li><a href="http://thetravelsquare.in/buses"><img height="47" width="48"
+                                            src="http://thetravelsquare.in/images/buses-icon.png"></a></li>
+    
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <nav id="mobile-menu-01" class="mobile-menu collapse">
+                        <ul id="mobile-primary-menu" class="menu">
+                            <li><a href="http://thetravelsquare.in/flight">Flight</a> </li>
+                            <li><a href="http://thetravelsquare.in/hotel">Hotel</a> </li>
+                            <li><a href="http://thetravelsquare.in/holidays">Holiday</a> </li>
+                            <li><a href="http://thetravelsquare.in/cabs">Cabs & Transfer</a> </li>
+                            <li><a href="http://thetravelsquare.in/experiences">Experiences & Activities</a> </li>
+                            <li><a href="http://thetravelsquare.in/events">Events & Shows</a> </li>
+                            <li><a href="http://thetravelsquare.in/visa">Visa</a> </li>
+                            <li><a href="http://thetravelsquare.in/buses">Bus</a> </li>
+                            <li><a href="http://thetravelsquare.in/forex">Forex</a> </li>
+                        </ul>
+                       
+
+                        <ul class="mobile-topnav container">
+
+
+                            <!-- <li class="ribbon">
+                                                                <font color="white"><a class="button white btn-small uppercase" style="height: 30px; font-size: 1em; color:black"> Vibhu Gupta</a></font>
+                                <ul class="menu mini uppercase" style="">
+                                    <li><a href="http://partner.thetravelsquare.in/dashboard">Dashboard Home</a></li>
+                                    <li><a href="http://partner.thetravelsquare.in/logout.php">Log Out</a></li>
+                                </ul>
+                            </li> -->
+                            <!-- <li><a href="http://business.thetravelsquare.in/booking-cart"><img height="27" width="30" src="images/cart-image.png"></a></li> -->
+                            <button class="button full-width white uppercase animated" data-animation-type="tada"
+                            data-toggle="modal" data-target="#customerlogin">
+                            <b><big><img height="27" width="35" src="http://thetravelsquare.in/images/travel-cart.png">&nbsp; &nbsp; <font
+                                        color="black">Travel Cart</font></big></b></button>
+                        </ul>
+                </nav></div>
+        </header>
+
+        <div class="page-title-container">
+            <div class="container">
+                <div class="page-title pull-left">
+                    <h2 class="entry-title">EMI Application Form </h2>
+                </div>
+                <ul class="breadcrumbs pull-right">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">THE TRAVEL SQAURE</a></li>
+                    <li class="active">Partners LTA</li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="content">
+            <div class="container">
+			
+			
+			
+                <div class="row">
+                    <div id="main" class="col-sm-8 col-md-9">
+					
+					
+					
+                        <div class="travelo-box booking-section">
+                            <form class="booking-form">
+                                <div class="person-information">
+                                    <h2>Section A : Personal Details</h2>
+									<p><a href=""><span class="skin-color">Personal Data Storage Policy | We are Data Protection Law Approved |</span></a> The Personal Data in Any Terms Will Not Be Misused or Publicised .</p>
+                                  
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>First Name</label>
+                                            <input type="text" name="first_name" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Last Name	</label>
+                                            <input type="text" name="last_name" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-xs-12 col-md-5 constant-column-3">
+                                            <div>
+                                                <label>Date of Birth</label>
+                                                <div class="selector">
+                                                    <select name="date_birth" class="full-width">
+                                                        <option>01</option><option>02</option><option>03</option>
+                                                        <option>04</option><option>05</option><option>06</option>
+                                                        <option>07</option><option>08</option><option>09</option>
+                                                        <option>10</option><option>11</option><option>12</option>
+                                                        <option>13</option><option>14</option><option>15</option>
+                                                        <option>16</option><option>17</option><option>18</option>
+                                                        <option>19</option><option>20</option><option>21</option>
+                                                        <option>22</option><option>23</option><option>24</option>
+                                                        <option>25</option><option>26</option><option>27</option>
+                                                        <option>28</option><option>29</option><option>30</option>
+                                                        <option>31</option>
+                                                    </select><span class="custom-select full-width">Date</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label>Month</label>
+                                                <div class="selector">
+                                                    <select name="month_birth" class="full-width">
+                                                        <option>Jan</option><option>Feb</option>
+                                                        <option>Mar</option><option>Apr</option>
+                                                        <option>May</option><option>Jun</option>
+                                                        <option>Jul</option><option>Aug</option>
+                                                        <option>Sep</option><option>Oct</option>
+                                                        <option>Nov</option><option>Dec</option>
+                                                        
+                                                    </select><span class="custom-select full-width">Jan</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label>Year</label>
+                                                <div class="selector">
+                                                    <select name="year_birth" class="full-width">
+                                                        <option>1970</option><option>1971</option><option>1972</option>
+                                                        <option>1973</option><option>1974</option><option>1975</option>
+                                                        <option>1976</option><option>1977</option><option>1978</option>
+                                                        <option>1979</option><option>1980</option><option>1981</option>
+                                                        <option>1982</option><option>1983</option><option>1984</option>
+                                                        <option>1985</option><option>1986</option><option>1987</option>
+                                                        <option>1988</option><option>1989</option><option>1990</option>
+                                                        <option>1991</option><option>1992</option><option>1993</option>
+                                                        <option>1994</option><option>1995</option><option>1996</option>
+                                                        <option>1997</option><option>1998</option><option>1999</option>
+                                                        <option>2000</option><option>2001</option><option>2002</option>
+                                                        
+                                                    </select><span class="custom-select full-width">Select</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Gender</label>
+                                            <div class="selector">
+                                                <select name="gender" class="full-width">
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                    <option>Unspecified</option>
+                                                </select><span class="custom-select full-width"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Select Country</label>
+                                            <div class="selector">
+                                                <select name="country" class="full-width">
+                                                    <option>India</option>
+                                                    <option>United Kingdom</option>
+                                                    <option>United State</option>
+                                                </select><span class="custom-select full-width">India</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Resedential State</label>
+                                            <input type="text" name="state" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                    </div>
+									<div class="form-group row">
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Home Address</label>
+                                            <input type="text" name="home_address" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Nearest Landmark</label>
+                                            <input type="text" name="landmark" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                    </div>
+									<div class="form-group row">
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>E-mail Address</label>
+                                            <input type="text" name="email" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Contact Number</label>
+                                            <input type="text" name="mobile" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="group-details">
+                                    <h2>Section B : Employment</h2>
+									
+									<div class="form-group row">
+										<div class="col-sm-6 col-md-5">
+                                            <label>Employment Type</label>
+                                            <div class="selector">
+                                                <select name="employment_type" class="full-width">
+                                                    <option>Salaried</option>
+                                                    <option>Self-Employed</option>
+                                                    <option>Commission Based</option>
+                                                </select><span class="custom-select full-width">Please Select</span>
+                                            </div>
+                                        </div>
+										<div class="col-sm-6 col-md-5">
+                                            <label>Company Name</label>
+                                            <input type="text" name="company_name" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                        
+                                    </div>
+									<div class="form-group row">
+										<div class="col-sm-6 col-md-5">
+                                            <label>Years in Service</label>
+                                            <input type="text" name="year_in_service" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Office City/Town</label>
+                                            <input type="text" name="ofc_city" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                        
+                                    </div>
+									<div class="form-group row">
+										
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Office Address</label>
+                                            <input type="text" name="ofc_address" class="input-text full-width" value="" placeholder="">
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="booking-type">
+                                    <h2>Section C : Document Upload for EMI Application Form</h2>
+									<p><a href=""><span class="skin-color">Need for Documents !</span></a> Documents Will Be Used For Verification And Security.</p>
+                                    
+                                    <div class="form-group row">
+										<div class="col-sm-6 col-md-5">
+                                            <label>Applicant's Aadhaar Card</label>
+                                            <input type="hidden" name="adhar_front" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="adhar-front"><p>(Kindly Upload Frot Side of Aadhaar)</p>
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Applicant's Aadhaar Card</label>
+                                            <input type="hidden" name="adhar_back" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="adhar_back"><p>(Kindly Upload Back Side of Aadhaar)</p>
+                                        </div>
+										<div class="col-sm-6 col-md-5 ">
+                                            <div>
+                                                <label>Upload Photgraph</label>
+												<input type="hidden" name="photograph" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="photograph"><p>(Kindly Upload Passport Size Photo)</p>
+                                            </div>
+                                        </div>
+										<div class="col-sm-6 col-md-5">
+                                            <label>Home Electricity Bill</label>
+                                            <input type="hidden" name="elec_bill" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="elec_bill"><p>(Kindly Upload Recent Bill)</p>
+                                        </div>
+										<div class="col-sm-6 col-md-5">
+                                            <label>Applicant's PAN Card</label>
+                                            <input type="hidden" name="pancard" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="pancard"><br>
+                                        </div>
+										<div class="col-sm-6 col-md-5 ">
+                                            <div>
+                                                <label>Cancelled Cheque</label>
+												<input type="hidden" name="cancelled_checque" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="cancelled_checque"><br>
+                                            </div>
+                                        </div>
+										<div class="col-sm-6 col-md-5 ">
+                                            <div>
+                                                <label>Flight Ticket Departure</label>
+												<input type="hidden" name="departure_ticket" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="departure_ticket"><br>
+                                            </div>
+                                        </div>
+										<div class="col-sm-6 col-md-5 ">
+                                            <div>
+                                                <label>Flight Ticket Return</label>
+												<input type="hidden" name="return_ticket" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="return_ticket"><br>
+                                            </div>
+                                        </div>
+										<div class="col-sm-6 col-md-5 ">
+                                            <div>
+                                                <label>Passbook Last Page</label>
+												<input type="hidden" name="passbook_last_page" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="passbook_last_page"><p>(Kindly upload last page of Passbook)</p>
+                                            </div>
+                                        </div>
+										<div class="col-sm-6 col-md-5 ">
+                                            <div>
+                                                <label>Hotel Booking Voucher</label>
+												<input type="hidden" name="hotel_booking_voucher" value="" hidden> <a href="" target="_blank"></a> <input type="file" name="hotel_booking_voucher"><br>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="booking-hotel">
+                                    <h2>Section D : Bank Details For Verification</h2>
+									<p><a href=""><span class="skin-color">Why Bank Details ?</span></a> This is to for Verification and Security.</p>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Bank Name</label>
+                                            <input type="text" name="bank_name" class="input-text full-width" value="" placeholder="Enter Bank Name">
+                                        </div>
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Account Holder Name</label>
+                                            <input type="text" name="ac_holder" class="input-text full-width" value="" placeholder="XXXX">
+                                        </div>
+                                    </div>
+									<div class="form-group row">
+                                        <div class="col-sm-6 col-md-5">
+                                            <label>Bank IFSC Code</label>
+                                            <input type="text" name="ifsc" class="input-text full-width" value="" placeholder="XXXX">
+                                        </div>
+										<div class="col-sm-6 col-md-5">
+                                            <label>Account Number</label>
+                                            <input type="text" name="ac_num" class="input-text full-width" value="" placeholder="Enter Company / Individual Name">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> By Continuing , You Agree the The Travel Square <a href=""><span class="skin-color">Terms and Conditions</span></a>.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <button type="submit" name="submit" class="full-width btn-large sky-blue1">SUMBIT APPLICATION</button>
+                                    </div><br>
+									<label>Your Details Will Be Verified Withing 24 Working Hours</label>
+   
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sidebar col-sm-4 col-md-3">
+                        <div class="travelo-box contact-box">
+                            <center><h4>Need Some Help ?</h4>
+                            <p>The Travel Sqaure Executives Are Always Ready Help You 24/7 .</p>
+                            <address class="contact-details">
+                                <span class="contact-phone">+91- 7428558566</span><br>
+                                <br>
+                                <a class="contact-email" href="">help.thetravelsquare@gmail.com</a>
+                            </address></center>
+                        </div>
+						
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+         <footer id="footer" class="style5">
+            <div class="footer-wrapper">
+                <div class="container">
+                    <div class="row">
+                       
+						
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h2>The Travel Square</h2>
+                            <ul class="discover triangle hover row">
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">About Company</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/jobs.html">Jobs & Carreers</a></li>
+								<li class="col-xs-6"><a href="http://www.thetravelsquare.in/about">Corporate Offices</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">Legal Information</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/press.html">Press Release</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">T & C</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/customer-care.html">Customer Care</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/legal.html">Privacy Policies</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/partner-Care.html">Partner Help</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/faq.html">FAQ's</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/site-map.html">Site Map</a></li>
+                                <li class="col-xs-6"><a href="http://www.thetravelsquare.in/contact-Us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h2>More of us !</h2>
+                            <ul class="discover triangle hover row">
+                                <li class="col-xs-"><a href="http://www.thetravelsquare.in/pro">Travel Square Business</a></li>
+                                <li class="col-xs-"><a href="http://www.signatureclubmembership.com/">Signature Club</a></li>
+                                <li class="col-xs-"><a href="http://www.cruisader.com/">Cruisader</a></li>
+                                <li class="col-xs-"><a href="http://www.cruisingindia.in/">Cruising India</a></li>
+                                <li class="col-xs-"><a href="http://www.happenings.ind.in/">Happenings</a></li>
+                                <li class="col-xs-"><a href="http://www.shoppist.in/">Shoppist</a></li>
+                                
+                            </ul>
+                        </div><hr>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <h2>About Us</h2>
+                            <p>The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains Inspiring the World to Travel In Style With Luxury  at Affordabe Pricing . </p>
+                            <br>
+                            <ul class="social-icons clearfix">
+                                <li class="twitter"><a title="Join Us on Twitter" href="https://twitter.com/travelsquare_" data-toggle="tooltip"  Target="_blank" data-original-title="twitter"><i class="soap-icon-twitter"></i></a></li>
+                                <li class="facebook"><a title="Join Us on Facebook" href="https://www.facebook.com/thetravelsquare/" Target="_blank" data-toggle="tooltip" data-original-title="facebook"><i class="soap-icon-facebook"></i></a></li>
+                                <li class="linkedin"><a title="Join Us on Linked In" href="https://www.linkedin.com/company/thetravelsquare" Target="_blank" data-toggle="tooltip" data-original-title="linkedin"><i class="soap-icon-linkedin"></i></a></li>
+                                <li class="vimeo"><a title="Join Us on Instagram" href="https://www.instagram.com/The_Travel_Square/" data-toggle="tooltip" Target="_blank" data-original-title="vimeo"><i class="soap-icon-instagram"></i></a></li>
+                                <li class="dribble"><a title="Join Us on Youtube" href="https://www.youtube.com/channel/UCqi_w8JlO-1VEmVUItvr8og" Target="_blank" data-toggle="tooltip" data-original-title="dribble"><i class="soap-icon-youtube"></i></a></li>
+ 
+                            </ul><br><br>
+							
+                        </div>
+						<center>
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<br>
+                            <img src="http://thetravelsquare.in/images/the-travel-square-logo-200x200.png">
+							<br><br>
+							<div class="row">
+							<a href="https://play.google.com/store?hl=en"><img src="http://thetravelsquare.in/images/the-travel-square-google-playstore.png" height="35" width="100">
+							<a href="https://www.apple.com/in/"><img src="http://thetravelsquare.in/images/the-travel-square-apple-store-ios.png" height="35" width="100"></div>
+                        </div>
+						</center>
+                    </div>
+					
+                </div>
+				
+			<center>
+			<a href="https://www.paypal.com/in/home"><img src="http://thetravelsquare.in/images/the-travel-square-visa-debit-credit-card.png" height="70" width="350">
+			<a href="https://www.payumoney.com/"><img src="http://thetravelsquare.in/images/the-travel-square-payu-paypal.png" height="70" width="300">
+			</center><br>
+            </div>
+			
+			
+            <div class="bottom gray-area">
+                <div class="container">
+                    
+                    <div class="pull-right">
+                        <a id="back-to-top" href="" class="animated bounce" data-animation-type="bounce" style="animation-duration: 1s; visibility: visible;"><i class="soap-icon-longarrow-up circle"></i></a>
+                    </div>
+                    <div class="copyright pull-right">
+                        <p>© 2019 Copyright | The Travel Square</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+	
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-1.11.1.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.noconflict.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/modernizr.2.7.1.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-migrate-1.2.1.min.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.placeholder.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-ui.1.10.4.min.js.download"></script>
+    
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="http://thetravelsquare.in/files/bootstrap.js.download"></script>
+    
+    <!-- parallax -->
+    <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.stellar.min.js.download"></script>
+    
+    <!-- waypoint -->
+    <script type="text/javascript" src="http://thetravelsquare.in/files/waypoints.min.js.download"></script>
+
+    <!-- load page Javascript -->
+    <script type="text/javascript" src="http://thetravelsquare.in/files/theme-scripts.js.download"></script>
+    <script type="text/javascript" src="http://thetravelsquare.in/files/scripts.js.download"></script>
+    
+
+</body></html>

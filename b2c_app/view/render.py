@@ -40,8 +40,8 @@ def cabs():
 def activities():
     return render_template('hotel/b2c_hotels/coming-soon.html')
 
-@app.route('/visa')
-def visa():
+@app.route('/visa/coming-soon')
+def visa_soon():
     return render_template('hotel/b2c_hotels/coming-soon.html')
 
 @app.route('/buses')
@@ -294,6 +294,14 @@ def terms_and_conditions():
 @app.route('/privacy-policy')
 def privacy_policy():
     return render_template('hotel/footer_pages/privacy-policy.html')
+    
+@app.route('/emi-application')
+def emi_app():
+    return render_template('hotel/b2c_hotels/emi-application-form.html')
+
+@app.route('/emi')
+def emi():
+    return render_template('hotel/b2c_hotels/emi.html')
 
 
 #================= collection hotels ==========================
@@ -489,3 +497,28 @@ def bb():
     return render_template('hotel/b2c_hotels/supplier-verification-form.html')
 
 
+########################################## Visa #########################################
+
+@app.route('/visa')
+def visa():
+    return render_template('hotel/b2c_hotels/visa/visa-home.html')
+
+
+@app.route('/visa-list')
+def visa_list():
+    return render_template('hotel/b2c_hotels/visa/visa-list-view.html')
+
+
+@app.route('/visa-detail')
+def visa_detail():
+    return render_template('hotel/b2c_hotels/visa/visa-detail-view.html')
+
+
+@app.route('/visa-application')
+def visa_app():
+    return render_template('hotel/b2c_hotels/visa/visa-application-form.html')
+
+
+@app.route('/dropdown')
+def test():
+    return render_template('hotel/b2c_hotels/visa/testing.html')
