@@ -1,0 +1,220 @@
+
+ 
+
+
+<!DOCTYPE html>
+
+<html ng-app="register">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Page Title -->
+  <title>Customer Sign Up | The Travel Square</title>
+
+  <!-- Meta Tags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Travel Beans">
+  <meta name="description" content="">
+  <meta name="distribution" content="global">
+  <meta name="country" content="india">
+  <meta name="copyright" content="The Travel Square">
+  <meta name="revisit-after" content="1 hour">
+  <meta name="designer" content="The Travel Square">
+  <meta name="language" content="english">
+  <meta name="robots" content="index, follow">
+  <meta name="rating" content="general">
+  <meta name="publisher" content="The Travel Square">
+
+  <meta property="og:title" content="The Travel Square">
+  <meta property="og:description" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+  <meta property="og:image" content="">
+
+  <meta name="twitter:card" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+
+  <meta name="keywords" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+  <meta name="format-detection" content="7428558566">
+
+
+
+  <link rel="shortcut icon" href="" type="image/x-icon">
+
+
+
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bgimg {
+      background-image: url('http://thetravelsquare.in/images/the-travel-square-business-signup.jpeg');
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 15px;
+    }
+
+    .bottomleft {
+      position: absolute;
+      bottom: 0;
+      left: 35px;
+    }
+
+
+    .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      color: black;
+    }
+
+    input[type="email"] {
+      color: black;
+    }
+
+    input[type="password"] {
+      color: black;
+    }
+
+    hr {
+      margin: auto;
+      width: 40%;
+    }
+  </style>
+
+  <!-- Theme Styles -->
+  <link rel="stylesheet" href="files/bootstrap.min.css">
+  <link rel="stylesheet" href="files/font-awesome.min.css">
+  <link href="files/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="files/animate.min.css">
+
+
+  <!-- Main Style -->
+  <!--<link id="main-style" rel="stylesheet" href="css/style.css">-->
+  <link id="main-style" rel="stylesheet" href="files/style-light-yellow.css">
+
+  <!-- Updated Styles -->
+  <link rel="stylesheet" href="files/updates.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="files/custom.css">
+
+  <!-- Responsive Styles -->
+  <link rel="stylesheet" href="files/responsive.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- remove cookie lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-cookies.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <script src="/register.js"></script>
+
+
+</head>
+
+<body ng-controller="registerCtrl">
+
+  <div class="bgimg" id="section1">
+    <br><br>
+    <div class="middle">
+      <img src="/images/the-travel-square-india-logo.png"><br><br><br>
+      <h4>
+        <font color="white"><b>India's Largest B2B Travel Network.</b></font>
+      </h4>
+      <!-- <p><a href=""><b>The Travel Square</b></a> Business Portal Connect You With More Than 10,000+ Suppliers , DMC's & Hoteliers Directly For Your Travel Leads. Join Now</p> -->
+      <form class="booking-form" method="POST">
+        <div class="person-information">
+
+          <div class="form-group row">
+            <div class="col-sm-6 col-md-6">
+              <label>Your Name</label>
+              <input type="text" name="name" ng-model="register.name" class="input-text full-width" value="" autocomplete="off" placeholder="Full Name" required>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <label>Email Id</label>
+              <input type="text"  name="email" ng-model="register.email" class="input-text full-width" value="" autocomplete="off" placeholder="Email Id" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6 col-md-6">
+              <label>Mobile Number</label>
+              <input type="text" name="mobile" ng-model="register.mobile" min-length="10" max-length="10" pattern="[1-9]{1}[0-9]{9}" class="input-text full-width" value="" autocomplete="off" placeholder="Mobile No." required>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <label>Password</label>
+              <input type="password" name="password" ng-model="register.password"  class="input-text full-width" value="" autocomplete="off" placeholder="Password" required>
+            </div>
+          </div>
+
+
+
+          <button type="submit" name="vregister" ng-click="onSubmit()" class="button btn-medium sky-blue1 uppercase">Get On Board</button>
+          <br><br>
+          <div>Already Registered? <a href="http://thetravelsquare.in/login"><b>Login Now</b></a></div>
+     
+        </div>
+        
+      </form>
+    </div>
+
+    <div class="bottomleft">
+      <p><small><a href="http://thetravelsquare.in">BACK</a> | <a href="http://thetravelsquare.in/customer-care">CUSTOMER CARE</a> |<a href="http://thetravelsquare.in/contact-us"> CONTACT US</a></small></p></a>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="files/jquery-1.11.1.min.js.download"></script>
+  <script type="text/javascript" src="files/jquery.noconflict.js.download"></script>
+  <script type="text/javascript" src="files/modernizr.2.7.1.min.js.download"></script>
+  <script type="text/javascript" src="files/jquery-migrate-1.2.1.min.js.download"></script>
+  <script type="text/javascript" src="files/jquery.placeholder.js.download"></script>
+  <script type="text/javascript" src="files/jquery-ui.1.10.4.min.js.download"></script>
+
+
+  <script type="text/javascript" src="js/js"></script>
+  <script type="text/javascript" src="js/gmap3.min.js.download"></script>
+  <script type="text/javascript" src="js/theme-scripts.js.download"></script>
+
+  <!-- Twitter Bootstrap -->
+  <script type="text/javascript" src="files/bootstrap.js.download"></script>
+
+  <!-- Flex Slider -->
+  <script type="text/javascript" src="files/jquery.flexslider-min.js.download"></script>
+
+  <!-- parallax -->
+  <script type="text/javascript" src="files/jquery.stellar.min.js.download"></script>
+
+  <!-- waypoint -->
+  <script type="text/javascript" src="files/waypoints.min.js.download"></script>
+
+  <!-- load page Javascript -->
+  <script type="text/javascript" src="files/theme-scripts.js.download"></script>
+  <script type="text/javascript" src="files/scripts.js.download"></script>
+
+
+
+
+
+
+</body>
+
+</html>

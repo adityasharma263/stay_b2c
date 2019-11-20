@@ -40,6 +40,10 @@ def cabs():
 def activities():
     return render_template('hotel/b2c_hotels/coming-soon.html')
 
+@app.route('/holidays')
+def holidays():
+    return render_template('hotel/b2c_hotels/holidays.html')
+
 @app.route('/visa/coming-soon')
 def visa_soon():
     return render_template('hotel/b2c_hotels/coming-soon.html')
@@ -63,6 +67,14 @@ def forex():
 @app.route('/hotel/list', methods=['GET'])
 def hotel_list():
     return render_template('hotel/b2c_hotels/hotel_list.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('hotel/b2c_hotels/register.html')
+
+@app.route('/login')
+def login():
+    return render_template('hotel/b2c_hotels/login.html')
 
 
 @app.route('/hotel/<string:slug>', methods=['GET'])

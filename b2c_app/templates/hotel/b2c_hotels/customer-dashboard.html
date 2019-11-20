@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html ng-app="main">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Page Title -->
 <title>Customer Dashboard | The Travel Square | India's Largest Travel Community</title>
@@ -94,11 +94,16 @@
     }
 </style>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- remove cookie lib -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-cookies.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.4.7/angular-filter.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
 
 </head>
 
-<body>
+<body ng-controller="dashboardCtrl">
 
     <div id="page-wrapper">
         <header id="header" class="navbar-static-top">
@@ -526,6 +531,7 @@
     <!-- load page Javascript -->
     <script type="text/javascript" src="files/theme-scripts.js.download"></script>
     <script type="text/javascript" src="files/scripts.js.download"></script>
+    <script src="/main.js"></script>
 
     <div class="footer">&nbsp;
         <div class="container">
@@ -549,5 +555,6 @@
     </div>
     </div>
 </body>
+
 
 </html>
