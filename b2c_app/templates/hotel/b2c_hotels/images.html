@@ -1,0 +1,74 @@
+<body ng-app='myapp'>
+
+        <div ng-controller="userCtrl">
+         
+         <input type='file' name='file' id='file' ng-file='uploadfiles'><br/>
+         <input type='button' value='Upload' id='upload' ng-click='upload()' >
+         
+         <p>{{ response.name }}</p>
+        </div>
+
+        <script>
+                var upload= angular.module('myapp', []);
+
+                upload.controller('userCtrl', ['$scope', '$http', function ($scope, $http) {
+                 $scope.upload = function(){
+                 
+                  var fd = new FormData();
+                  var files = document.getElementById('file').files[0];
+                  fd.append('file',files);
+                
+                  // AJAX request
+                  $http({
+                   method: 'post',
+                   url: 'upload.php',
+                   data: fd,
+                   headers: {'Content-Type': undefined},
+                  }).then(function successCallback(response) { 
+                    // Store response data
+                    $scope.response = response.data;
+                  });
+                 }
+                 
+                }]);
+
+        </script>
+
+        <script>
+        var upload = angular.module('myapp', []);
+upload.directive('ngFile', ['$parse', function ($parse) {
+ return {
+  restrict: 'A',
+  link: function(scope, element, attrs) {
+   element.bind('change', function(){
+
+    $parse(attrs.ngFile).assign(scope,element[0].files)
+    scope.$apply();
+   });
+  }
+ };
+}]);
+
+upload.controller('userCtrl', ['$scope', '$http', function ($scope, $http) {
+ 
+ $scope.upload = function(value){
+  var fd=new FormData();
+  angular.forEach($scope.uploadfiles,function(file){
+  fd.append('file',file);
+ });
+
+ $http({
+  method: 'post',
+  url: 'upload.php',
+  data: fd,
+  headers: {'Content-Type': undefined},
+ }).then(function successCallback(response) { 
+  // Store response data
+  $scope.response = response.data;
+ });
+}
+ 
+}]);
+        </script>
+       
+       </body>
