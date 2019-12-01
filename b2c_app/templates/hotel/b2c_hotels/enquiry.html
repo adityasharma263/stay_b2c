@@ -457,8 +457,9 @@ autoclose: true
                     <label>Pick-Up Date / Time</label>
                     <div class="form-group row">
                         <div class="col-xs-6">
-                            <div class="datepicker-wrap">
-                                <input type="text" required  ng-model="cabs.pick_up_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                                <div class="datepicker input-group date">
+                                        <input type="text" ng-model="cabs.pick_up_date" class="input-text form-control inputstl full-width" placeholder="mm/dd/yy" required/>
+                                            <span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
                             </div>
                         </div>
                         <div class="col-xs-6">
@@ -474,8 +475,9 @@ autoclose: true
                     <label>Drop-Off Date / Time</label>
                     <div class="row">
                         <div class="col-xs-6">
-                            <div class="datepicker-wrap">
-                                <input type="text" required  ng-model="cabs.drop_off_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                                <div class="datepicker input-group date">
+                                        <input type="text" ng-model="cabs.drop_off_date" class="input-text form-control inputstl full-width" placeholder="mm/dd/yy" required/>
+                                            <span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
                             </div>
                         </div>
                         <div class="col-xs-6">
@@ -618,9 +620,9 @@ autoclose: true
                 <label>Departure Dates & Time</label>
                 <div class="row">
                     <div class="col-xs-4 col-md-3">
-                        <div class="datepicker-wrap">
-                            <input type="text" ng-model="flight.departure_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
-                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            <div class="datepicker input-group date">
+                                    <input type="text" ng-model="flight.departure_date" class="input-text form-control inputstl full-width" placeholder="mm/dd/yy" required/>
+                                        <span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
                         </div>
                     </div>
                     <div class="col-xs-4 col-md-3">
@@ -635,9 +637,9 @@ autoclose: true
                 <label>Arrival</label>
                 <div class="row">
                     <div class="col-xs-4 col-md-3">
-                        <div class="datepicker-wrap">
-                            <input type="text" ng-model="flight.arrival_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
-                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            <div class="datepicker input-group date">
+                                    <input type="text" ng-model="flight.arrival_date" class="input-text form-control inputstl full-width" placeholder="mm/dd/yy" required/>
+                                        <span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
                         </div>
                     </div>
                     <div class="col-xs-4 col-md-3">
@@ -748,14 +750,16 @@ autoclose: true
                     <div class="row">
                         <div class="col-xs-6">
                             <label>Start Date</label>
-                            <div class="datepicker-wrap">
-                                <input type="text" ng-model="package.start_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            <div class="datepicker input-group date">
+                                    <input type="text" ng-model="package.start_date" class="input-text form-control inputstl full-width" placeholder="mm/dd/yy" required/>
+                                        <span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <label>End Date</label>
-                            <div class="datepicker-wrap">
-                                <input type="text" ng-model="package.end_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                            <div class="datepicker input-group date">
+                                    <input type="text" ng-model="package.end_date" class="input-text form-control inputstl full-width" placeholder="mm/dd/yy" required/>
+                                        <span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
                             </div>
                         </div>
                     </div><br>
