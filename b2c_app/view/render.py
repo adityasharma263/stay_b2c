@@ -351,6 +351,18 @@ def coming_soon():
 
 #---------------------------Packages--------------------------#
 
+
+@app.route('/package-booking')
+def package_booking():
+    return render_template('hotel/b2c_hotels/package-booking.html')
+
+@app.route('/package-confirmation')
+def package_confirmation():
+    return render_template('hotel/b2c_hotels/package-confirmation.html')
+
+
+
+
 @app.route('/packages')
 def packages():
     return render_template('hotel/b2c_hotels/packages/packages.html')

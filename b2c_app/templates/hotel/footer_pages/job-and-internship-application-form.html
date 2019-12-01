@@ -41,15 +41,10 @@
 
 <!-- Theme Styles -->
 <link rel="stylesheet" href="files/bootstrap.min.css">
-<link rel="stylesheet" href="files/font-awesome.min(1).css">
 <link href="files/css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="files/animate.min.css">
 
 <!-- Current Page Styles -->
-<link rel="stylesheet" type="text/css" href="files/settings.css" media="screen">
-<link rel="stylesheet" type="text/css" href="files/style.css" media="screen">
-<link rel="stylesheet" type="text/css" href="files/jquery.bxslider.css" media="screen">
-<link rel="stylesheet" type="text/css" href="files/flexslider.css" media="screen">
 <script src="/jobs.js"></script>
 
 <!-- Main Style -->
@@ -256,7 +251,7 @@
 					
 					
                         <div class="travelo-box booking-section" ng-controller="jobsCtrl">
-                            <form class="booking-form" >
+                            <form name="jobForm" class="booking-form" >
                                 <div class="person-information">
 								<!-- <center><img src="images/The-Travel-Square-Logo.png"></center><br><br> -->
 								
@@ -430,7 +425,9 @@
                                         <div class="col-sm-6 col-md-5">
                                             <label>Refferal Person</label>
                                             <input type="text" ng-model="jobs.referral_person" class="input-text full-width" value="" placeholder="Enter Refferal Person">
+                                        
                                         </div>
+
                                     </div>
 									
                                         <!-- <a href="" class="button btn-medium sky-blue1 uppercase">Submit Personal Details</a> -->

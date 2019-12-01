@@ -7,18 +7,18 @@
     
     <!-- Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta ng-model="viewport" content="width=device-width, initial-scale=1.0">
-	<meta ng-model="author" content="The Travel Square">
-    <meta ng-model="description" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
-    <meta ng-model="distribution" content="global">
-    <meta ng-model="country" content="india">
-    <meta ng-model="copyright" content="The Travel Square">
-    <meta ng-model="revisit-after" content="1 hour">
-    <meta ng-model="designer" content="The Travel Square">
-    <meta ng-model="language" content="english">
-    <meta ng-model="robots" content="index, follow">
-    <meta ng-model="rating" content="general">
-    <meta ng-model="publisher" content="The Travel Square">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="The Travel Square">
+    <meta name="description" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+    <meta name="distribution" content="global">
+    <meta name="country" content="india">
+    <meta name="copyright" content="The Travel Square">
+    <meta name="revisit-after" content="1 hour">
+    <meta name="designer" content="The Travel Square">
+    <meta name="language" content="english">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="publisher" content="The Travel Square">
 	<link rel="shortcut icon" href="http://www.thetravelsquare.in/images/the-travel-square-logo-thumbnail.png" type="image/x-icon">
 	<meta property="og:title" content="The Travel Square">
     <meta property="og:description" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
@@ -26,39 +26,61 @@
 	<meta property="og:image" content="http://www.thetravelsquare/the-travel-square-logo-thumbnail.png">
 	<meta property="og:url" content="http://www.thetravelsquare.in/">
   
-    <meta ng-model="twitter:card" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
+    <meta name="twitter:card" content="India's Largest & Fastest Growing Travel Community . The Travel Square is a Network of 10000+ Travel Suppliers , DMC & Hotel Chains & Travellers Inspiring the World to Travel In Style With Luxury at Affordabe Pricing . The Travel Square Allows its Customers to Build The Most Customizable and Comfortable Holiday Package They Desire , Hassle Free After Comparision , Without Interence of Any Agency or Third Party . It Also Gives Free Credits & No-Cost EMI Travel Plans for Its Customers to Book , With Good Management of Their Budgets.">
   
-    <meta ng-model="keywords" content="travel in india ,travel packages , dubai packages , holiday packages , travel, the travel square, hotels, flights, India's Largest Travel Community">
-    <meta ng-model="format-detection" content="7428558566">
+    <meta name="keywords" content="travel in india ,travel packages , dubai packages , holiday packages , travel, the travel square, hotels, flights, India's Largest Travel Community">
+    <meta name="format-detection" content="7428558566">
 	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js" />
+  
+    <!-- Date Picker -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+
+
+<script type='text/javascript'>
+$(function(){
+$('.datepicker.date').datepicker({
+todayHighlight: true,
+autoclose: true
+});
+});
+
+</script>
+
+<style>
+        .inputstl { 
+            
+            border: solid 1px #000; 
+            outline: 0; 
+            float: left;
+            } 
+           
+        </style>
+
+    <!-- Date Picker -->
+   
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/enquiry.js"></script>
 
 
 
         <!-- Theme Styles -->
         <link rel="stylesheet" href="files/bootstrap.min.css">
-        <link rel="stylesheet" href="files/font-awesome.min(1).css">
         <link href="files/css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="files/animate.min.css">
 
         <!-- Current Page Styles -->
-        <link rel="stylesheet" type="text/css" href="files/settings.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="files/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="files/jquery.bxslider.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="files/flexslider.css" media="screen">
 
         <!-- Main Style -->
         <!--<link id="main-style" rel="stylesheet" href="css/style.css">-->
-        <script type="text/javascript">
-            var mainStyle = "style.css";
-            if (typeof localStorage != "undefined") {
-                var colorSkin = localStorage.getItem("colorSkin");
-                if (colorSkin != null) {
-                    mainStyle = "style-" + colorSkin + ".css";
-                }
-            }
-            document.write('<link id="main-style" rel="stylesheet" href="css/' + mainStyle + '">');
-        </script><link id="main-style" rel="stylesheet" href="files/style(1).css">
         <link id="main-style" rel="stylesheet" href="files/style-light-yellow.css">
 
         <!-- Updated Styles -->
@@ -69,7 +91,12 @@
 
         <!-- Responsive Styles -->
         <link rel="stylesheet" href="files/responsive.css">
-
+        <script>
+        $('#sandbox-container input').datepicker({
+            autoclose: true,
+            toggleActive: true
+        });
+        </script>
 <style>
 .responsive {
   width: 100%;
@@ -220,8 +247,8 @@
 
                                 <div class="search-tab-content full-width">
                                         
- <div class="tab-pane fade active in" ng-app="enquiryApp" ng-controller="hotelEnquiryCtrl" id="hotels-tab">
-        <form method="POST">
+ <div class="tab-pane fade active in" ng-controller="hotelEnqCtrl" id="hotels-tab">
+        <form >
     
             <div class="search-content">
     
@@ -234,39 +261,39 @@
                     <div class="col-xs-6">
                         <label>Your Name</label>
     
-                        <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+                        <input type="text" ng-model="hotel.name" class="input-text full-width" placeholder="Enter Your Name" required />
     
                     </div>
 
                     <div class="col-xs-6">
                         <label>Mobile Number</label>
     
-                        <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
+                        <input type="text" ng-model="hotel.mobile" class="input-text full-width" placeholder="Enter Mobile Number" required />
     
                     </div>
                 </div>
     <hr>
                 <label>City</label>
-                <input type="text" ng-model="city" class="input-text full-width" autocomplete="off" placeholder="Enter The City Name" required><br><br>
+                <input type="text" ng-model="hotel.city" class="input-text full-width" autocomplete="off" placeholder="Enter The City Name" required /><br><br>
     
                 <label>Hotel / Property Name</label>
-                <input type="text" ng-model="hotel_name" class="input-text full-width" required autocomplete="off" placeholder="Enter Hotel / Property Name">
+                <input type="text" ng-model="hotel.hotel_name" class="input-text full-width" autocomplete="off" placeholder="Enter Hotel / Property Name" required />
                 <hr>
     
                 <div class="row">
                     <div class="col-xs-6">
                         <label>Check In</label>
-                        <div class="datepicker-wrap">
-                            <input type="text" ng-model="check_in" autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy" id="dp1562882459940" required>
-                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                        <div class="datepicker input-group date">
+                            <input type="text" ng-model="hotel.check_in" class="input-text form-control inputstl full-width " placeholder="mm/dd/yy" required/><span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
+                            <!-- <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title=""> -->
                         </div>
                     </div>
     
                     <div class="col-xs-6">
                         <label>Check Out</label>
-                        <div class="datepicker-wrap">
-                            <input type="text" ng-model="check_out" autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy" id="dp1562882459941" required>
-                            <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                        <div class="datepicker input-group date">
+                            <input type="text" ng-model="hotel.check_out" class="input-text form-control inputstl full-width" placeholder="mm/dd/yy" required/><span style="background-color: black;" class="input-group-addon"><i style="color: #fff;" class="glyphicon glyphicon-calendar"></i></span>
+                            <!-- <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title=""> -->
                         </div>
                     </div>
                 </div>
@@ -285,16 +312,17 @@
                     <div class="col-xs-6">
                         <label>MEAL PLAN</label>
                         <div class="selector">
-                            <select ng-model="meal_plan"  autocomplete="off"  required class="full-width">
-                                <option value="1">CP - With Breakfast</option>
-                                <option value="2">MAP - With Two Meals</option>
-                                <option value="3">AP - All Meals</option>
-                            </select><span class="custom-select full-width">EP - Room Only</span>
+                            <select ng-model="hotel.meal_plan"required class="full-width" required>
+                                <option value="">Select</option>
+                                <option value="With Breakfast">With Breakfast</option>
+                                <option value="With Breakfast & Dinner">With Breakfast and Dinner</option>
+                                <option value="With Breakfast Lunch & Dinner">With Breakfast Lunch and Dinner (All Meals)</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <label>ROOMS</label>
-                        <input type="text" ng-model="rooms"  autocomplete="off"  class="input-text full-width" placeholder="Enter Number Of Room" required>
+                        <input type="text" ng-model="hotel.rooms" class="input-text full-width" placeholder="Enter Number Of Room" required>
                     </div>
                 </div><br><br>
                 <div class="row">
@@ -302,32 +330,32 @@
                     
                     <div class="col-xs-6">
                         <label>Room Category</label>
-                        <input type="text" ng-model="room_category"  autocomplete="off" class="input-text full-width" placeholder="Enter The City Name" required>
+                        <input type="text" ng-model="hotel.room_category"class="input-text full-width" placeholder="Enter The City Name" required>
     
                     </div>
                     <div class="col-xs-6">
                         <label>TOTAL PAX</label>
-                        <input type="text" ng-model="total_pax"  autocomplete="off" class="input-text full-width" placeholder="Enter Total Number Of Pax" required>
+                        <input type="text" ng-model="hotel.total_pax"class="input-text full-width" placeholder="Enter Total Number Of Pax" required>
                     </div><br>
                 </div><br>
     
                 <div class="row">
                     <div class="col-xs-4">
                         <label> ADULTS</label>
-                        <input type="text" ng-model="adults" min="0" autocomplete="off"  class="input-text full-width" placeholder="Enter Number Of Adults" required>
+                        <input type="text" ng-model="hotel.adults" class="input-text full-width" placeholder="Enter Number Of Adults" required>
                     </div>
                     <div class="col-xs-4">
                         <label>CHILD</label>
-                        <input type="text" ng-model="child" min="0" class="input-text full-width" placeholder="Enter Number Of Children" required>
+                        <input type="text" ng-model="hotel.child" class="input-text full-width" placeholder="Enter Number Of Children" required>
                     </div>
                     <div class="col-xs-4">
                         <label>CHILD AGE</label>
-                        <input type="text" ng-model="child_age" min="0" max="6" autocomplete="off"  class="input-text full-width" placeholder="Enter Child Age (Comma Seperated)" required>
+                        <input type="text" ng-model="hotel.child_age" class="input-text full-width" placeholder="Enter Child Age (Comma Seperated)" required>
                     </div>
                 </div><br>
     
                 <label>Description</label>
-                <input type="text" ng-model="descrip" class="input-text full-width" autocomplete="off"  placeholder="Special Request or Description">
+                <input type="text" ng-model="hotel.descrip" class="input-text full-width" placeholder="Special Request or Description">
                 <hr>
                 <!-- <div class="row choose-travel">
                     <div class="col-xs-4">
@@ -347,10 +375,9 @@
                     </div>
                 </div> -->
                 <hr>
+                
     
-    
-                <button type="submit" ng-click="post_hotel_enq(name, mobile, city, hotel_name, check_in, check_out, enquiry_type, meal_plan,
-                            rooms, room_category, total_pax, adults, child, child_age, descrip, types, 'customer')" class="full-width uppercase blue1">Send Enquiry</button>
+                <button type="submit" ng-click="hotelSubmit()" class="full-width uppercase blue1">Send Enquiry</button>
             </div>
         </form>
     </div>    
@@ -385,32 +412,32 @@
                     <div class="row choose-travel">
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="1">Sightseeing
+                                <input type="radio" ng-model="cab_trip_way" value="Sightseeing">Sightseeing
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="2">Self Drive
+                                <input type="radio" ng-model="cab_trip_way" value="Self Drive">Self Drive
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="3">Multi-city
+                                <input type="radio" ng-model="cab_trip_way" value="Multi-city">Multi-city
                             </label>
                         </div><br>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="1">Oneway
+                                <input type="radio" ng-model="cab_trip_way" value="Oneway">Oneway
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="2">Round Trip
+                                <input type="radio" ng-model="cab_trip_way" value="Round Trip">Round Trip
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="3">Multi-city
+                                <input type="radio" ng-model="cab_trip_way" value="Multi-city">Multi-city
                             </label>
                         </div>
                     </div>
@@ -814,7 +841,7 @@
         <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-migrate-1.2.1.min.js.download"></script>
         <script type="text/javascript" src="http://thetravelsquare.in/files/jquery.placeholder.js.download"></script>
         <script type="text/javascript" src="http://thetravelsquare.in/files/jquery-ui.1.10.4.min.js.download"></script>
-
+        <script src="/enquiry.js"></script>
         <!-- Twitter Bootstrap -->
         <script type="text/javascript" src="http://thetravelsquare.in/files/bootstrap.js.download"></script>
 
