@@ -382,8 +382,8 @@ autoclose: true
         </form>
     </div>    
 
-    <div class="tab-pane fade" id="cars-tab">
-            <form method="POST">
+    <div class="tab-pane fade" ng-controller="cabEnqCtrl" id="cars-tab">
+            <form>
     
                 <div class="search-content">
                     <div class="row">
@@ -395,14 +395,14 @@ autoclose: true
                         <div class="col-xs-6">
                             <label>Your Name</label>
     
-                            <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+                            <input type="text" ng-model="cabs.name" class="input-text full-width" placeholder="Enter Your Name">
     
                         </div>
 
                         <div class="col-xs-6">
                             <label>Mobile Number</label>
                            
-                            <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
+                            <input type="text" ng-model="cabs.mobile" class="input-text full-width" placeholder="Enter Mobile Number">
     
                         </div>
                         
@@ -412,32 +412,32 @@ autoclose: true
                     <div class="row choose-travel">
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="Sightseeing">Sightseeing
+                                <input type="radio" ng-model="cabs.cab_trip_way" value="Sightseeing">Sightseeing
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="Self Drive">Self Drive
+                                <input type="radio" ng-model="cabs.cab_trip_way" value="Self Drive">Self Drive
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="Multi-city">Multi-city
+                                <input type="radio" ng-model="cabs.cab_trip_way" value="Multi-city">Multi-city
                             </label>
                         </div><br>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="Oneway">Oneway
+                                <input type="radio" ng-model="cabs.cab_trip_way" value="Oneway">Oneway
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="Round Trip">Round Trip
+                                <input type="radio" ng-model="cabs.cab_trip_way" value="Round Trip">Round Trip
                             </label>
                         </div>
                         <div class="col-xs-4">
                             <label class="radio radio-inline">
-                                <input type="radio" ng-model="cab_trip_way" value="Multi-city">Multi-city
+                                <input type="radio" ng-model="cabs.cab_trip_way" value="Multi-city">Multi-city
                             </label>
                         </div>
                     </div>
@@ -446,11 +446,11 @@ autoclose: true
                     <div class="row">
                         <div class="col-xs-6">
                             <label>Pick Up</label>
-                            <input type="text" required ng-model="pick_up_city" class="input-text full-width" placeholder="city, distirct or specific airpot">
+                            <input type="text" required ng-model="cabs.pick_up_city" class="input-text full-width" placeholder="city, distirct or specific airpot">
                         </div>
                         <div class="col-xs-6">
                             <label>Drop Off</label>
-                            <input type="text" required  ng-model="drop_off_city" class="input-text full-width" placeholder="city, distirct or specific airpot">
+                            <input type="text" required  ng-model="cabs.drop_off_city" class="input-text full-width" placeholder="city, distirct or specific airpot">
                         </div>
                     </div>
                     <hr>
@@ -458,12 +458,13 @@ autoclose: true
                     <div class="form-group row">
                         <div class="col-xs-6">
                             <div class="datepicker-wrap">
-                                <input type="text" required  ng-model="pick_up_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                                <input type="text" required  ng-model="cabs.pick_up_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="selector">
-                                <select ng-model="pick_up_time" required  class="full-width">
+                                <select ng-model="cabs.pick_up_time" required  class="full-width">
+                                    <option value="">Select</option>
                                     <option value="1">anytime</option>
                                     <option value="2">morning</option>
                                 </select><span class="custom-select full-width">anytime</span>
@@ -474,12 +475,13 @@ autoclose: true
                     <div class="row">
                         <div class="col-xs-6">
                             <div class="datepicker-wrap">
-                                <input type="text" required  ng-model="drop_off_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                                <input type="text" required  ng-model="cabs.drop_off_date" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="selector">
-                                <select ng-model="drop_off_time" required  class="full-width">
+                                <select ng-model="cabs.drop_off_time" required  class="full-width">
+                                    <option value="">Select</option>
                                     <option value="1">anytime</option>
                                     <option value="2">morning</option>
                                 </select><span class="custom-select full-width">anytime</span>
@@ -490,19 +492,19 @@ autoclose: true
                     <div class="row">
                         <div class="col-xs-3">
                             <label>Vehicles</label>
-                            <input type="text" ng-model="vehicles" class="input-text full-width" required  placeholder="Enter Number Of Vehicle Required">
+                            <input type="text" ng-model="cabs.vehicles" class="input-text full-width" required  placeholder="Enter Number Of Vehicle Required">
                         </div>
                         <div class="col-xs-3">
                             <label>Total PAX</label>
-                            <input type="text" ng-model="total_pax" class="input-text full-width" required  placeholder="Enter Total Number Of Pax">
+                            <input type="text" ng-model="cabs.total_pax" class="input-text full-width" required  placeholder="Enter Total Number Of Pax">
                         </div>
                         <div class="col-xs-3">
                             <label>Adults</label>
-                            <input type="text" ng-model="adults" class="input-text full-width" required  placeholder="Enter Number Of Adults">
+                            <input type="text" ng-model="cabs.adults" class="input-text full-width" required  placeholder="Enter Number Of Adults">
                         </div>
                         <div class="col-xs-3">
                             <label>Kids</label>
-                                <input type="text" ng-model="kids" class="input-text full-width" required  placeholder="Enter Number Of Kids">
+                                <input type="text" ng-model="cabs.kids" class="input-text full-width" required  placeholder="Enter Number Of Kids">
                         </div>
     
                     </div>
@@ -510,16 +512,16 @@ autoclose: true
                     <div class="row">
                         <div class="col-xs-6">
                             <label>Car Type</label>
-                            <input type="text" ng-model="car_type" class="input-text full-width" required  placeholder="Enter Vehicle Name">
+                            <input type="text" ng-model="cabs.car_type" class="input-text full-width" required  placeholder="Enter Vehicle Name">
                         </div>
                         <div class="col-xs-6">
                             <label>Car Type</label>
-                            <input type="text" ng-model="car_type_capacity" class="input-text full-width" required  placeholder="Enter Vehicle Capacity Required ">
+                            <input type="text" ng-model="cabs.car_type_capacity" class="input-text full-width" required  placeholder="Enter Vehicle Capacity Required ">
                         </div>
                     </div>
                     <hr>
                     <label>Description</label>
-                    <input type="text" ng-model="descrip" class="input-text full-width" required  placeholder="Special Request or Description">
+                    <input type="text" ng-model="cabs.descrip" class="input-text full-width" required  placeholder="Special Request or Description">
                     <hr>
                     <!-- <div class="row choose-travel">
                         <div class="col-xs-4">
@@ -540,8 +542,7 @@ autoclose: true
                     </div> -->
                     <hr>
                     <div class="form-group">
-                        <button type="submit" ng-click="post_cab_enq(mobile, cab_trip_way, pick_up_city, drop_off_city, pick_up_date, pick_up_time,
-                        drop_off_date, drop_off_time, vehicles, total_pax, adults, kids, car_type, car_type_capacity, descrip, suppliers, 'business')" class="full-width">PROCEED TO RESULT</button>
+                        <button type="submit" ng-click="cabSubmit()" class="full-width">PROCEED TO RESULT</button>
                     </div>
                 </div>
             </form>
@@ -549,7 +550,7 @@ autoclose: true
      
 <!-- Flight Enquiry -->
 
-<div class="tab-pane fade" id="flights-tab">
+<div class="tab-pane fade" ng-controller="flightEnqCtrl" id="flights-tab">
         <form method="POST">
     
             <div class="search-content">
@@ -562,14 +563,14 @@ autoclose: true
                     <div class="col-xs-6">
                         <label>Your Name</label>
     
-                        <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+                        <input type="text" ng-model="flight.name" class="input-text full-width" placeholder="Enter Your Name">
     
                     </div>
 
                     <div class="col-xs-6">
                         <label>Mobile Number</label>
     
-                        <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number" >
+                        <input type="text" ng-model="flight.mobile" class="input-text full-width" placeholder="Enter Mobile Number" >
     
                     </div>  
                 </div><br>
@@ -578,17 +579,17 @@ autoclose: true
                 <div class="row choose-travel">
                     <div class="col-xs-4">
                         <label class="radio radio-inline">
-                            <input type="radio" required autocomplete="off" ng-model="trip_way" value="Oneway">Oneway
+                            <input type="radio" ng-model="flight.trip_way" value="Oneway">Oneway
                         </label>
                     </div>
                     <div class="col-xs-4">
                         <label class="radio radio-inline">
-                            <input type="radio" required autocomplete="off" ng-model="trip_way" value="Round Trip">Round Trip
+                            <input type="radio" ng-model="flight.trip_way" value="Round Trip">Round Trip
                         </label>
                     </div>
                     <div class="col-xs-4">
                         <label class="radio radio-inline">
-                            <input type="radio" required autocomplete="off" ng-model="trip_way" value="Multi-city">Multi-city
+                            <input type="radio"  ng-model="flight.trip_way" value="Multi-city">Multi-city
                         </label>
                     </div>
                 </div>
@@ -596,11 +597,11 @@ autoclose: true
                 <div class="row">
                     <div class="col-xs-6">
                         <label>From</label>
-                        <input type="text" ng-model="fr_om" required autocomplete="off" class="input-text full-width" placeholder="Enter Destination or Airport">
+                        <input type="text" ng-model="flight.fr_om" required autocomplete="off" class="input-text full-width" placeholder="Enter Destination or Airport">
                     </div>
                     <div class="col-xs-6">
                         <label>To</label>
-                        <input type="text" ng-model="t_o" required autocomplete="off" class="input-text full-width" placeholder="Enter Destination or Airport">
+                        <input type="text" ng-model="flight.t_o" required autocomplete="off" class="input-text full-width" placeholder="Enter Destination or Airport">
                     </div>
                 </div><br>
                 <!-- <div class="row">
@@ -618,16 +619,16 @@ autoclose: true
                 <div class="row">
                     <div class="col-xs-4 col-md-3">
                         <div class="datepicker-wrap">
-                            <input type="text" ng-model="departure_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
+                            <input type="text" ng-model="flight.departure_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
                             <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
                         </div>
                     </div>
                     <div class="col-xs-4 col-md-3">
-                        <input type="text" ng-model="departure_time" required autocomplete="off" class="input-text full-width" placeholder="Enter Timming (eg: Morning)">
+                        <input type="text" ng-model="flight.departure_time" required autocomplete="off" class="input-text full-width" placeholder="Enter Timming (eg: Morning)">
     
                     </div>
                     <div class="col-xs-5 col-md-6">
-                        <input type="text" ng-model="departure_airline_name" required autocomplete="off" class="input-text full-width" placeholder="Enter Airlines Name">
+                        <input type="text" ng-model="flight.departure_airline_name" required autocomplete="off" class="input-text full-width" placeholder="Enter Airlines Name">
     
                     </div>
                 </div><br>
@@ -635,16 +636,16 @@ autoclose: true
                 <div class="row">
                     <div class="col-xs-4 col-md-3">
                         <div class="datepicker-wrap">
-                            <input type="text" ng-model="arrival_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
+                            <input type="text" ng-model="flight.arrival_date" required autocomplete="off" class="input-text full-width " placeholder="Select Date">
                             <img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
                         </div>
                     </div>
                     <div class="col-xs-4 col-md-3">
-                        <input type="text" ng-model="arrival_time" required autocomplete="off" class="input-text full-width" placeholder="Enter Timming (eg: Morning)">
+                        <input type="text" ng-model="flight.arrival_time" required autocomplete="off" class="input-text full-width" placeholder="Enter Timming (eg: Morning)">
     
                     </div>
                     <div class="col-xs-5 col-md-6">
-                        <input type="text" ng-model="arrival_airline_name" required autocomplete="off" class="input-text full-width" placeholder="Enter Airlines Name">
+                        <input type="text" ng-model="flight.arrival_airline_name" required autocomplete="off" class="input-text full-width" placeholder="Enter Airlines Name">
     
                     </div>
                 </div><br>
@@ -652,26 +653,26 @@ autoclose: true
                 <div class="row">
                     <div class="col-xs-4 col-md-3">
                         <label>Total Pax</label>
-                        <input type="text" ng-model="total_pax" required autocomplete="off" class="input-text full-width" placeholder="Enter Total Pax">
+                        <input type="text" ng-model="flight.total_pax" required autocomplete="off" class="input-text full-width" placeholder="Enter Total Pax">
                     </div>
                     <div class="col-xs-4 col-md-3">
                         <label>Adults</label>
-                        <input type="text" ng-model="adults" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Adults">
+                        <input type="text" ng-model="flight.adults" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Adults">
                     </div>
                     <div class="col-xs-4 col-md-3">
                         <label>Kids</label>
-                        <input type="text" ng-model="kids" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Kids">
+                        <input type="text" ng-model="flight.kids" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Kids">
                     </div>
                     <div class="col-xs-4 col-md-3">
                         <label>Infants</label>
-                        <input type="text" ng-model="infants" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Infants">
+                        <input type="text" ng-model="flight.infants" required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Infants">
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col-xs-6">
                         <label>Flight Ticket Class</label>
-                        <input type="text" ng-model="flight_ticket_class" required autocomplete="off" class="input-text full-width" placeholder="Enter Passenger Ticket Type">
+                        <input type="text" ng-model="flight.flight_ticket_class" required autocomplete="off" class="input-text full-width" placeholder="Enter Passenger Ticket Type">
                     </div>
                     <div class="col-xs-6">
     
@@ -679,7 +680,7 @@ autoclose: true
                 </div>
                 <hr>
                 <label>Description</label>
-                <input type="text" ng-model="descrip" required autocomplete="off" class="input-text full-width" placeholder="Special Request or Description">
+                <input type="text" ng-model="flight.descrip" required autocomplete="off" class="input-text full-width" placeholder="Special Request or Description">
                 <hr>
                 <!-- <div class="row choose-travel">
                     <div class="col-xs-4">
@@ -699,16 +700,15 @@ autoclose: true
                     </div>
                 </div> -->
                 <hr>
-                <button type="submit" ng-click="post_flight_enq(name, mobile, trip_way, fr_om, t_o, departure_date, departure_time, departure_airline_name,
-                arrival_date, arrival_time, arrival_airline_name, total_pax, adults, kids, infants, flight_ticket_class, descrip, types, 'business')" class="full-width btn-medium">Send Enquiry</button>
+                <button type="submit" ng-click="flightSubmit()" class="full-width btn-medium">Send Enquiry</button>
             </div>
         </form>
     </div>
 
     <!-- Package Enquiry -->
                                 
-    <div class="tab-pane fade" id="flight-and-hotel-tab">
-            <form action="" method="post">
+    <div class="tab-pane fade" ng-controller="packageEnqCtrl" id="flight-and-hotel-tab">
+            <form>
             
                 <div class="search-content">
                     <div class="row">
@@ -720,14 +720,14 @@ autoclose: true
                         <div class="col-xs-6">
                             <label>Your Name</label>
             
-                            <input type="text" ng-model="name" class="input-text full-width" placeholder="Enter Your Name">
+                            <input type="text" ng-model="package.name" class="input-text full-width" placeholder="Enter Your Name">
             
                         </div>
 
                         <div class="col-xs-6">
                             <label>Mobile Number</label>
                         
-                            <input type="text" ng-model="mobile" class="input-text full-width" placeholder="Enter Mobile Number">
+                            <input type="text" ng-model="package.mobile" class="input-text full-width" placeholder="Enter Mobile Number">
             
                         </div>
                        
@@ -737,11 +737,11 @@ autoclose: true
                     <div class="row">
                         <div class="col-xs-6">
                             <label>Leaving From</label>
-                            <input type="text" ng-model="leaving_from" required autocomplete="off" class="input-text full-width" placeholder="Enter City">
+                            <input type="text" ng-model="package.leaving_from" required autocomplete="off" class="input-text full-width" placeholder="Enter City">
                         </div>
                         <div class="col-xs-6">
                             <label>Going To</label>
-                            <input type="text" ng-model="going_to"  required autocomplete="off" class="input-text full-width" placeholder="Enter City">
+                            <input type="text" ng-model="package.going_to"  required autocomplete="off" class="input-text full-width" placeholder="Enter City">
                         </div>
                     </div>
                     <hr>
@@ -749,13 +749,13 @@ autoclose: true
                         <div class="col-xs-6">
                             <label>Start Date</label>
                             <div class="datepicker-wrap">
-                                <input type="text" ng-model="start_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                                <input type="text" ng-model="package.start_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <label>End Date</label>
                             <div class="datepicker-wrap">
-                                <input type="text" ng-model="end_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
+                                <input type="text" ng-model="package.end_date"   required autocomplete="off" class="input-text full-width" placeholder="mm/dd/yy"><img class="ui-datepicker-trigger" src="./index_files/blank.png" alt="" title="">
                             </div>
                         </div>
                     </div><br>
@@ -764,19 +764,19 @@ autoclose: true
                     <div class="row">
                         <div class="col-xs-4 col-md-3">
                             <label>Total PAX</label>
-                            <input type="text" ng-model="total_pax"  required autocomplete="off" class="input-text full-width" placeholder="Enter Total Number Of Pax">
+                            <input type="text" ng-model="package.total_pax"  required autocomplete="off" class="input-text full-width" placeholder="Enter Total Number Of Pax">
                         </div>
                         <div class="col-xs-4 col-md-3">
                             <label>Adults</label>
-                            <input type="text" ng-model="adults"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Adults">
+                            <input type="text" ng-model="package.adults"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Adults">
                         </div>
                         <div class="col-xs-4 col-md-3">
                             <label>Kids</label>
-                            <input type="text" ng-model="kids"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Kids">
+                            <input type="text" ng-model="package.kids"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Kids">
                         </div>
                         <div class="col-xs-4 col-md-3">
                             <label>Infants</label>
-                            <input type="text" ng-model="infants"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Infants">
+                            <input type="text" ng-model="package.infants"  required autocomplete="off" class="input-text full-width" placeholder="Enter Number Of Infants">
                         </div>
                     </div>
                     <hr>
@@ -784,19 +784,19 @@ autoclose: true
                         <div class="col-xs-6">
                             <label>Class of travel</label>
                             <div class="selector">
-                                <select ng-model="class_of_travel">
+                                <select ng-model="package.class_of_travel">
                                     <option value="Economy">Economy</option>
-                                </select><span class="custom-select">Economy</span>
+                                </select>
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <label>Preferred Airline</label>
-                            <input type="text" ng-model="preferred_airline"  required autocomplete="off" class="input-text full-width" placeholder="Enter Airline Preference">
+                            <input type="text" ng-model="package.preferred_airline"  required autocomplete="off" class="input-text full-width" placeholder="Enter Airline Preference">
                         </div>
                     </div>
                     <hr>
                     <label>Description</label>
-                    <input type="text" ng-model="descrip" class="input-text full-width"  required autocomplete="off" placeholder="Special Request or Description">
+                    <input type="text" ng-model="package.descrip" class="input-text full-width"  required autocomplete="off" placeholder="Special Request or Description">
                     <hr>
                     <!-- <div class="row choose-travel">
                         <div class="col-xs-4">
@@ -816,8 +816,7 @@ autoclose: true
                         </div>
                     </div> -->
                   
-                    <button type="submit" ng-click="post_package_enq(mobile, leaving_from, going_to, start_date, end_date, total_pax, adults, kids,
-                    infants, class_of_travel, preferred_airline, descrip, suppliers, 'business')" class="full-width btn-medium">PROCEED TO RESULT</button>
+                    <button type="submit" ng-click="packageSubmit()" class="full-width btn-medium">Send Enquiry</button>
                 </div>
             </form>
             </div>
