@@ -348,6 +348,13 @@ def collection5():
 def coming_soon():
     return render_template('hotel/b2c_hotels/coming-soon.html')  
 
+@app.route('/application-submitted')
+def job_success():
+    return render_template('hotel/components/job-submitted.html')  
+
+@app.route('/enquiry-submitted')
+def enquiry_success():
+    return render_template('hotel/components/enquiry-submitted.html')
 
 #---------------------------Packages--------------------------#
 

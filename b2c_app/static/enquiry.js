@@ -23,8 +23,8 @@ $scope.flightSubmit = function(){
 
 
     $http.post('http://partner.thetravelsquare.in/api/v1/insert/flight_enquiry.php', $scope.flight).success
-    };
-    });
+};
+});
 
 app.controller('cabEnqCtrl', function($scope,$http){
     $scope.cabs = {};
@@ -34,7 +34,7 @@ $scope.cabSubmit = function(){
     console.log($scope.cabs);
 
 
-$http.post('http://partner.thetravelsquare.in/api/v1/insert/cab_enquiry.php', $scope.cabs).success
+    $http.post('http://partner.thetravelsquare.in/api/v1/insert/cab_enquiry.php', $scope.cabs).success
 };
 });
 
@@ -46,6 +46,6 @@ $scope.packageSubmit = function(){
     console.log($scope.package);
 
 
-$http.post('http://partner.thetravelsquare.in/api/v1/insert/package_enquiry.php', $scope.package).success
+    $http.post('http://partner.thetravelsquare.in/api/v1/insert/package_enquiry.php', $scope.package).success
 };
 });
