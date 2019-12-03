@@ -24,7 +24,7 @@ $scope.flightSubmit = function(){
     console.log($scope.flight);
 
 
-    $http.post('http://0.0.0.0:7000/api/v1/insert/flight_enquiry.php', $scope.flight).success
+    $http.post('http://partner.thetravelsquare.in/api/v1/insert/flight_enquiry.php', $scope.flight).success
 };
 });
 
