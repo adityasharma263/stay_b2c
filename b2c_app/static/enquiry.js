@@ -3,6 +3,7 @@ var app = angular.module('enquiryApp', []);
 
 app.controller('hotelEnqCtrl', function($scope,$http){
 $scope.hotel = {};
+$scope.hotel.descrip = "Enter Description if Any";
 
 $scope.hotelSubmit = function(){
     console.log("Submitted");
@@ -16,18 +17,20 @@ $scope.hotelSubmit = function(){
 
 app.controller('flightEnqCtrl', function($scope,$http){
     $scope.flight = {};
+    $scope.flight.descrip = "Enter Description if Any";
 
 $scope.flightSubmit = function(){
     console.log("Submitted");
     console.log($scope.flight);
 
 
-    $http.post('http://partner.thetravelsquare.in/api/v1/insert/flight_enquiry.php', $scope.flight).success
+    $http.post('http://0.0.0.0:7000/api/v1/insert/flight_enquiry.php', $scope.flight).success
 };
 });
 
 app.controller('cabEnqCtrl', function($scope,$http){
     $scope.cabs = {};
+    $scope.cabs.descrip = "Enter Description if Any";
 
 $scope.cabSubmit = function(){
     console.log("Submitted");
@@ -40,6 +43,7 @@ $scope.cabSubmit = function(){
 
 app.controller('packageEnqCtrl', function($scope,$http){
     $scope.package = {};
+    $scope.package.descrip = "Enter Description if Any";
 
 $scope.packageSubmit = function(){
     console.log("Submitted");
