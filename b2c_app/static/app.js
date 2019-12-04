@@ -1284,3 +1284,4 @@ var app = angular.module('comparetravel', ['angular.filter'])
 
     }]);
     
+ 
