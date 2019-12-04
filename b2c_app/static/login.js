@@ -19,7 +19,7 @@ app.controller('loginCtrl', function($scope, $http) {
       if(stat=="true")
        window.location.href="http://thetravelsquare.in/dashboard";
       else
-        alert("Failure");
+        alert("Check Mobile Or Password");
       };
       
      $scope.login = {
