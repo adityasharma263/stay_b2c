@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from marshmallow.compat import iteritems #added by adnan delete if problematic
 from flask_cors import CORS
 
 # Initializes Flask
